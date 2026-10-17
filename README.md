@@ -1,12 +1,11 @@
 # DailyFeed
 
-매일 구독 중인 기술 피드와 GeekNews를 확인해 날짜별 Markdown 파일로 보관하는 저장소입니다.
+매일 기술 뉴스, 기술 블로그, GitHub Trending, 기술 YouTube 영상을 확인해 날짜별 Markdown 파일로 보관하는 저장소입니다.
 
 - 기준 시간대: **Asia/Seoul (KST)**
 - 실행 시각: **매일 00:30 KST**
-- 수집 대상 날짜: 실행 시점의 **전날 00:00~23:59 KST**
-- GeekNews와 나머지 기술 피드를 **서로 다른 파일**로 저장합니다.
-- 외국어 글은 제목과 요약을 **한국어로 번역**하고, URL은 원문을 유지합니다.
+- 수집 대상 날짜: 실행 시점의 **전날**
+- 외국어 제목과 요약은 한국어로 번역하고 원문 URL은 그대로 유지합니다.
 
 ## 저장 구조
 
@@ -18,20 +17,24 @@ DailyFeed/
 │  └─ YYYY/
 │     └─ MM/
 │        └─ YYYY-MM-DD.md
-└─ tech/
-   └─ YYYY/
-      └─ MM/
-         └─ YYYY-MM-DD.md
+├─ tech/
+│  └─ YYYY/
+│     └─ MM/
+│        └─ YYYY-MM-DD.md
+├─ github/
+│  └─ YYYYMMDD_github.md
+└─ youtube/
+   └─ YYYYMMDD_youtube_tech.md
 ```
 
 예시:
 
 ```text
-geeknews/2026/10/2026-10-17.md
-tech/2026/10/2026-10-17.md
+geeknews/2026/10/2026-10-18.md
+tech/2026/10/2026-10-18.md
+github/20261018_github.md
+youtube/20261018_youtube_tech.md
 ```
-
-GitHub는 빈 폴더를 저장하지 않으므로 날짜별 Markdown 파일이 생성될 때 해당 폴더도 함께 만들어집니다.
 
 ## 매일 생성되는 파일
 
@@ -39,8 +42,7 @@ GitHub는 빈 폴더를 저장하지 않으므로 날짜별 Markdown 파일이 �
 
 경로: `geeknews/YYYY/MM/YYYY-MM-DD.md`
 
-- GeekNews에 대상 날짜에 새로 등록된 글 중 **AI·IT·개발·소프트웨어·인프라·보안·데이터·오픈소스 등 기술 관련 항목만** 수록합니다.
-- 단순 홍보, 일반 비즈니스/마케팅, 기술과 직접 관련 없는 글은 제외합니다.
+- 대상 날짜에 새로 등록된 글 중 **AI·IT·개발·소프트웨어·인프라·보안·데이터·오픈소스 등 기술 관련 항목만** 수록합니다.
 - 형식은 **한국어 제목 + 링크**만 사용합니다.
 - 별도 요약은 작성하지 않습니다.
 
@@ -50,20 +52,39 @@ GitHub는 빈 폴더를 저장하지 않으므로 날짜별 Markdown 파일이 �
 
 - GeekNews를 제외한 아래 기술 피드 및 공식 채널을 확인합니다.
 - 각 글은 **한국어 제목 + 원문 URL + 핵심 내용 약 3줄**로 정리합니다.
-- 영어·일본어·중국어 등 한국어가 아닌 글은 제목과 요약을 한국어로 번역합니다.
+- 외국어 글은 제목과 요약을 한국어로 번역합니다.
 - 새 글이 없는 피드는 표시하지 않습니다.
-- 해당 날짜에 확인된 신규 글이 하나도 없으면 그 사실만 기록합니다.
+
+### 3. GitHub Trending
+
+경로: `github/YYYYMMDD_github.md`
+
+- 매일 00:30 KST에 GitHub 공식 Trending의 **Daily / All Languages 상위 10개**를 확인합니다.
+- 이 파일은 대상 날짜의 엄밀한 00:00~23:59 통계가 아니라 **다음 날 00:30에 관측한 Daily Trending 스냅샷**입니다.
+- 저장소명, GitHub URL, 주 언어, 당일 증가 Star 수(확인 가능한 경우), 한국어 설명을 기록합니다.
+- GitHub 공식 페이지를 우선하고 필요할 때만 Trendshift 등 아카이브/트래커를 보조적으로 사용합니다.
+
+### 4. YouTube Tech
+
+경로: `youtube/YYYYMMDD_youtube_tech.md`
+
+- 아래 지정 채널에서 대상 날짜 **00:00~23:59 KST에 새로 공개된 기술 영상**을 확인합니다.
+- 형식은 **한국어 제목 + YouTube URL + 핵심 내용 약 3줄**입니다.
+- 외국어 영상은 제목과 요약을 한국어로 번역합니다.
+- Shorts, 회사 홍보, 채용 홍보, 행사 티저, 일반 마케팅 등 **기술적 내용이 부족한 영상은 제외**합니다.
+- 자막을 확인할 수 있으면 자막을 우선하고, 없으면 공식 설명과 공개 메타데이터로 요약합니다.
+- 확인할 수 없는 내용을 추정하지 않습니다.
 
 ## 날짜 및 중복 처리 규칙
 
-1. 글에 명시된 게시 날짜가 있으면 그 날짜를 우선합니다.
-2. 게시 날짜가 대상 날짜라면 수록합니다.
-3. 날짜가 없는 소스는 **canonical/original URL**을 기준으로 이전 날짜 파일들과 중복 여부를 확인합니다.
-4. 날짜 없는 글은 과거 파일에 같은 URL이 없고 대상 날짜에 새로 발견된 것으로 확인되는 경우에만 수록합니다.
-5. 같은 사건을 여러 곳에서 다루더라도 각 구독 피드에 실제로 새 글이 게시된 경우에는 해당 피드의 글로 수록할 수 있습니다.
-6. 확인되지 않은 날짜나 내용을 추정해서 작성하지 않습니다.
+1. 게시 날짜/업로드 날짜가 명시된 콘텐츠는 해당 날짜를 우선합니다.
+2. 날짜가 없는 소스는 canonical/original URL 기준으로 과거 파일과 중복 여부를 확인합니다.
+3. 동일 URL은 다시 기록하지 않습니다.
+4. 기존 콘텐츠의 단순 수정·재노출은 신규로 취급하지 않습니다.
+5. 날짜나 신규 여부를 확인할 수 없으면 추정해서 수록하지 않습니다.
+6. GitHub Trending만 예외적으로 **00:30 KST 관측 스냅샷을 전날자 파일**로 저장합니다.
 
-## 구독 소스
+# Tech Feed 구독 소스
 
 총 **33개 소스**입니다. RSS/Atom 32개와 공식 웹페이지 1개(Anthropic Newsroom)로 구성됩니다.
 
@@ -98,17 +119,57 @@ GitHub는 빈 폴더를 저장하지 않으므로 날짜별 Markdown 파일이 �
 | 27 | 字节跳动技术团队 (ByteDance Tech) | https://wechat2rss.xlab.app/feed/4025ea55575daf8bfd8227e68b28d9638b073267.xml | China Tech Blogs | RSS |
 | 28 | 小红书技术REDtech (Xiaohongshu REDtech) | https://wechat2rss.bestblogs.dev/feed/0f8c47df6fd304112518544776e0bbf1d98ba0b9.xml | China Tech Blogs | RSS |
 | 29 | 美团技术团队 (Meituan Tech) | https://tech.meituan.com/rss.xml | China Tech Blogs | RSS |
-| 30 | Google Official Blog (News from Google) | https://blog.google/rss/ | AI · Official | RSS |
+| 30 | Google Official Blog | https://blog.google/rss/ | AI · Official | RSS |
 | 31 | Google DeepMind | https://deepmind.google/blog/rss.xml | AI · Official | RSS |
 | 32 | OpenAI | https://openai.com/news/rss.xml | AI · Official | RSS |
 | 33 | Anthropic Newsroom | https://www.anthropic.com/news | AI · Official | 공식 웹페이지 |
 
-### 공식 채널 참고
+# YouTube Tech 모니터링 소스
 
-- **Google Official Blog**: Google 전체 공식 뉴스입니다.
-- **Google DeepMind**: Gemini·DeepMind 연구 및 모델 발표를 중심으로 확인합니다.
-- **OpenAI**: OpenAI 공식 News RSS입니다.
-- **Anthropic**: 공식 Newsroom을 확인합니다. 공개 공식 RSS가 확인되지 않아 웹페이지를 직접 확인합니다.
+## AI · Cloud · Developer 공식 채널
+
+| 채널 | URL | 비고 |
+|---|---|---|
+| OpenAI | https://www.youtube.com/@OpenAI | OpenAI 공식 |
+| Claude | https://www.youtube.com/channel/UCV03SRZXJEz-hchIAogeJOg | Anthropic / Claude |
+| Google for Developers | https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw | Google 개발자 공식 |
+| Google DeepMind | https://www.youtube.com/@googledeepmind | AI 연구·모델 |
+| Google Cloud Tech | https://www.youtube.com/channel/UCJS9pqu9BzkAMNTmzNMNhvg | Cloud·Agent·플랫폼 |
+| NVIDIA Developer | https://www.youtube.com/channel/UCBHcMCGaiJhv-ESTcWGJPcw | AI·CUDA·로보틱스·그래픽스 |
+| Meta Developers | https://www.youtube.com/@MetaDevelopers | Meta 개발자 공식 |
+| AWS Developers | https://www.youtube.com/channel/UCT-nPlVzJI-ccQXlxjSvJmw | AWS 개발자 공식 |
+| Microsoft Developer | https://www.youtube.com/@MicrosoftDeveloper | Microsoft 개발자 공식 |
+| SAP | https://www.youtube.com/channel/UCVnIv2xF2wyMMCSKv1qF3pA | SAP 공식 |
+| SAP TechEd | https://www.youtube.com/channel/UCUJdXZAAOsNuPBpLa50XUxQ | SAP 기술 세션 |
+| NAVER D2 | https://www.youtube.com/channel/UCNrehnUq7Il-J7HQxrzp7CA | NAVER 기술 공식 |
+| LINE Developers Korea | https://www.youtube.com/channel/UC3Vp8t2iPX1cz4eWw-XezGA | LINE/LY 개발자 기술 콘텐츠 |
+| kakao tech | https://www.youtube.com/channel/UCdQF7F6hwjSpulj_fwB9iDQ | 카카오 기술 공식 |
+| 당근 팀 | https://www.youtube.com/channel/UCwNwSGlLJNZTatOnE2t33tg | 기술 관련 영상만 |
+| 토스 | https://www.youtube.com/channel/UCeg5g-vWgtgzQ0cYNV2Cyow | 기술 관련 영상만 |
+
+## 게임 제작 · 3D
+
+| 채널 | URL | 비고 |
+|---|---|---|
+| Unreal Engine | https://www.youtube.com/channel/UCBobmJyzsJ6Ll7UbfhI4iwQ | Unreal 공식 |
+| Unity Korea | https://www.youtube.com/channel/UCQArZVLg7Omzg4cBReJTS3w | Unity 한국 공식 |
+| Blender Guru | https://www.youtube.com/channel/UCOKHwx1VCdgnxwbjyb9Iu1g | Blender 제작 실전 |
+| GDC Festival of Gaming | https://www.youtube.com/channel/UC0JB7TSe49lg56u6qH8y_MQ | 게임 개발 세션 |
+| Game Maker's Toolkit | https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw | 게임 디자인·제작 |
+| Masahiro Sakurai on Creating Games | https://www.youtube.com/channel/UCv1DvRY5PyHHt3KN9ghunuw | 게임 제작 원리 |
+| Maker's Muse | https://www.youtube.com/channel/UCxQbYGpbdrh-b2ND-AfIybg | 3D 제작·메이킹 |
+
+## 개인 채널 예외
+
+| 채널 | URL | 포함 이유 |
+|---|---|---|
+| Cole Medin | https://www.youtube.com/channel/UCMwVTLZIRRUyyVrkjDpn4pA | Agent·AI coding·하네스·로컬 AI 중심 |
+
+### YouTube 제외 원칙
+
+- `WorldofAI`, `AgentOS`, `조코딩`, `AI는 야근중`, `인공지능팩토리`는 DailyFeed 모니터링 대상에서 제외합니다.
+- X는 안정적으로 추적할 공식 기술 YouTube 채널을 현재 목록에 넣지 않습니다.
+- 일반 회사 채널(당근, 토스 등)은 기술/개발 관련 영상만 수록합니다.
 
 ## 작업 규칙
 
