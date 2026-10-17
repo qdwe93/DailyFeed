@@ -5,13 +5,14 @@
 ## 1. 실행 기준
 
 - 기준 시간대: `Asia/Seoul`
-- 정기 실행: 매일 `00:30`
-- 대상 날짜: 실행일의 전날(KST)
-- 결과 파일:
+- 일일 실행: 매일 `00:30`
   - `geeknews/YYYY/MM/YYYY-MM-DD.md`
   - `tech/YYYY/MM/YYYY-MM-DD.md`
-  - `github/YYYYMMDD_github.md`
   - `youtube/YYYYMMDD_youtube_tech.md`
+- 주간 실행: 매주 월요일 `00:30`
+  - `github/YYYYMMDD_github_weekly.md`
+- 일일 대상 날짜: 실행일의 전날(KST)
+- GitHub Weekly 파일명의 날짜는 실행일(월요일)이다.
 
 ## 2. 공통 원칙
 
@@ -25,12 +26,12 @@
 ## 3. 날짜 판정
 
 1. 게시일 또는 업로드일이 명시된 콘텐츠는 해당 날짜를 사용한다.
-2. 대상 날짜와 날짜가 일치하는 신규 콘텐츠만 수록한다.
+2. 일일 파일에는 대상 날짜와 날짜가 일치하는 신규 콘텐츠만 수록한다.
 3. 날짜가 없는 항목은 canonical/original URL 기준으로 과거 파일을 검색한다.
 4. 과거 파일에 동일 URL이 있으면 다시 기록하지 않는다.
 5. 날짜가 불명확하고 신규 여부도 확인할 수 없으면 수록하지 않는다.
 6. 기존 글/영상의 단순 수정·재노출은 새 콘텐츠로 취급하지 않는다.
-7. GitHub Trending은 예외적으로 실행 시점의 Daily Trending 스냅샷을 전날자 파일로 저장한다.
+7. GitHub Trending은 위 날짜 판정 규칙 대신 매주 월요일 00:30 KST 시점의 Weekly Trending 스냅샷을 저장한다.
 
 ## 4. GeekNews 규칙
 
@@ -86,16 +87,19 @@
 - 해당 날짜에 신규 글이 없는 소스는 생략한다.
 - 전체 Tech 소스에서 신규 글이 없으면 `해당 날짜에 확인된 신규 글 없음.`이라고 기록한다.
 
-## 6. GitHub Trending 규칙
+## 6. GitHub Trending Weekly 규칙
 
-### 기준
+### 실행 및 기준
 
-- 1차 소스: `https://github.com/trending`
-- 조건: **Daily / All Languages**
+- 실행: **매주 월요일 00:30 KST**
+- 1차 소스: `https://github.com/trending?since=weekly`
+- 조건: **Weekly / All Languages**
 - 수량: 상위 **10개 repository**
-- 실행 시각인 00:30 KST에 관측되는 Daily Trending을 전날자 스냅샷으로 저장한다.
-- GitHub Trending은 과거 날짜를 공식적으로 직접 조회할 수 있는 데이터가 아니므로, 과거 소급 생성 시 정확한 당시 스냅샷이 없으면 그 한계를 파일에 명시한다.
-- 공식 페이지가 일시적으로 확인되지 않을 때만 Trendshift 등 신뢰 가능한 아카이브/트래커를 보조적으로 사용하고, 사용한 경우 파일에 표시한다.
+- 결과 경로: `github/YYYYMMDD_github_weekly.md`
+- 파일명의 날짜는 실행일(월요일)이다.
+- 관측 시점의 GitHub Weekly Trending을 그대로 스냅샷으로 저장한다.
+- GitHub Trending은 과거 특정 주차를 공식적으로 직접 조회할 수 있는 데이터가 아니므로 소급 생성은 원칙적으로 하지 않는다.
+- 공식 페이지가 일시적으로 확인되지 않을 때만 신뢰 가능한 아카이브/트래커를 보조적으로 사용하고, 사용한 경우 파일에 표시한다.
 
 ### 각 항목
 
@@ -105,15 +109,16 @@
 https://github.com/owner/repository
 
 - 언어: Python
-- 오늘 증가: +1,234 stars
+- 이번 주 증가: +1,234 stars
 - 무엇을 하는 프로젝트인지 한국어로 설명
 - 핵심 특징 또는 사용 가치
 ```
 
 - 순서는 관측된 Trending 순서를 유지한다.
-- Star 증가 수와 언어는 확인 가능한 경우만 적는다.
+- 주간 증가 Star 수와 언어는 확인 가능한 경우만 적는다.
 - 저장소 README/Description을 확인해 단순 영문 description 번역보다 실제 용도를 우선 파악한다.
 - `왜 유행하는지`가 자료로 확인되지 않으면 임의의 원인을 만들지 않는다.
+- 기존의 `github/20261017_github.md`는 초기 Daily 테스트 파일이므로 향후 정기 실행 대상에서 제외한다.
 
 ## 7. YouTube Tech 규칙
 
@@ -183,14 +188,15 @@ https://www.youtube.com/watch?v=...
 ## 9. 저장 및 커밋
 
 - GeekNews/Tech는 기존 연/월 폴더 구조를 유지한다.
-- GitHub Trending과 YouTube는 각각 `github/`, `youtube/` 바로 아래에 날짜 파일을 저장한다.
+- YouTube는 `youtube/` 바로 아래에 날짜 파일을 저장한다.
+- GitHub Weekly는 `github/` 바로 아래에 월요일 날짜 기준 파일을 저장한다.
 - 이미 같은 날짜 파일이 있으면 새 파일을 만들지 말고 필요한 경우 갱신한다.
 - 권장 커밋 메시지:
   - `daily: add YYYY-MM-DD GeekNews`
   - `daily: add YYYY-MM-DD tech feeds`
-  - `daily: add YYYYMMDD GitHub trending`
   - `daily: add YYYYMMDD YouTube tech`
-- 자동 실행 후 채팅에는 기사/영상 내용을 다시 길게 출력하지 말고 성공/실패와 생성된 GitHub 경로만 간단히 알린다.
+  - `weekly: add YYYYMMDD GitHub trending`
+- 자동 실행 후 채팅에는 내용을 다시 길게 출력하지 말고 성공/실패와 생성된 GitHub 경로만 간단히 알린다.
 
 ## 10. 품질 원칙
 
