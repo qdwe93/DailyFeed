@@ -1,10 +1,11 @@
 # DailyFeed
 
-매일 기술 뉴스, 기술 블로그, GitHub Trending, 기술 YouTube 영상을 확인해 날짜별 Markdown 파일로 보관하는 저장소입니다.
+기술 뉴스, 기술 블로그, 기술 YouTube 영상과 GitHub Trending을 Markdown으로 보관하는 저장소입니다.
 
 - 기준 시간대: **Asia/Seoul (KST)**
-- 실행 시각: **매일 00:30 KST**
-- 수집 대상 날짜: 실행 시점의 **전날**
+- **매일 00:30 KST**: GeekNews / Tech Feeds / YouTube Tech
+- **매주 월요일 00:30 KST**: GitHub Trending Weekly
+- 일일 수집 대상 날짜: 실행 시점의 **전날**
 - 외국어 제목과 요약은 한국어로 번역하고 원문 URL은 그대로 유지합니다.
 
 ## 저장 구조
@@ -14,15 +15,11 @@ DailyFeed/
 ├─ README.md
 ├─ AGENT.md
 ├─ geeknews/
-│  └─ YYYY/
-│     └─ MM/
-│        └─ YYYY-MM-DD.md
+│  └─ YYYY/MM/YYYY-MM-DD.md
 ├─ tech/
-│  └─ YYYY/
-│     └─ MM/
-│        └─ YYYY-MM-DD.md
+│  └─ YYYY/MM/YYYY-MM-DD.md
 ├─ github/
-│  └─ YYYYMMDD_github.md
+│  └─ YYYYMMDD_github_weekly.md
 └─ youtube/
    └─ YYYYMMDD_youtube_tech.md
 ```
@@ -32,13 +29,15 @@ DailyFeed/
 ```text
 geeknews/2026/10/2026-10-18.md
 tech/2026/10/2026-10-18.md
-github/20261018_github.md
 youtube/20261018_youtube_tech.md
+github/20261019_github_weekly.md
 ```
 
-## 매일 생성되는 파일
+> `github/20261017_github.md`는 초기 설정 과정에서 생성한 Daily Trending 테스트 스냅샷이며, 이후 정기 파일은 Weekly 형식만 사용합니다.
 
-### 1. GeekNews
+## 정기 생성 파일
+
+### 1. GeekNews — 매일
 
 경로: `geeknews/YYYY/MM/YYYY-MM-DD.md`
 
@@ -46,7 +45,7 @@ youtube/20261018_youtube_tech.md
 - 형식은 **한국어 제목 + 링크**만 사용합니다.
 - 별도 요약은 작성하지 않습니다.
 
-### 2. Tech Feeds
+### 2. Tech Feeds — 매일
 
 경로: `tech/YYYY/MM/YYYY-MM-DD.md`
 
@@ -55,16 +54,7 @@ youtube/20261018_youtube_tech.md
 - 외국어 글은 제목과 요약을 한국어로 번역합니다.
 - 새 글이 없는 피드는 표시하지 않습니다.
 
-### 3. GitHub Trending
-
-경로: `github/YYYYMMDD_github.md`
-
-- 매일 00:30 KST에 GitHub 공식 Trending의 **Daily / All Languages 상위 10개**를 확인합니다.
-- 이 파일은 대상 날짜의 엄밀한 00:00~23:59 통계가 아니라 **다음 날 00:30에 관측한 Daily Trending 스냅샷**입니다.
-- 저장소명, GitHub URL, 주 언어, 당일 증가 Star 수(확인 가능한 경우), 한국어 설명을 기록합니다.
-- GitHub 공식 페이지를 우선하고 필요할 때만 Trendshift 등 아카이브/트래커를 보조적으로 사용합니다.
-
-### 4. YouTube Tech
+### 3. YouTube Tech — 매일
 
 경로: `youtube/YYYYMMDD_youtube_tech.md`
 
@@ -73,7 +63,16 @@ youtube/20261018_youtube_tech.md
 - 외국어 영상은 제목과 요약을 한국어로 번역합니다.
 - Shorts, 회사 홍보, 채용 홍보, 행사 티저, 일반 마케팅 등 **기술적 내용이 부족한 영상은 제외**합니다.
 - 자막을 확인할 수 있으면 자막을 우선하고, 없으면 공식 설명과 공개 메타데이터로 요약합니다.
-- 확인할 수 없는 내용을 추정하지 않습니다.
+
+### 4. GitHub Trending Weekly — 매주 월요일
+
+경로: `github/YYYYMMDD_github_weekly.md`
+
+- **매주 월요일 00:30 KST**에 GitHub 공식 Trending의 **Weekly / All Languages 상위 10개**를 확인합니다.
+- 파일명의 날짜는 **실행일(월요일)** 입니다.
+- 저장소명, GitHub URL, 주 언어, 주간 증가 Star 수(확인 가능한 경우), 한국어 설명을 기록합니다.
+- GitHub 공식 페이지를 우선하고 공식 페이지 확인이 어려울 때만 신뢰 가능한 아카이브/트래커를 보조적으로 사용합니다.
+- 순위와 Star 수는 해당 시점의 GitHub Weekly Trending 스냅샷이며 별도의 주간 통계 재계산값이 아닙니다.
 
 ## 날짜 및 중복 처리 규칙
 
@@ -82,7 +81,7 @@ youtube/20261018_youtube_tech.md
 3. 동일 URL은 다시 기록하지 않습니다.
 4. 기존 콘텐츠의 단순 수정·재노출은 신규로 취급하지 않습니다.
 5. 날짜나 신규 여부를 확인할 수 없으면 추정해서 수록하지 않습니다.
-6. GitHub Trending만 예외적으로 **00:30 KST 관측 스냅샷을 전날자 파일**로 저장합니다.
+6. GitHub Trending은 일일 날짜 판정 규칙을 적용하지 않고 **매주 월요일 00:30의 Weekly Trending 스냅샷**을 저장합니다.
 
 # Tech Feed 구독 소스
 
