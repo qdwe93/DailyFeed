@@ -5,14 +5,18 @@
 ## 1. 실행 기준
 
 - 기준 시간대: `Asia/Seoul`
-- 일일 실행: 매일 `00:30`
-  - `geeknews/YYYY/MM/YYYY-MM-DD.md`
-  - `tech/YYYY/MM/YYYY-MM-DD.md`
-  - `youtube/YYYYMMDD_youtube_tech.md`
-- 주간 실행: 매주 월요일 `00:30`
-  - `github/YYYYMMDD_github_weekly.md`
+- 일일 실행: 매일 `08:00`
+  - `geeknews/<YYYY년M월>/<YYYY-MM-DD>_<주요기사>.md`
+  - `tech/<YYYY년M월>/<YYYY-MM-DD>_<주요기사>.md`
+  - `youtube/<YYYY년M월>/<YYYY-MM-DD>_<주요기사>.md`
+- 주간 실행: 매주 월요일 `08:00`
+  - `github/<YYYY년M월>/<YYYY-MM-DD>_<주요기사>.md`
 - 일일 대상 날짜: 실행일의 전날(KST)
 - GitHub Weekly 파일명의 날짜는 실행일(월요일)이다.
+- 파일명의 `<주요기사>`는 그 파일의 첫 번째 항목 제목을 20자로 줄인 값이다.
+  - 공백은 `-`로 바꾸고, 파일명에 쓸 수 없는 문자(`\ / : * ? " < > |`)는 제거한다.
+  - 20자를 넘으면 자르고 끝의 `-`·`.`를 지운다. 항목이 없으면 `신규없음`을 쓴다.
+- 같은 날짜 파일이 이미 있으면 새 파일을 만들지 않고, 이름이 달라졌을 때만 교체한다.
 
 ## 2. 공통 원칙
 
@@ -187,9 +191,8 @@ https://www.youtube.com/watch?v=...
 
 ## 9. 저장 및 커밋
 
-- GeekNews/Tech는 기존 연/월 폴더 구조를 유지한다.
-- YouTube는 `youtube/` 바로 아래에 날짜 파일을 저장한다.
-- GitHub Weekly는 `github/` 바로 아래에 월요일 날짜 기준 파일을 저장한다.
+- 채널 폴더는 `geeknews/`, `tech/`, `youtube/`, `github/` 이고, 그 아래 `YYYY년M월` 월 폴더를 둔다.
+- 파일명은 `YYYY-MM-DD_주요기사20자.md` 형식이다(1장 참조).
 - 이미 같은 날짜 파일이 있으면 새 파일을 만들지 말고 필요한 경우 갱신한다.
 - 권장 커밋 메시지:
   - `daily: add YYYY-MM-DD GeekNews`
@@ -198,7 +201,27 @@ https://www.youtube.com/watch?v=...
   - `weekly: add YYYYMMDD GitHub trending`
 - 자동 실행 후 채팅에는 내용을 다시 길게 출력하지 말고 성공/실패와 생성된 GitHub 경로만 간단히 알린다.
 
-## 10. 품질 원칙
+## 10. 로컬 실행 파이프라인
+
+수집은 결정론적 스크립트가 맡고, 요약만 에이전트가 맡는다.
+
+```bash
+uv venv .venv && uv pip install -r requirements.txt        # 최초 1회
+python run.py doctor                                      # 저장소·소스 상태 점검
+python run.py collect --date YYYY-MM-DD                   # RSS·YouTube·본문 수집
+python run.py render  --date YYYY-MM-DD --publish         # 마크다운 생성 후 커밋·푸시
+python run.py weekly  && python run.py render-weekly --publish
+```
+
+- `collect` 결과는 `work/<날짜>/candidates.json`, `stats.json`, `prompt.md`에 남는다(`work/`는 커밋하지 않는다).
+- 에이전트는 `prompt.md`를 읽고 `work/<날짜>/summaries.json`을 작성한다.
+  - 형식: `{"date": "...", "items": {"tech-1": {"title_ko": "...", "bullets": ["...","...","..."]}}}`
+  - 요약할 수 없는 항목은 `{"skip": true, "reason": "..."}`로 표시한다.
+- `render`는 candidates와 summaries를 id로 병합해 파일을 쓰고, 같은 날짜의 이름이 다른 기존 파일은 지운다.
+- 소스 목록의 기준은 계속 `README.md`다. 피드 URL이 깨졌을 때만 `pipeline/overrides.json`에 대체 URL을 적는다.
+- 실행 결과는 `log/YYYY-MM-DD.md`에 남긴다. 실패한 소스와 원인을 숨기지 않는다.
+
+## 11. 품질 원칙
 
 - 실제 새 콘텐츠가 적은 날은 적게 기록해도 된다.
 - 날짜·제목·URL·내용이 충돌하면 원문/공식 채널을 우선한다.

@@ -14,26 +14,44 @@
 DailyFeed/
 ├─ README.md
 ├─ AGENT.md
+├─ run.py                 # 수집·렌더·발행 오케스트레이터
+├─ pipeline/              # RSS·YouTube·본문 추출·중복 판정
 ├─ geeknews/
-│  └─ YYYY/MM/YYYY-MM-DD.md
+│  └─ YYYY년M월/YYYY-MM-DD_주요기사.md
 ├─ tech/
-│  └─ YYYY/MM/YYYY-MM-DD.md
+│  └─ YYYY년M월/YYYY-MM-DD_주요기사.md
 ├─ github/
-│  └─ YYYYMMDD_github_weekly.md
+│  └─ YYYY년M월/YYYY-MM-DD_주요기사.md
 └─ youtube/
-   └─ YYYYMMDD_youtube_tech.md
+   └─ YYYY년M월/YYYY-MM-DD_주요기사.md
 ```
 
 예시:
 
 ```text
-geeknews/2026/10/2026-10-18.md
-tech/2026/10/2026-10-18.md
-youtube/20261018_youtube_tech.md
-github/20261019_github_weekly.md
+geeknews/2026년10월/2026-10-20_Show-HN-Qwen3-4B의-AI.md
+tech/2026년10월/2026-10-20_투기적-실행으로-호텔-예약-전화-응대.md
+youtube/2026년10월/2026-10-20_프로덕션-DB에-AI-코딩-에이전트를.md
+github/2026년10월/2026-10-19_rea.md
 ```
 
-> `github/20261017_github.md`는 초기 설정 과정에서 생성한 Daily Trending 테스트 스냅샷이며, 이후 정기 파일은 Weekly 형식만 사용합니다.
+파일명은 `날짜_주요기사20자.md`이며, 주요기사는 파일의 첫 항목 제목을 20자로 줄인 값입니다.
+
+> `github/2026년10월/2026-10-17_claude-plugins-offic.md`는 초기 설정 과정에서 생성한 Daily Trending 테스트 스냅샷이며, 이후 정기 파일은 Weekly 형식만 사용합니다.
+
+## 로컬 실행
+
+```bash
+uv venv .venv && uv pip install -r requirements.txt   # 최초 1회
+.venv/Scripts/python.exe run.py doctor               # 저장소·소스 점검
+.venv/Scripts/python.exe run.py collect --date 2026-10-20
+.venv/Scripts/python.exe run.py render  --date 2026-10-20 --publish
+```
+
+- 수집은 RSS/YouTube 채널 피드/GitHub Trending HTML을 직접 요청합니다(웹 검색 의존 없음).
+- 요약은 에이전트가 `work/<날짜>/prompt.md`를 읽고 `summaries.json`을 쓴 뒤 `render`가 병합합니다.
+- 상세 규칙은 [`AGENT.md`](./AGENT.md) 10장을 참조합니다.
+
 
 ## 정기 생성 파일
 
