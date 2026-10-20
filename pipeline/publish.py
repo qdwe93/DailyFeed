@@ -46,7 +46,8 @@ def publish(paths: list[Path], message: str, push: bool = True) -> dict:
         _run(["add", "--", *rel])
         staged = git("diff", "--cached", "--name-only").stdout.strip()
         if not staged:
-            out["error"] = "nothing staged (content unchanged)"
+            out["error"] = None
+            out["note"] = "no changes to commit (content identical)"
             return out
         _run(["commit", "-m", message])
         commit = _run(["rev-parse", "HEAD"])
