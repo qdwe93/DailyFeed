@@ -1,0 +1,46 @@
+# YouTube Tech — 2026-10-20
+
+## OpenAI
+
+### Thomson Reuters, 법률 AI에서 신뢰 구축하기
+https://www.youtube.com/watch?v=7lC2N9woZy4
+
+- Thomson Reuters가 OpenAI와 협력하여 HighQ 및 CoCounsel Legal을 ChatGPT Enterprise에 통합했다.
+- 변호사가 결과를 검증·인용하고 자신의 이름으로 서명할 수 있는 수준의 출력 신뢰성을 목표로 한다.
+- 법률 전문지식과 프론티어 AI를 하나의 플랫폼에서 연결하는 접근 방식을 설명한다.
+
+## Google Cloud Tech
+
+### 프로덕션 DB에 AI 코딩 에이전트를 붙여도 될까?
+https://www.youtube.com/watch?v=fNImL07VZMk
+
+- Google 개발자 애드버킷 Martin Omander가 AI 코딩 어시스턴트에 운영 DB 직접 접근 권한을 주는 위험을 설명한다.
+- 환각으로 테이블이 날아가는 사고와 GDPR·EU AI Act 위반 과징금 같은 실제 위험을 지적한다.
+- 에이전트를 샌드박스로 격리하고 합성 목 데이터를 쓰는 방식으로 파이프라인을 안전하게 유지하는 방법을 보여준다.
+
+## Claude
+
+### Claude 대시보드와 Claude Motion 베타 공개
+https://www.youtube.com/watch?v=_Ui4ZkYm4ho
+
+- Claude Dashboards는 데이터 플랫폼·CRM에 연결해 데이터가 바뀌면 함께 갱신되는 라이브 대시보드를 만든다.
+- Claude Motion은 보고서나 차트를 짧은 애니메이션 설명 영상으로 바꾸며, 영상 모델 없이 코드로 생성해 문구·수치·타이밍을 수정할 수 있다.
+- Claude Docs·Slides·Design이 베타를 졸업하고 Free를 포함한 모든 플랜에서 제공된다.
+
+## OpenAI
+
+### Cooking with Codex Ep.1 — Codex 클라우드 환경과 CLI 신기능
+https://www.youtube.com/watch?v=DQHtmW9ZlIs
+
+- Codex로 라면 레시피를 계획하고 ChatGPT Space에서 조리 과정을 정리하는 실사용 예시를 보여준다.
+- 노트북을 닫아도 작업이 계속되는 Codex 클라우드 환경과 음성 입력, 에이전트 관리, 워크트리로 대화 분기 같은 CLI 신기능을 소개한다.
+- 커뮤니티 프로젝트로 8비트 라면 게임, 레트로 슈팅 게임, 손그림 레이싱 게임을 시연한다.
+
+## Microsoft Developer
+
+### Work IQ의 MCP retrieve 도구 — 에이전트가 사내 지식을 검색하는 방식
+https://www.youtube.com/watch?v=mwl4fev1hDI
+
+- Microsoft Work IQ에 추가된 retrieve MCP 도구는 에이전트가 메일·파일·회의·Teams 메시지·조직 정보 등 업무 데이터를 검색하게 한다.
+- 사용자가 이미 접근 권한을 가진 소스만 조회하도록 기존 권한 체계를 그대로 존중하는 것이 설계 원칙이다.
+- Copilot Retrieval API를 에이전트 소비에 맞게 재설계해, 판단과 실행의 근거를 사내 지식에 두도록 확장하는 것이 목표다.
