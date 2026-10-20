@@ -433,6 +433,29 @@ def doctor(_args) -> int:
     return 0
 
 
+def daily_lite(args) -> int:
+    """No-LLM daily path: GeekNews titles are already Korean, so publish without summaries."""
+    target = parse_date(args.date) if args.date else default_target_date()
+    existing = list((ROOT / "geeknews" / month_dir(target)).glob(f"{target:%Y-%m-%d}_*.md"))
+    if existing:
+        print(f"skip: {existing[0].relative_to(ROOT)} already exists (lite mode never overwrites curated files)")
+        return 0
+    collect_args = argparse.Namespace(
+        date=target.strftime("%Y-%m-%d"),
+        channels="geeknews",
+        workers=args.workers,
+        include_undated=False,
+    )
+    collect(collect_args)
+    render_args = argparse.Namespace(
+        date=target.strftime("%Y-%m-%d"),
+        publish=not args.no_publish,
+        no_push=False,
+        message=f"daily: add {target:%Y-%m-%d} GeekNews",
+    )
+    return render_cmd(render_args)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="DailyFeed pipeline")
     sub = parser.add_subparsers(dest="cmd", required=True)
@@ -464,6 +487,12 @@ def main(argv: list[str] | None = None) -> int:
 
     p_doctor = sub.add_parser("doctor", help="check repo + source reachability")
     p_doctor.set_defaults(func=doctor)
+
+    p_lite = sub.add_parser("daily-lite", help="GeekNews only, no LLM needed")
+    p_lite.add_argument("--date")
+    p_lite.add_argument("--workers", type=int, default=8)
+    p_lite.add_argument("--no-publish", action="store_true")
+    p_lite.set_defaults(func=daily_lite)
 
     args = parser.parse_args(argv)
     return args.func(args)
