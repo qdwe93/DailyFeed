@@ -214,6 +214,10 @@ python run.py weekly  && python run.py render-weekly --publish
 ```
 
 - `collect` 결과는 `work/<날짜>/candidates.json`, `stats.json`, `prompt.md`에 남는다(`work/`는 커밋하지 않는다).
+- `collect`는 같은 날짜의 이전 스냅샷(`candidates.json`)과 URL 기준으로 합집합을 만든다.
+  GeekNews RSS는 최신 50건만 주므로, 08:00 실행만으로는 전날 아침 항목이 사라질 수 있기 때문이다.
+  - 00:10 KST 스냅샷(`dailyfeed-snapshot.sh`)이 먼저 수집해 두고, 08:00 실행이 이를 합친다.
+  - 합칠 때 기존 항목의 id는 유지된다. 처음부터 다시 수집하려면 `--fresh`를 준다.
 - 에이전트는 `prompt.md`를 읽고 `work/<날짜>/summaries.json`을 작성한다.
   - 형식: `{"date": "...", "items": {"tech-1": {"title_ko": "...", "bullets": ["...","...","..."]}}}`
   - 요약할 수 없는 항목은 `{"skip": true, "reason": "..."}`로 표시한다.

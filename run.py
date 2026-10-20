@@ -33,6 +33,7 @@ from pipeline.util import (
     now_kst,
     parse_date,
     parse_readme,
+    read_json,
     urls_in_markdown,
     write_json,
 )
@@ -118,6 +119,38 @@ def _drop_stale_files(channel: str, target: datetime, keep: Path | None = None) 
 
 
 # --------------------------------------------------------------------- collect
+
+
+def merge_with_previous(payload: dict, date_dir: Path) -> dict:
+    """Union this run with an earlier snapshot of the same date.
+
+    Feeds (especially GeekNews, 50 items) roll off within hours, so a 00:10 snapshot keeps
+    items that a later run would silently lose. Previous items keep their ids.
+    """
+    previous = read_json(date_dir / "candidates.json")
+    if not previous:
+        return payload
+    for channel, block in payload["channels"].items():
+        old_block = previous.get("channels", {}).get(channel)
+        if not old_block:
+            continue
+        old_items = old_block.get("items", [])
+        if not old_items:
+            continue
+        seen = {item.get("canonical") for item in old_items}
+        merged = list(old_items)
+        for item in block["items"]:
+            if item.get("canonical") in seen:
+                continue
+            merged.append(item)
+        for i, item in enumerate(merged, start=1):
+            item["id"] = f"{channel}-{i}"
+        block["items"] = merged
+        block["count"] = len(merged)
+        snaps = payload.setdefault("merged_snapshots", [])
+        if previous.get("collected_at") not in snaps:
+            snaps.append(previous.get("collected_at"))
+    return payload
 
 
 def collect(args) -> int:
@@ -222,6 +255,9 @@ def collect(args) -> int:
     for channel, block in payload["channels"].items():
         for i, item in enumerate(block["items"], start=1):
             item["id"] = f"{channel}-{i}"
+
+    if not getattr(args, "fresh", False):
+        payload = merge_with_previous(payload, date_dir)
 
     write_json(date_dir / "candidates.json", payload)
     write_json(date_dir / "stats.json", {"counts": counts, "sources": payload["sources"]})
@@ -465,6 +501,7 @@ def main(argv: list[str] | None = None) -> int:
     p_collect.add_argument("--channels", default="geeknews,tech,youtube")
     p_collect.add_argument("--workers", type=int, default=8)
     p_collect.add_argument("--include-undated", action="store_true")
+    p_collect.add_argument("--fresh", action="store_true", help="ignore the earlier snapshot for this date")
     p_collect.set_defaults(func=collect)
 
     p_render = sub.add_parser("render", help="write markdown from candidates + summaries")
