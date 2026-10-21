@@ -1,105 +1,113 @@
 # DailyFeed
 
 기술 뉴스, 기술 블로그, 기술 YouTube 영상과 GitHub Trending을 Markdown으로 보관하는 저장소입니다.
+수집·요약·업로드는 로컬 PC에서 `run.py auto` 하나로 자동 실행되며, 요약은 opencode의 **무료 LLM**이 맡습니다.
 
 - 기준 시간대: **Asia/Seoul (KST)**
-- **매일 00:30 KST**: GeekNews / Tech Feeds / YouTube Tech
-- **매주 월요일 00:30 KST**: GitHub Trending Weekly
-- 일일 수집 대상 날짜: 실행 시점의 **전날**
+- **매일 12:00 KST** (Windows 작업 스케줄러): GeekNews / Tech Feeds / YouTube Tech
+  - 수집 범위: **직전 실행 이후** 새로 올라온 글 전부. PC가 꺼져 실행을 건너뛰어도 다음 실행이 빈 구간을 모두 가져옵니다.
+  - 파일 날짜: **실행일**
+- **GitHub Trending Weekly**: 월요일 실행 때, 또는 마지막 스냅샷 후 7일이 지났으면 그다음 실행 때 보충
 - 외국어 제목과 요약은 한국어로 번역하고 원문 URL은 그대로 유지합니다.
+- 실행 결과(성공·실패)는 Discord/Slack 웹훅으로 알립니다.
 
 ## 저장 구조
 
 ```text
 DailyFeed/
-├─ README.md
-├─ AGENT.md
-├─ run.py                 # 수집·렌더·발행 오케스트레이터
-├─ pipeline/              # RSS·YouTube·본문 추출·중복 판정
-├─ geeknews/
+├─ README.md / AGENT.md
+├─ run.py                 # 오케스트레이터 (auto = 정기 실행 전체)
+├─ pipeline/              # 수집·대체 수집·요약·렌더·발행
+├─ models/
+│  ├─ available.md        # 매 실행 전 점검한 무료 모델 목록과 점수 (자동 갱신)
+│  └─ priority.txt        # 사용할 모델 우선순위 (사용자가 편집)
+├─ state/run_state.json   # 채널별 마지막 실행 시각, 마지막 사용 모델
+├─ log/YYYY-MM-DD.md      # 실행 로그: 수집 실패 원인과 대체 시도 기록
+├─ geeknews/ tech/ youtube/ github/
 │  └─ YYYY년M월/YYYY-MM-DD_주요기사.md
-├─ tech/
-│  └─ YYYY년M월/YYYY-MM-DD_주요기사.md
-├─ github/
-│  └─ YYYY년M월/YYYY-MM-DD_주요기사.md
-└─ youtube/
-   └─ YYYY년M월/YYYY-MM-DD_주요기사.md
-```
-
-예시:
-
-```text
-geeknews/2026년10월/2026-10-20_Show-HN-Qwen3-4B의-AI.md
-tech/2026년10월/2026-10-20_투기적-실행으로-호텔-예약-전화-응대.md
-youtube/2026년10월/2026-10-20_프로덕션-DB에-AI-코딩-에이전트를.md
-github/2026년10월/2026-10-19_rea.md
 ```
 
 파일명은 `날짜_주요기사20자.md`이며, 주요기사는 파일의 첫 항목 제목을 20자로 줄인 값입니다.
 
-> `github/2026년10월/2026-10-17_claude-plugins-offic.md`는 초기 설정 과정에서 생성한 Daily Trending 테스트 스냅샷이며, 이후 정기 파일은 Weekly 형식만 사용합니다.
+> `github/2026년10월/2026-10-17_claude-plugins-offic.md`는 초기 설정 과정에서 생성한 Daily Trending 테스트 스냅샷입니다.
+> 2026-10-20까지의 파일은 "대상일 = 전날" 방식, 2026-10-21부터는 "직전 실행 이후" 방식입니다.
+
+## 무료 모델 관리
+
+1. 매 실행 전 `opencode models`에서 opencode 무료 모델(`-free`, 가격 0)을 찾아 같은 요약 과제로 시험합니다.
+2. 결과를 [`models/available.md`](./models/available.md)에 올립니다(응답 여부, 점수, 응답 시간, 새로 생기거나 사라진 모델).
+3. [`models/priority.txt`](./models/priority.txt)에 한 줄에 하나씩 모델을 적으면 위에서부터 사용합니다. GitHub 웹에서 고쳐도 다음 실행이 먼저 `git pull`해서 반영합니다.
+4. 우선순위가 비어 있거나 모두 실패하면 **마지막으로 성공한 모델 → 점수순**으로 넘어갑니다.
+5. opencode 무료 모델이 하나도 응답하지 않을 때만 OpenRouter `:free` 모델을 씁니다. 그것도 없으면 GeekNews만 올리고 Tech/YouTube는 다음 실행으로 보류합니다.
+
+## 수집 실패 대응
+
+소스 요청이 실패하면 원인을 먼저 분류하고(DNS, Cloudflare 차단, 403/404/429/5xx, 파싱 오류, 빈 피드 등) 아래 순서로 다시 시도합니다.
+
+1. 피드 주소 자동 탐색 (404·파싱 오류일 때, 찾으면 `pipeline/overrides.json`에 자동 반영)
+2. crawl4ai (헤드리스 브라우저)
+3. Apify `web-fetch` (실행당 최대 20회, 회당 약 $0.0016)
+4. Playwright
+5. opencode 에이전트 웹 검색 (게시 시각이 확인된 원문 URL만 채택)
+
+본문 추출이 비는 글은 2~4번으로 본문을 다시 가져옵니다. GeekNews RSS(최신 50건)가 직전 실행 시점까지 닿지 않으면 `news.hada.io/past` 날짜 페이지로 빈 구간을 채웁니다. 모든 시도와 결과는 `log/`에 남깁니다.
 
 ## 로컬 실행
 
 ```bash
 uv venv .venv && uv pip install -r requirements.txt   # 최초 1회
+.venv/Scripts/python.exe run.py auto                 # 정기 실행과 동일 (수동 실행도 이것)
+.venv/Scripts/python.exe run.py models               # 무료 모델 점검만
 .venv/Scripts/python.exe run.py doctor               # 저장소·소스 점검
-.venv/Scripts/python.exe run.py collect --date 2026-10-20
-.venv/Scripts/python.exe run.py render  --date 2026-10-20 --publish
+.venv/Scripts/python.exe run.py collect --date 2026-10-20   # 특정 하루만 수집 (구 방식)
 ```
 
-- 수집은 RSS/YouTube 채널 피드/GitHub Trending HTML을 직접 요청합니다(웹 검색 의존 없음).
-- 요약은 에이전트가 `work/<날짜>/prompt.md`를 읽고 `summaries.json`을 쓴 뒤 `render`가 병합합니다.
-- 상세 규칙은 [`AGENT.md`](./AGENT.md) 10장을 참조합니다.
-
+- 알림 웹훅은 공개 저장소에 두지 않습니다. `%USERPROFILE%\.dailyfeed\config.json`에
+  `{"discord_webhook": "..."}` 또는 `{"slack_webhook": "..."}`를 적습니다.
+- Apify는 환경 변수 `APIFY_TOKEN`을 씁니다.
+- 상세 규칙은 [`AGENT.md`](./AGENT.md)를 참조합니다.
 
 ## 정기 생성 파일
 
 ### 1. GeekNews — 매일
 
-경로: `geeknews/YYYY/MM/YYYY-MM-DD.md`
+경로: `geeknews/YYYY년M월/YYYY-MM-DD_주요기사.md`
 
-- 대상 날짜에 새로 등록된 글 중 **AI·IT·개발·소프트웨어·인프라·보안·데이터·오픈소스 등 기술 관련 항목만** 수록합니다.
+- 직전 실행 이후 새로 등록된 글 중 **AI·IT·개발·소프트웨어·인프라·보안·데이터·오픈소스 등 기술 관련 항목만** 수록합니다.
 - 형식은 **한국어 제목 + 링크**만 사용합니다.
-- 별도 요약은 작성하지 않습니다.
 
 ### 2. Tech Feeds — 매일
 
-경로: `tech/YYYY/MM/YYYY-MM-DD.md`
+경로: `tech/YYYY년M월/YYYY-MM-DD_주요기사.md`
 
 - GeekNews를 제외한 아래 기술 피드 및 공식 채널을 확인합니다.
-- 각 글은 **한국어 제목 + 원문 URL + 핵심 내용 약 3줄**로 정리합니다.
-- 외국어 글은 제목과 요약을 한국어로 번역합니다.
+- 각 글은 **한국어 제목 + 원문 URL + 핵심 내용 5줄**로 정리합니다.
 - 새 글이 없는 피드는 표시하지 않습니다.
 
 ### 3. YouTube Tech — 매일
 
-경로: `youtube/YYYYMMDD_youtube_tech.md`
+경로: `youtube/YYYY년M월/YYYY-MM-DD_주요기사.md`
 
-- 아래 지정 채널에서 대상 날짜 **00:00~23:59 KST에 새로 공개된 기술 영상**을 확인합니다.
-- 형식은 **한국어 제목 + YouTube URL + 핵심 내용 약 3줄**입니다.
-- 외국어 영상은 제목과 요약을 한국어로 번역합니다.
+- 아래 지정 채널에서 직전 실행 이후 공개된 **기술 영상**을 확인합니다.
+- 형식은 **한국어 제목 + YouTube URL + 핵심 내용 5줄**입니다.
 - Shorts, 회사 홍보, 채용 홍보, 행사 티저, 일반 마케팅 등 **기술적 내용이 부족한 영상은 제외**합니다.
-- 자막을 확인할 수 있으면 자막을 우선하고, 없으면 공식 설명과 공개 메타데이터로 요약합니다.
+- 공식 설명과 공개 메타데이터로 요약하고, 설명이 부족하면 추측하지 않고 제외합니다.
 
 ### 4. GitHub Trending Weekly — 매주 월요일
 
-경로: `github/YYYYMMDD_github_weekly.md`
+경로: `github/YYYY년M월/YYYY-MM-DD_주요기사.md`
 
-- **매주 월요일 00:30 KST**에 GitHub 공식 Trending의 **Weekly / All Languages 상위 10개**를 확인합니다.
-- 파일명의 날짜는 **실행일(월요일)** 입니다.
-- 저장소명, GitHub URL, 주 언어, 주간 증가 Star 수(확인 가능한 경우), 한국어 설명을 기록합니다.
-- GitHub 공식 페이지를 우선하고 공식 페이지 확인이 어려울 때만 신뢰 가능한 아카이브/트래커를 보조적으로 사용합니다.
-- 순위와 Star 수는 해당 시점의 GitHub Weekly Trending 스냅샷이며 별도의 주간 통계 재계산값이 아닙니다.
+- GitHub 공식 Trending의 **Weekly / All Languages 상위 10개**를 확인합니다. 파일명의 날짜는 실행일입니다.
+- 저장소명, GitHub URL, 주 언어, 주간 증가 Star 수, README 기반 한국어 설명 2줄을 기록합니다.
+- 월요일 실행을 놓쳐 마지막 스냅샷 후 7일이 지났으면 다음 실행 때 바로 수집합니다.
 
 ## 날짜 및 중복 처리 규칙
 
-1. 게시 날짜/업로드 날짜가 명시된 콘텐츠는 해당 날짜를 우선합니다.
-2. 날짜가 없는 소스는 canonical/original URL 기준으로 과거 파일과 중복 여부를 확인합니다.
-3. 동일 URL은 다시 기록하지 않습니다.
-4. 기존 콘텐츠의 단순 수정·재노출은 신규로 취급하지 않습니다.
-5. 날짜나 신규 여부를 확인할 수 없으면 추정해서 수록하지 않습니다.
-6. GitHub Trending은 일일 날짜 판정 규칙을 적용하지 않고 **매주 월요일 00:30의 Weekly Trending 스냅샷**을 저장합니다.
+1. 게시 시각이 직전 실행 시각 이후이고 이번 실행 시각 이전인 콘텐츠만 수록합니다.
+2. 같은 canonical URL이 과거 파일에 있으면 다시 기록하지 않습니다.
+3. 기존 콘텐츠의 단순 수정·재노출은 신규로 취급하지 않습니다.
+4. 날짜나 신규 여부를 확인할 수 없으면 추정해서 수록하지 않습니다.
+5. 같은 날 다시 실행하면 그날 파일에 새 항목을 합칩니다(이미 올린 항목은 유지).
 
 # Tech Feed 구독 소스
 

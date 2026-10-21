@@ -59,8 +59,17 @@ def entry_datetime(entry) -> datetime | None:
     return None
 
 
+def _blocked_by(resp: httpx.Response | None) -> str | None:
+    if resp is None:
+        return None
+    server = resp.headers.get("server", "").lower()
+    if "cf-ray" in resp.headers or "cloudflare" in server or "just a moment" in resp.text[:2000].lower():
+        return "cloudflare"
+    return server or None
+
+
 def fetch_feed(source: dict) -> dict:
-    """Return {entries: [...], error: str|None}. Never raises."""
+    """Return {entries: [...], error: str|None, status, blocked_by}. Never raises."""
     out = {"source": source["name"], "url": source["url"], "entries": [], "error": None}
     content = None
     err = None
@@ -70,15 +79,25 @@ def fetch_feed(source: dict) -> dict:
             break
         except Exception as exc:  # noqa: BLE001
             err = f"{type(exc).__name__}: {exc}"[:200]
+            resp = getattr(exc, "response", None)
+            if resp is not None:
+                out["status"] = resp.status_code
+                out["blocked_by"] = _blocked_by(resp)
     if content is None:
         out["error"] = err or "no content"
         return out
+    out["entries"], out["error"] = parse_feed(content)
+    return out
 
+
+def parse_feed(content: bytes | str) -> tuple[list[dict], str | None]:
+    """Feed bytes -> normalized entries. Shared by the direct fetch and the rescue fetchers."""
     feed = feedparser.parse(content)
     if not feed.entries and feed.bozo:
-        out["error"] = f"parse: {type(feed.get('bozo_exception')).__name__}"
-        return out
-
+        return [], f"parse: {type(feed.get('bozo_exception')).__name__}"
+    if not feed.entries:
+        return [], "empty feed"
+    entries = []
     for entry in feed.entries:
         raw_link = entry.get("link") or ""
         vid = youtube_id(raw_link) or entry.get("yt_videoid")
@@ -87,7 +106,7 @@ def fetch_feed(source: dict) -> dict:
         body = ""
         if entry.get("content"):
             body = _strip_html(" ".join(c.get("value", "") for c in entry["content"]))
-        out["entries"].append(
+        entries.append(
             {
                 "title": _strip_html(entry.get("title") or "").strip(),
                 "url": link,
@@ -97,7 +116,7 @@ def fetch_feed(source: dict) -> dict:
                 "author": entry.get("author") or "",
             }
         )
-    return out
+    return entries, None
 
 
 def fetch_all(sources: list[dict], workers: int = 10) -> list[dict]:
@@ -132,6 +151,7 @@ def fetch_youtube(channels: list[dict]) -> list[dict]:
             feed_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}"
             out.update(fetch_feed({"name": channel["name"], "url": feed_url}))
             out["url"] = channel["url"]
+            out["feed_url"] = feed_url
             out["channel_id"] = cid
         except Exception as exc:  # noqa: BLE001
             out["error"] = f"{type(exc).__name__}: {exc}"[:200]
@@ -146,16 +166,26 @@ def fetch_youtube(channels: list[dict]) -> list[dict]:
 
 def fetch_trending(limit: int = 10) -> dict:
     """Parse https://github.com/trending?since=weekly (official page only)."""
-    out = {"entries": [], "error": None, "source": "https://github.com/trending?since=weekly"}
+    out = {"entries": [], "error": None, "source": TRENDING_URL}
     try:
-        resp = get("https://github.com/trending?since=weekly")
+        resp = get(TRENDING_URL)
     except Exception as exc:  # noqa: BLE001
         out["error"] = f"{type(exc).__name__}: {exc}"[:200]
         return out
+    out["entries"] = parse_trending(resp.text, limit)
+    if not out["entries"]:
+        out["error"] = "no rows parsed"
+    return out
 
+
+TRENDING_URL = "https://github.com/trending?since=weekly"
+
+
+def parse_trending(page: str, limit: int = 10) -> list[dict]:
     import lxml.html
 
-    doc = lxml.html.fromstring(resp.text)
+    entries = []
+    doc = lxml.html.fromstring(page)
     for article in doc.cssselect("article.Box-row")[:limit]:
         links = article.cssselect("h2 a")
         if not links:
@@ -167,7 +197,7 @@ def fetch_trending(limit: int = 10) -> dict:
         stars = article.cssselect("span.d-inline-block.float-sm-right")
         star_text = stars[0].text_content().strip() if stars else ""
         desc = article.cssselect("p")
-        out["entries"].append(
+        entries.append(
             {
                 "repo": href,
                 "url": f"https://github.com/{href}",
@@ -176,6 +206,16 @@ def fetch_trending(limit: int = 10) -> dict:
                 "stars": re.sub(r"\s+", " ", star_text).strip(),
             }
         )
-    if not out["entries"]:
-        out["error"] = "no rows parsed"
-    return out
+    return entries
+
+
+def readme_excerpt(repo: str, limit: int = 1800) -> str:
+    """README head for the weekly summarizer (AGENT.md 6: describe what it really does)."""
+    for branch in ("HEAD", "main", "master"):
+        try:
+            text = get(f"https://raw.githubusercontent.com/{repo}/{branch}/README.md", retries=0).text
+        except Exception:  # noqa: BLE001
+            continue
+        text = re.sub(r"<[^>]+>|!\[[^\]]*\]\([^)]*\)", " ", text)
+        return re.sub(r"\n{2,}", "\n", text).strip()[:limit]
+    return ""

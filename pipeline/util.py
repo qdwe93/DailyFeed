@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import re
+import subprocess
+import sys
 import unicodedata
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -33,9 +35,30 @@ HEADERS = {
 
 CHANNELS = ("geeknews", "tech", "youtube", "github")
 
+# Scheduled runs use pythonw; without this every git/opencode child opens a console window.
+NO_WINDOW = subprocess.CREATE_NO_WINDOW if sys.platform == "win32" else 0
+
+HANGUL_RE = re.compile(r"[가-힣]")
+
 
 def now_kst() -> datetime:
     return datetime.now(KST)
+
+
+def parse_iso(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        stamp = datetime.fromisoformat(value)
+    except ValueError:
+        return None
+    return stamp if stamp.tzinfo else stamp.replace(tzinfo=KST)
+
+
+def in_window(published: str | None, start: datetime, end: datetime) -> bool:
+    """start < published <= end. Undated items never match (AGENT.md section 3)."""
+    stamp = parse_iso(published)
+    return bool(stamp) and start < stamp <= end
 
 
 def parse_date(value: str) -> datetime:

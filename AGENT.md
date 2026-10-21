@@ -5,14 +5,14 @@
 ## 1. 실행 기준
 
 - 기준 시간대: `Asia/Seoul`
-- 일일 실행: 매일 `08:00`
+- 일일 실행: 매일 `12:00` (Windows 작업 스케줄러 → `run.py auto`)
   - `geeknews/<YYYY년M월>/<YYYY-MM-DD>_<주요기사>.md`
   - `tech/<YYYY년M월>/<YYYY-MM-DD>_<주요기사>.md`
   - `youtube/<YYYY년M월>/<YYYY-MM-DD>_<주요기사>.md`
-- 주간 실행: 매주 월요일 `08:00`
+- 주간 실행: 월요일 일일 실행 때 함께. 마지막 스냅샷 후 7일이 지났으면 그다음 실행 때 보충한다.
   - `github/<YYYY년M월>/<YYYY-MM-DD>_<주요기사>.md`
-- 일일 대상 날짜: 실행일의 전날(KST)
-- GitHub Weekly 파일명의 날짜는 실행일(월요일)이다.
+- 수집 범위: 채널별 **직전 성공 실행 시각 이후 ~ 이번 실행 시각** (`state/run_state.json`). PC가 꺼져 건너뛴 날도 다음 실행이 모두 가져온다.
+- 파일명의 날짜는 실행일(KST)이다. 2026-10-20까지의 파일은 "대상일 = 전날" 방식으로 만들었다.
 - 파일명의 `<주요기사>`는 그 파일의 첫 번째 항목 제목을 20자로 줄인 값이다.
   - 공백은 `-`로 바꾸고, 파일명에 쓸 수 없는 문자(`\ / : * ? " < > |`)는 제거한다.
   - 20자를 넘으면 자르고 끝의 `-`·`.`를 지운다. 항목이 없으면 `신규없음`을 쓴다.
@@ -30,12 +30,12 @@
 ## 3. 날짜 판정
 
 1. 게시일 또는 업로드일이 명시된 콘텐츠는 해당 날짜를 사용한다.
-2. 일일 파일에는 대상 날짜와 날짜가 일치하는 신규 콘텐츠만 수록한다.
+2. 일일 파일에는 게시 시각이 수집 범위(직전 실행 이후 ~ 이번 실행) 안에 있는 신규 콘텐츠만 수록한다.
 3. 날짜가 없는 항목은 canonical/original URL 기준으로 과거 파일을 검색한다.
 4. 과거 파일에 동일 URL이 있으면 다시 기록하지 않는다.
 5. 날짜가 불명확하고 신규 여부도 확인할 수 없으면 수록하지 않는다.
 6. 기존 글/영상의 단순 수정·재노출은 새 콘텐츠로 취급하지 않는다.
-7. GitHub Trending은 위 날짜 판정 규칙 대신 매주 월요일 00:30 KST 시점의 Weekly Trending 스냅샷을 저장한다.
+7. GitHub Trending은 위 날짜 판정 규칙 대신 실행 시점의 Weekly Trending 스냅샷을 저장한다.
 
 ## 4. GeekNews 규칙
 
@@ -84,9 +84,11 @@
 - 핵심 내용 첫째 줄
 - 핵심 내용 둘째 줄
 - 핵심 내용 셋째 줄
+- 핵심 내용 넷째 줄
+- 핵심 내용 다섯째 줄
 ```
 
-- 보통 3줄로 요약한다.
+- 정확히 5줄로 요약한다. 각 줄은 한 문장.
 - 마케팅 문구를 그대로 옮기지 말고 기술적 핵심을 사실 위주로 요약한다.
 - 해당 날짜에 신규 글이 없는 소스는 생략한다.
 - 전체 Tech 소스에서 신규 글이 없으면 `해당 날짜에 확인된 신규 글 없음.`이라고 기록한다.
@@ -95,11 +97,11 @@
 
 ### 실행 및 기준
 
-- 실행: **매주 월요일 00:30 KST**
+- 실행: **월요일 일일 실행 때** (놓쳤으면 7일 경과 후 첫 실행 때 보충)
 - 1차 소스: `https://github.com/trending?since=weekly`
 - 조건: **Weekly / All Languages**
 - 수량: 상위 **10개 repository**
-- 결과 경로: `github/YYYYMMDD_github_weekly.md`
+- 결과 경로: `github/<YYYY년M월>/<YYYY-MM-DD>_<주요기사>.md`
 - 파일명의 날짜는 실행일(월요일)이다.
 - 관측 시점의 GitHub Weekly Trending을 그대로 스냅샷으로 저장한다.
 - GitHub Trending은 과거 특정 주차를 공식적으로 직접 조회할 수 있는 데이터가 아니므로 소급 생성은 원칙적으로 하지 않는다.
@@ -173,8 +175,11 @@ https://www.youtube.com/watch?v=...
 - 핵심 내용 첫째 줄
 - 핵심 내용 둘째 줄
 - 핵심 내용 셋째 줄
+- 핵심 내용 넷째 줄
+- 핵심 내용 다섯째 줄
 ```
 
+- 정확히 5줄로 요약한다.
 - 원래 제목이 외국어면 자연스러운 한국어로 번역한다.
 - 한국어 원제는 과도하게 바꾸지 않는다.
 - 자막/스크립트를 확인할 수 있으면 이를 가장 우선한다.
@@ -194,36 +199,39 @@ https://www.youtube.com/watch?v=...
 - 채널 폴더는 `geeknews/`, `tech/`, `youtube/`, `github/` 이고, 그 아래 `YYYY년M월` 월 폴더를 둔다.
 - 파일명은 `YYYY-MM-DD_주요기사20자.md` 형식이다(1장 참조).
 - 이미 같은 날짜 파일이 있으면 새 파일을 만들지 말고 필요한 경우 갱신한다.
-- 권장 커밋 메시지:
-  - `daily: add YYYY-MM-DD GeekNews`
-  - `daily: add YYYY-MM-DD tech feeds`
-  - `daily: add YYYYMMDD YouTube tech`
-  - `weekly: add YYYYMMDD GitHub trending`
-- 자동 실행 후 채팅에는 내용을 다시 길게 출력하지 말고 성공/실패와 생성된 GitHub 경로만 간단히 알린다.
+- 자동 실행은 산출물 폴더(`geeknews/ tech/ youtube/ github/ models/ state/ log/`)를 한 커밋으로 올린다.
+  - 커밋 메시지: `daily: YYYY-MM-DD HH:MM (geeknews N, tech N, youtube N[, github N])`
+- 실행 결과는 Discord/Slack 웹훅으로 성공/실패, 건수, 실패 소스와 복구 결과, 생성 파일 링크만 짧게 알린다.
 
 ## 10. 로컬 실행 파이프라인
 
-수집은 결정론적 스크립트가 맡고, 요약만 에이전트가 맡는다.
+수집은 결정론적 스크립트가 맡고, 요약만 LLM(opencode 무료 모델)이 맡는다. 정기 실행과 수동 실행 모두 `run.py auto` 하나다.
 
 ```bash
 uv venv .venv && uv pip install -r requirements.txt        # 최초 1회
-python run.py doctor                                      # 저장소·소스 상태 점검
-python run.py collect --date YYYY-MM-DD                   # RSS·YouTube·본문 수집
-python run.py render  --date YYYY-MM-DD --publish         # 마크다운 생성 후 커밋·푸시
-python run.py weekly  && python run.py render-weekly --publish
+python run.py auto                                         # 전체 실행 (정기 실행과 동일)
+python run.py models                                       # 무료 모델 점검만
+python run.py collect | summarize | render [--publish]     # 단계별 실행
+python run.py doctor                                       # 저장소·소스 상태 점검
 ```
 
-- `collect` 결과는 `work/<날짜>/candidates.json`, `stats.json`, `prompt.md`에 남는다(`work/`는 커밋하지 않는다).
-- `collect`는 같은 날짜의 이전 스냅샷(`candidates.json`)과 URL 기준으로 합집합을 만든다.
-  GeekNews RSS는 최신 50건만 주므로, 08:00 실행만으로는 전날 아침 항목이 사라질 수 있기 때문이다.
-  - 00:10 KST 스냅샷(`dailyfeed-snapshot.sh`)이 먼저 수집해 두고, 08:00 실행이 이를 합친다.
-  - 합칠 때 기존 항목의 id는 유지된다. 처음부터 다시 수집하려면 `--fresh`를 준다.
-- 에이전트는 `prompt.md`를 읽고 `work/<날짜>/summaries.json`을 작성한다.
-  - 형식: `{"date": "...", "items": {"tech-1": {"title_ko": "...", "bullets": ["...","...","..."]}}}`
-  - 요약할 수 없는 항목은 `{"skip": true, "reason": "..."}`로 표시한다.
-- `render`는 candidates와 summaries를 id로 병합해 파일을 쓰고, 같은 날짜의 이름이 다른 기존 파일은 지운다.
-- 소스 목록의 기준은 계속 `README.md`다. 피드 URL이 깨졌을 때만 `pipeline/overrides.json`에 대체 URL을 적는다.
-- 실행 결과는 `log/YYYY-MM-DD.md`에 남긴다. 실패한 소스와 원인을 숨기지 않는다.
+`auto` 순서:
+
+1. `git pull` — GitHub에서 고친 `models/priority.txt`를 반영한다.
+2. 무료 모델 점검 — `opencode models`의 opencode 무료 모델을 같은 요약 과제로 시험해 `models/available.md`를 갱신한다.
+   사용 순서: `priority.txt` → 마지막 성공 모델 → 점수순. opencode 무료 모델이 전부 실패할 때만 OpenRouter `:free`를 쓴다.
+3. 수집 — 채널별 직전 실행 이후 항목. 실패한 소스는 원인을 분류한 뒤
+   피드 자동 탐색 → crawl4ai → Apify → Playwright → opencode 에이전트 웹 검색 순으로 다시 시도한다.
+   GeekNews RSS(50건)가 직전 실행까지 닿지 않으면 `news.hada.io/past` 날짜 페이지로 채운다.
+4. 요약 — 4~5건씩 묶어 요청하고, JSON·5줄·한국어 검증에 실패한 항목만 다음 모델로 재시도한다.
+   끝내 실패한 항목은 제목만 기록하고 로그에 남긴다. 사용 가능한 모델이 하나도 없으면 GeekNews만 올리고 Tech/YouTube는 보류한다.
+5. 렌더 — 같은 날 다시 실행하면 그날 파일에 합친다. 기존 파일의 링크가 새 결과에서 빠지면 덮어쓰지 않는다.
+6. GitHub Weekly — 월요일이거나 마지막 스냅샷 후 7일이 지났으면 실행한다.
+7. `log/YYYY-MM-DD.md`에 결과를 덧붙이고 commit·push한 뒤 웹훅으로 알린다.
+
+- 중간 산출물은 `work/<날짜>/candidates.json`, `summaries.json`, `prompt.md`에 남는다(`work/`는 커밋하지 않는다).
+- 소스 목록의 기준은 계속 `README.md`다. 피드 URL이 바뀌면 자동 탐색 결과가 `pipeline/overrides.json`에 기록된다.
+- 실패한 소스와 원인, 시도한 방법을 숨기지 않는다.
 
 ## 11. 품질 원칙
 
