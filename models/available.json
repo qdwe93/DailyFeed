@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-21T23:25:51+09:00",
+  "checked_at": "2026-10-21T23:32:14+09:00",
   "list_error": null,
   "opencode_free": [
     "opencode/beam-free",
@@ -19,7 +19,7 @@
       "model": "opencode/beam-free",
       "ok": true,
       "score": 100,
-      "seconds": 14.3,
+      "seconds": 8.4,
       "error": null
     },
     {
@@ -33,72 +33,72 @@
       "model": "opencode/deepseek-v4.1-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 14.5,
+      "seconds": 6.5,
       "error": null
     },
     {
       "model": "opencode/glm-5.3-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 6.8,
+      "seconds": 12.1,
       "error": null
     },
     {
       "model": "opencode/longcat-2.5-preview-free",
       "ok": true,
       "score": 100,
-      "seconds": 14.7,
+      "seconds": 12.2,
       "error": null
     },
     {
       "model": "opencode/mimo-v2.6-flash-free",
       "ok": true,
-      "score": 100,
-      "seconds": 11.5,
+      "score": 95,
+      "seconds": 24.6,
       "error": null
     },
     {
       "model": "opencode/minimax-m3.1-flash-free",
       "ok": true,
-      "score": 100,
-      "seconds": 5.8,
+      "score": 95,
+      "seconds": 15.3,
       "error": null
     },
     {
       "model": "opencode/nemotron-3-ultra-free",
       "ok": true,
       "score": 100,
-      "seconds": 13.0,
+      "seconds": 9.1,
       "error": null
     },
     {
       "model": "opencode/nemotron-3.5-lightning-free",
       "ok": true,
       "score": 95,
-      "seconds": 15.1,
+      "seconds": 22.3,
       "error": null
     },
     {
       "model": "opencode/nemotron-3.5-super-vl-free",
       "ok": true,
-      "score": 95,
-      "seconds": 43.4,
+      "score": 100,
+      "seconds": 11.6,
       "error": null
     }
   ],
   "order": [
-    "opencode/minimax-m3.1-flash-free",
-    "opencode/glm-5.3-flash-free",
-    "opencode/mimo-v2.6-flash-free",
-    "opencode/big-pickle",
     "opencode/nemotron-3-ultra-free",
-    "opencode/beam-free",
     "opencode/deepseek-v4.1-flash-free",
+    "opencode/beam-free",
+    "opencode/nemotron-3.5-super-vl-free",
+    "opencode/glm-5.3-flash-free",
     "opencode/longcat-2.5-preview-free",
+    "opencode/big-pickle",
+    "opencode/minimax-m3.1-flash-free",
     "opencode/nemotron-3.5-lightning-free",
-    "opencode/nemotron-3.5-super-vl-free"
+    "opencode/mimo-v2.6-flash-free"
   ],
-  "seconds": 65.9,
+  "seconds": 42.2,
   "disappeared": [],
   "appeared": []
 }
