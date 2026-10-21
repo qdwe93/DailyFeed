@@ -1,0 +1,104 @@
+{
+  "checked_at": "2026-10-21T23:25:51+09:00",
+  "list_error": null,
+  "opencode_free": [
+    "opencode/beam-free",
+    "opencode/big-pickle",
+    "opencode/deepseek-v4.1-flash-free",
+    "opencode/glm-5.3-flash-free",
+    "opencode/longcat-2.5-preview-free",
+    "opencode/mimo-v2.6-flash-free",
+    "opencode/minimax-m3.1-flash-free",
+    "opencode/nemotron-3-ultra-free",
+    "opencode/nemotron-3.5-lightning-free",
+    "opencode/nemotron-3.5-super-vl-free"
+  ],
+  "openrouter_fallback_used": false,
+  "probes": [
+    {
+      "model": "opencode/beam-free",
+      "ok": true,
+      "score": 100,
+      "seconds": 14.3,
+      "error": null
+    },
+    {
+      "model": "opencode/big-pickle",
+      "ok": true,
+      "score": 100,
+      "seconds": 12.6,
+      "error": null
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "ok": true,
+      "score": 100,
+      "seconds": 14.5,
+      "error": null
+    },
+    {
+      "model": "opencode/glm-5.3-flash-free",
+      "ok": true,
+      "score": 100,
+      "seconds": 6.8,
+      "error": null
+    },
+    {
+      "model": "opencode/longcat-2.5-preview-free",
+      "ok": true,
+      "score": 100,
+      "seconds": 14.7,
+      "error": null
+    },
+    {
+      "model": "opencode/mimo-v2.6-flash-free",
+      "ok": true,
+      "score": 100,
+      "seconds": 11.5,
+      "error": null
+    },
+    {
+      "model": "opencode/minimax-m3.1-flash-free",
+      "ok": true,
+      "score": 100,
+      "seconds": 5.8,
+      "error": null
+    },
+    {
+      "model": "opencode/nemotron-3-ultra-free",
+      "ok": true,
+      "score": 100,
+      "seconds": 13.0,
+      "error": null
+    },
+    {
+      "model": "opencode/nemotron-3.5-lightning-free",
+      "ok": true,
+      "score": 95,
+      "seconds": 15.1,
+      "error": null
+    },
+    {
+      "model": "opencode/nemotron-3.5-super-vl-free",
+      "ok": true,
+      "score": 95,
+      "seconds": 43.4,
+      "error": null
+    }
+  ],
+  "order": [
+    "opencode/minimax-m3.1-flash-free",
+    "opencode/glm-5.3-flash-free",
+    "opencode/mimo-v2.6-flash-free",
+    "opencode/big-pickle",
+    "opencode/nemotron-3-ultra-free",
+    "opencode/beam-free",
+    "opencode/deepseek-v4.1-flash-free",
+    "opencode/longcat-2.5-preview-free",
+    "opencode/nemotron-3.5-lightning-free",
+    "opencode/nemotron-3.5-super-vl-free"
+  ],
+  "seconds": 65.9,
+  "disappeared": [],
+  "appeared": []
+}
