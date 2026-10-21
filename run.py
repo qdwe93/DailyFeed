@@ -850,9 +850,29 @@ def main(argv: list[str] | None = None) -> int:
     return args.func(args)
 
 
+class _Tee:
+    """Mirror output into work/logs/ — under Task Scheduler nobody sees the console."""
+
+    def __init__(self, *streams):
+        self.streams = [s for s in streams if s is not None]
+
+    def write(self, text):
+        for stream in self.streams:
+            try:
+                stream.write(text)
+                stream.flush()
+            except (OSError, ValueError):
+                pass
+        return len(text)
+
+    def flush(self):
+        pass
+
+
 if __name__ == "__main__":
-    if sys.stdout is None:  # pythonw (Task Scheduler): keep a local log of the run
+    if sys.argv[1:2] == ["auto"]:
         log_dir = WORK / "logs"
         log_dir.mkdir(parents=True, exist_ok=True)
-        sys.stdout = sys.stderr = open(log_dir / f"{datetime.now():%Y%m%d-%H%M%S}.log", "w", encoding="utf-8")
+        log_file = open(log_dir / f"{datetime.now():%Y%m%d-%H%M%S}.log", "w", encoding="utf-8")
+        sys.stdout, sys.stderr = _Tee(sys.stdout, log_file), _Tee(sys.stderr, log_file)
     sys.exit(main())
