@@ -269,9 +269,12 @@ def rescue_feed(result: dict, start: datetime, end: datetime, models: list[str],
 
     if allow_agent:
         entries, record = _attempt("agent-websearch", via_agent, source, start, end, models)
-        if entries is not None:
+        if entries:
             record["entries"] = len(entries)
             out.update(entries=entries, method="agent-websearch")
+        elif record["ok"]:
+            # Zero results cannot be told apart from "could not find": keep the source marked failed.
+            record.update(ok=False, error="기간 내 글을 확인하지 못함 (0건)")
         out["attempts"].append(record)
     return out
 

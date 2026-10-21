@@ -502,6 +502,9 @@ def summarize_cmd(args) -> int:
     st = state.load()
     order = models.check(st.get("last_model"))["order"]
     report = summarize.summarize(date_dir, DAILY, order, {})
+    if report.get("last_model"):
+        st["last_model"] = report["last_model"]
+        state.save(st)
     print(json.dumps({k: report[k] for k in ("model_counts", "failed")}, ensure_ascii=False, indent=2))
     return 0
 
@@ -630,7 +633,7 @@ def notification_text(run: dict) -> str:
     m = run.get("models") or {}
     if m:
         ok = sum(1 for p in m.get("probes", []) if p["ok"])
-        used = ", ".join(f"{k.split('/')[-1]}({v})" for k, v in (run.get("model_counts") or {}).items()) or "-"
+        used = ", ".join(f"{k.split('/')[-1]}({v})" for k, v in (run.get("model_counts") or {}).items()) or "새 요약 없음"
         lines.append(f"모델: {used} | 무료 모델 {ok}/{len(m.get('probes', []))} 정상")
         if m.get("disappeared"):
             lines.append(f"사라진 모델: {', '.join(m['disappeared'])}")

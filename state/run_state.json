@@ -5,6 +5,6 @@
     "youtube": "2026-10-21T23:25:51+09:00"
   },
   "last_weekly_at": "2026-10-19T08:00:00+09:00",
-  "last_model": null,
+  "last_model": "opencode/nemotron-3-ultra-free",
   "failed_since": {}
 }
