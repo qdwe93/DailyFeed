@@ -1,12 +1,10 @@
 {
   "last_run": {
-    "geeknews": "2026-10-22T12:00:54+09:00",
-    "tech": "2026-10-22T12:00:54+09:00",
-    "youtube": "2026-10-22T12:00:54+09:00"
+    "geeknews": "2026-10-23T12:00:54+09:00",
+    "tech": "2026-10-23T12:00:54+09:00",
+    "youtube": "2026-10-23T12:00:54+09:00"
   },
   "last_weekly_at": "2026-10-19T08:00:00+09:00",
   "last_model": "opencode/nemotron-3-ultra-free",
-  "failed_since": {
-    "YouTube:SAP": "2026-10-21T23:32:14+09:00"
-  }
+  "failed_since": {}
 }
