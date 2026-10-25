@@ -1,10 +1,14 @@
 {
   "last_run": {
-    "geeknews": "2026-10-24T12:01:02+09:00",
-    "tech": "2026-10-24T12:01:02+09:00",
-    "youtube": "2026-10-24T12:01:02+09:00"
+    "geeknews": "2026-10-25T12:00:58+09:00",
+    "tech": "2026-10-25T12:00:58+09:00",
+    "youtube": "2026-10-25T12:00:58+09:00"
   },
   "last_weekly_at": "2026-10-19T08:00:00+09:00",
   "last_model": "opencode/nemotron-3-ultra-free",
-  "failed_since": {}
+  "failed_since": {
+    "YouTube:AWS Developers": "2026-10-24T12:01:02+09:00",
+    "YouTube:Microsoft Developer": "2026-10-24T12:01:02+09:00",
+    "YouTube:Maker's Muse": "2026-10-24T12:01:02+09:00"
+  }
 }
