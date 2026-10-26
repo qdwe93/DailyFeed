@@ -1,14 +1,27 @@
 {
   "last_run": {
-    "geeknews": "2026-10-25T12:00:58+09:00",
-    "tech": "2026-10-25T12:00:58+09:00",
-    "youtube": "2026-10-25T12:00:58+09:00"
+    "geeknews": "2026-10-26T12:00:50+09:00",
+    "tech": "2026-10-26T12:00:50+09:00",
+    "youtube": "2026-10-26T12:00:50+09:00"
   },
-  "last_weekly_at": "2026-10-19T08:00:00+09:00",
-  "last_model": "opencode/nemotron-3-ultra-free",
+  "last_weekly_at": "2026-10-26T12:00:50+09:00",
+  "last_model": "opencode/beam-free",
   "failed_since": {
-    "YouTube:AWS Developers": "2026-10-24T12:01:02+09:00",
     "YouTube:Microsoft Developer": "2026-10-24T12:01:02+09:00",
-    "YouTube:Maker's Muse": "2026-10-24T12:01:02+09:00"
+    "YouTube:Maker's Muse": "2026-10-24T12:01:02+09:00",
+    "YouTube:Claude": "2026-10-25T12:00:58+09:00",
+    "YouTube:Google for Developers": "2026-10-25T12:00:58+09:00",
+    "YouTube:Google Cloud Tech": "2026-10-25T12:00:58+09:00",
+    "YouTube:SAP": "2026-10-25T12:00:58+09:00",
+    "YouTube:NAVER D2": "2026-10-25T12:00:58+09:00",
+    "YouTube:LINE Developers Korea": "2026-10-25T12:00:58+09:00",
+    "YouTube:당근 팀": "2026-10-25T12:00:58+09:00",
+    "YouTube:토스": "2026-10-25T12:00:58+09:00",
+    "YouTube:Unreal Engine": "2026-10-25T12:00:58+09:00",
+    "YouTube:Unity Korea": "2026-10-25T12:00:58+09:00",
+    "YouTube:Blender Guru": "2026-10-25T12:00:58+09:00",
+    "YouTube:Game Maker's Toolkit": "2026-10-25T12:00:58+09:00",
+    "YouTube:Masahiro Sakurai on Creating Games": "2026-10-25T12:00:58+09:00",
+    "YouTube:Cole Medin": "2026-10-25T12:00:58+09:00"
   }
 }

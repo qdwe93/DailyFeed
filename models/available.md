@@ -1,8 +1,8 @@
 # 사용 가능한 무료 모델
 
-- 점검 시각: 2026-10-25T12:00:58+09:00 (KST)
-- opencode 무료 모델 9개 발견, 정상 응답 9개
-- 이번 실행 사용 순서: `opencode/nemotron-3-ultra-free` → `opencode/big-pickle` → `opencode/beam-free` → `opencode/glm-5.3-flash-free` → `opencode/deepseek-v4.1-flash-free`
+- 점검 시각: 2026-10-26T12:00:50+09:00 (KST)
+- opencode 무료 모델 9개 발견, 정상 응답 8개
+- 이번 실행 사용 순서: `opencode/beam-free` → `opencode/glm-5.3-flash-free` → `opencode/deepseek-v4.1-flash-free` → `opencode/mimo-v2.6-flash-free` → `opencode/flint-40b-free`
 
 우선순위는 [`priority.txt`](./priority.txt)에 한 줄에 하나씩 적는다. 비어 있으면 마지막으로 성공한 모델 → 점수순.
 
@@ -10,12 +10,12 @@
 
 | 모델 | 상태 | 점수 | 응답(초) | 비고 |
 |---|---|---:|---:|---|
-| `opencode/big-pickle` | ✅ | 100 | 4.4 |  |
-| `opencode/beam-free` | ✅ | 100 | 4.6 |  |
-| `opencode/glm-5.3-flash-free` | ✅ | 100 | 4.6 |  |
-| `opencode/deepseek-v4.1-flash-free` | ✅ | 100 | 4.8 |  |
-| `opencode/nemotron-3-ultra-free` | ✅ | 100 | 6.0 |  |
+| `opencode/beam-free` | ✅ | 100 | 4.8 |  |
+| `opencode/glm-5.3-flash-free` | ✅ | 100 | 5.6 |  |
+| `opencode/deepseek-v4.1-flash-free` | ✅ | 100 | 7.0 |  |
 | `opencode/mimo-v2.6-flash-free` | ✅ | 100 | 7.2 |  |
-| `opencode/flint-40b-free` | ✅ | 95 | 15.1 |  |
-| `opencode/nemotron-3.5-super-vl-free` | ✅ | 95 | 26.3 |  |
-| `opencode/nemotron-3.5-lightning-free` | ✅ | 95 | 35.8 |  |
+| `opencode/flint-40b-free` | ✅ | 100 | 12.1 |  |
+| `opencode/nemotron-3.5-super-vl-free` | ✅ | 100 | 13.8 |  |
+| `opencode/big-pickle` | ✅ | 95 | 17.7 |  |
+| `opencode/nemotron-3.5-lightning-free` | ✅ | 95 | 32.0 |  |
+| `opencode/nemotron-3-ultra-free` | ❌ | 0 | 0.8 | {"type": "provider.invalid-request", "message": "Upstream request failed: Model is unavailable.", "status": 400, "respon |
