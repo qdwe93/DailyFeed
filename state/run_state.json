@@ -1,11 +1,11 @@
 {
   "last_run": {
-    "geeknews": "2026-10-26T12:00:50+09:00",
-    "tech": "2026-10-26T12:00:50+09:00",
-    "youtube": "2026-10-26T12:00:50+09:00"
+    "geeknews": "2026-10-28T12:03:07+09:00",
+    "tech": "2026-10-28T12:03:07+09:00",
+    "youtube": "2026-10-28T12:03:07+09:00"
   },
   "last_weekly_at": "2026-10-26T12:00:50+09:00",
-  "last_model": "opencode/beam-free",
+  "last_model": "openrouter/thinkingmachines/inkling-small:free",
   "failed_since": {
     "YouTube:Microsoft Developer": "2026-10-24T12:01:02+09:00",
     "YouTube:Maker's Muse": "2026-10-24T12:01:02+09:00",
@@ -22,6 +22,13 @@
     "YouTube:Blender Guru": "2026-10-25T12:00:58+09:00",
     "YouTube:Game Maker's Toolkit": "2026-10-25T12:00:58+09:00",
     "YouTube:Masahiro Sakurai on Creating Games": "2026-10-25T12:00:58+09:00",
-    "YouTube:Cole Medin": "2026-10-25T12:00:58+09:00"
+    "YouTube:Cole Medin": "2026-10-25T12:00:58+09:00",
+    "YouTube:Google DeepMind": "2026-10-26T12:00:50+09:00",
+    "YouTube:NVIDIA Developer": "2026-10-26T12:00:50+09:00",
+    "YouTube:Meta Developers": "2026-10-26T12:00:50+09:00",
+    "YouTube:AWS Developers": "2026-10-26T12:00:50+09:00",
+    "YouTube:SAP TechEd": "2026-10-26T12:00:50+09:00",
+    "YouTube:kakao tech": "2026-10-26T12:00:50+09:00",
+    "YouTube:GDC Festival of Gaming": "2026-10-26T12:00:50+09:00"
   }
 }

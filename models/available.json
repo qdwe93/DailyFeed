@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-26T12:00:50+09:00",
+  "checked_at": "2026-10-28T12:03:07+09:00",
   "list_error": null,
   "opencode_free": [
     "opencode/beam-free",
@@ -12,83 +12,175 @@
     "opencode/nemotron-3.5-lightning-free",
     "opencode/nemotron-3.5-super-vl-free"
   ],
-  "openrouter_fallback_used": false,
+  "openrouter_fallback_used": true,
   "probes": [
     {
       "model": "opencode/beam-free",
-      "ok": true,
-      "score": 100,
-      "seconds": 4.8,
-      "error": null
+      "ok": false,
+      "score": 0,
+      "seconds": 2.5,
+      "error": "{\"type\": \"provider.quota\", \"message\": \"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\", \"status\": 429, \"response\": {\"body\": \"{\\\"type\\\":\\\"error\\\",\\\"error\\\":{\\\"type\\\":\\\"FreeUsageLimitError\\\",\\\"message\\\":\\\"Fre"
     },
     {
       "model": "opencode/big-pickle",
-      "ok": true,
-      "score": 95,
-      "seconds": 17.7,
-      "error": null
+      "ok": false,
+      "score": 0,
+      "seconds": 2.8,
+      "error": "{\"type\": \"provider.quota\", \"message\": \"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\", \"status\": 429, \"response\": {\"body\": \"{\\\"type\\\":\\\"error\\\",\\\"error\\\":{\\\"type\\\":\\\"FreeUsageLimitError\\\",\\\"message\\\":\\\"Fre"
     },
     {
       "model": "opencode/deepseek-v4.1-flash-free",
-      "ok": true,
-      "score": 100,
-      "seconds": 7.0,
-      "error": null
+      "ok": false,
+      "score": 0,
+      "seconds": 2.2,
+      "error": "{\"type\": \"provider.quota\", \"message\": \"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\", \"status\": 429, \"response\": {\"body\": \"{\\\"type\\\":\\\"error\\\",\\\"error\\\":{\\\"type\\\":\\\"FreeUsageLimitError\\\",\\\"message\\\":\\\"Fre"
     },
     {
       "model": "opencode/flint-40b-free",
-      "ok": true,
-      "score": 100,
-      "seconds": 12.1,
-      "error": null
+      "ok": false,
+      "score": 0,
+      "seconds": 2.6,
+      "error": "{\"type\": \"provider.quota\", \"message\": \"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\", \"status\": 429, \"response\": {\"body\": \"{\\\"type\\\":\\\"error\\\",\\\"error\\\":{\\\"type\\\":\\\"FreeUsageLimitError\\\",\\\"message\\\":\\\"Fre"
     },
     {
       "model": "opencode/glm-5.3-flash-free",
-      "ok": true,
-      "score": 100,
-      "seconds": 5.6,
-      "error": null
+      "ok": false,
+      "score": 0,
+      "seconds": 1.1,
+      "error": "{\"type\": \"provider.quota\", \"message\": \"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\", \"status\": 429, \"response\": {\"body\": \"{\\\"type\\\":\\\"error\\\",\\\"error\\\":{\\\"type\\\":\\\"FreeUsageLimitError\\\",\\\"message\\\":\\\"Fre"
     },
     {
       "model": "opencode/mimo-v2.6-flash-free",
-      "ok": true,
-      "score": 100,
-      "seconds": 7.2,
-      "error": null
+      "ok": false,
+      "score": 0,
+      "seconds": 1.2,
+      "error": "{\"type\": \"provider.quota\", \"message\": \"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\", \"status\": 429, \"response\": {\"body\": \"{\\\"type\\\":\\\"error\\\",\\\"error\\\":{\\\"type\\\":\\\"FreeUsageLimitError\\\",\\\"message\\\":\\\"Fre"
     },
     {
       "model": "opencode/nemotron-3-ultra-free",
       "ok": false,
       "score": 0,
-      "seconds": 0.8,
+      "seconds": 1.2,
       "error": "{\"type\": \"provider.invalid-request\", \"message\": \"Upstream request failed: Model is unavailable.\", \"status\": 400, \"response\": {\"body\": \"{\\\"error\\\":{\\\"type\\\":\\\"server_error\\\",\\\"message\\\":\\\"Upstream request failed: Model is unavailable.\\\"}}\"}}"
     },
     {
       "model": "opencode/nemotron-3.5-lightning-free",
-      "ok": true,
-      "score": 95,
-      "seconds": 32.0,
-      "error": null
+      "ok": false,
+      "score": 0,
+      "seconds": 1.7,
+      "error": "{\"type\": \"provider.quota\", \"message\": \"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\", \"status\": 429, \"response\": {\"body\": \"{\\\"type\\\":\\\"error\\\",\\\"error\\\":{\\\"type\\\":\\\"FreeUsageLimitError\\\",\\\"message\\\":\\\"Fre"
     },
     {
       "model": "opencode/nemotron-3.5-super-vl-free",
+      "ok": false,
+      "score": 0,
+      "seconds": 1.4,
+      "error": "{\"type\": \"provider.quota\", \"message\": \"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\", \"status\": 429, \"response\": {\"body\": \"{\\\"type\\\":\\\"error\\\",\\\"error\\\":{\\\"type\\\":\\\"FreeUsageLimitError\\\",\\\"message\\\":\\\"Fre"
+    },
+    {
+      "model": "openrouter/cohere/north-mini-code:free",
       "ok": true,
       "score": 100,
-      "seconds": 13.8,
+      "seconds": 11.8,
       "error": null
+    },
+    {
+      "model": "openrouter/google/gemma-4-26b-a4b-it:free",
+      "ok": false,
+      "score": 0,
+      "seconds": 93.8,
+      "error": "{\"type\": \"provider.rate-limit\", \"message\": \"Provider returned error\", \"status\": 429, \"response\": {\"body\": \"{\\\"error\\\":{\\\"message\\\":\\\"Provider returned error\\\",\\\"code\\\":429,\\\"metadata\\\":{\\\"raw\\\":\\\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your o"
+    },
+    {
+      "model": "openrouter/google/gemma-4-31b-it:free",
+      "ok": false,
+      "score": 0,
+      "seconds": 89.7,
+      "error": "{\"type\": \"provider.rate-limit\", \"message\": \"Provider returned error\", \"status\": 429, \"response\": {\"body\": \"{\\\"error\\\":{\\\"message\\\":\\\"Provider returned error\\\",\\\"code\\\":429,\\\"metadata\\\":{\\\"raw\\\":\\\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own k"
+    },
+    {
+      "model": "openrouter/liquid/lfm-2.5-2.6b:free",
+      "ok": true,
+      "score": 95,
+      "seconds": 31.3,
+      "error": null
+    },
+    {
+      "model": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "ok": true,
+      "score": 95,
+      "seconds": 21.9,
+      "error": null
+    },
+    {
+      "model": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "ok": true,
+      "score": 95,
+      "seconds": 27.0,
+      "error": null
+    },
+    {
+      "model": "openrouter/nvidia/nemotron-3.5-content-safety:free",
+      "ok": false,
+      "score": 0,
+      "seconds": 0.8,
+      "error": "{\"type\": \"provider.invalid-request\", \"message\": \"No endpoints found that support tool use. Try disabling \\\"edit\\\". To learn more about provider routing, visit: https://openrouter.ai/docs/guides/routing/provider-selection\", \"status\": 404, \"response\": {\"body\": \"{\\\"error\\\":{\\\"message\\\":\\\"No endpoints f"
+    },
+    {
+      "model": "openrouter/nvidia/nemotron-3.5-lightning:free",
+      "ok": true,
+      "score": 95,
+      "seconds": 17.3,
+      "error": null
+    },
+    {
+      "model": "openrouter/nvidia/nemotron-3.5-super-vl:free",
+      "ok": true,
+      "score": 95,
+      "seconds": 17.9,
+      "error": null
+    },
+    {
+      "model": "openrouter/recursive/flint-v1.0:free",
+      "ok": true,
+      "score": 100,
+      "seconds": 10.2,
+      "error": null
+    },
+    {
+      "model": "openrouter/thinkingmachines/inkling-small:free",
+      "ok": true,
+      "score": 100,
+      "seconds": 3.9,
+      "error": null
+    },
+    {
+      "model": "openrouter/thinkingmachines/inkling:free",
+      "ok": true,
+      "score": 95,
+      "seconds": 15.3,
+      "error": null
+    },
+    {
+      "model": "openrouter/xingchen-agi/xing4.0-29b-a4b:free",
+      "ok": false,
+      "score": 0,
+      "seconds": 104.8,
+      "error": "{\"type\": \"provider.rate-limit\", \"message\": \"Provider returned error\", \"status\": 429, \"response\": {\"body\": \"{\\\"error\\\":{\\\"message\\\":\\\"Provider returned error\\\",\\\"code\\\":429,\\\"metadata\\\":{\\\"raw\\\":\\\"xingchen-agi/xing4.0-29b-a4b:free is temporarily rate-limited upstream. Please retry shortly, or add you"
     }
   ],
   "order": [
-    "opencode/beam-free",
-    "opencode/glm-5.3-flash-free",
-    "opencode/deepseek-v4.1-flash-free",
-    "opencode/mimo-v2.6-flash-free",
-    "opencode/flint-40b-free",
-    "opencode/nemotron-3.5-super-vl-free",
-    "opencode/big-pickle",
-    "opencode/nemotron-3.5-lightning-free"
+    "openrouter/thinkingmachines/inkling-small:free",
+    "openrouter/recursive/flint-v1.0:free",
+    "openrouter/cohere/north-mini-code:free",
+    "openrouter/thinkingmachines/inkling:free",
+    "openrouter/nvidia/nemotron-3.5-lightning:free",
+    "openrouter/nvidia/nemotron-3.5-super-vl:free",
+    "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+    "openrouter/liquid/lfm-2.5-2.6b:free"
   ],
-  "seconds": 46.4,
+  "seconds": 182.7,
   "disappeared": [],
   "appeared": []
 }

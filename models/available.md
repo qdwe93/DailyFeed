@@ -1,8 +1,9 @@
 # 사용 가능한 무료 모델
 
-- 점검 시각: 2026-10-26T12:00:50+09:00 (KST)
-- opencode 무료 모델 9개 발견, 정상 응답 8개
-- 이번 실행 사용 순서: `opencode/beam-free` → `opencode/glm-5.3-flash-free` → `opencode/deepseek-v4.1-flash-free` → `opencode/mimo-v2.6-flash-free` → `opencode/flint-40b-free`
+- 점검 시각: 2026-10-28T12:03:07+09:00 (KST)
+- opencode 무료 모델 9개 발견, 정상 응답 0개
+- 이번 실행 사용 순서: `openrouter/thinkingmachines/inkling-small:free` → `openrouter/recursive/flint-v1.0:free` → `openrouter/cohere/north-mini-code:free` → `openrouter/thinkingmachines/inkling:free` → `openrouter/nvidia/nemotron-3.5-lightning:free`
+- ⚠️ opencode 무료 모델이 모두 실패해 OpenRouter `:free` 모델을 점검했다.
 
 우선순위는 [`priority.txt`](./priority.txt)에 한 줄에 하나씩 적는다. 비어 있으면 마지막으로 성공한 모델 → 점수순.
 
@@ -10,12 +11,25 @@
 
 | 모델 | 상태 | 점수 | 응답(초) | 비고 |
 |---|---|---:|---:|---|
-| `opencode/beam-free` | ✅ | 100 | 4.8 |  |
-| `opencode/glm-5.3-flash-free` | ✅ | 100 | 5.6 |  |
-| `opencode/deepseek-v4.1-flash-free` | ✅ | 100 | 7.0 |  |
-| `opencode/mimo-v2.6-flash-free` | ✅ | 100 | 7.2 |  |
-| `opencode/flint-40b-free` | ✅ | 100 | 12.1 |  |
-| `opencode/nemotron-3.5-super-vl-free` | ✅ | 100 | 13.8 |  |
-| `opencode/big-pickle` | ✅ | 95 | 17.7 |  |
-| `opencode/nemotron-3.5-lightning-free` | ✅ | 95 | 32.0 |  |
-| `opencode/nemotron-3-ultra-free` | ❌ | 0 | 0.8 | {"type": "provider.invalid-request", "message": "Upstream request failed: Model is unavailable.", "status": 400, "respon |
+| `openrouter/thinkingmachines/inkling-small:free` | ✅ | 100 | 3.9 |  |
+| `openrouter/recursive/flint-v1.0:free` | ✅ | 100 | 10.2 |  |
+| `openrouter/cohere/north-mini-code:free` | ✅ | 100 | 11.8 |  |
+| `openrouter/thinkingmachines/inkling:free` | ✅ | 95 | 15.3 |  |
+| `openrouter/nvidia/nemotron-3.5-lightning:free` | ✅ | 95 | 17.3 |  |
+| `openrouter/nvidia/nemotron-3.5-super-vl:free` | ✅ | 95 | 17.9 |  |
+| `openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` | ✅ | 95 | 21.9 |  |
+| `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | ✅ | 95 | 27.0 |  |
+| `openrouter/liquid/lfm-2.5-2.6b:free` | ✅ | 95 | 31.3 |  |
+| `openrouter/nvidia/nemotron-3.5-content-safety:free` | ❌ | 0 | 0.8 | {"type": "provider.invalid-request", "message": "No endpoints found that support tool use. Try disabling \"edit\". To le |
+| `opencode/glm-5.3-flash-free` | ❌ | 0 | 1.1 | {"type": "provider.quota", "message": "Free usage limit reached. Free models work in OpenCode (https://opencode.ai); sub |
+| `opencode/mimo-v2.6-flash-free` | ❌ | 0 | 1.2 | {"type": "provider.quota", "message": "Free usage limit reached. Free models work in OpenCode (https://opencode.ai); sub |
+| `opencode/nemotron-3-ultra-free` | ❌ | 0 | 1.2 | {"type": "provider.invalid-request", "message": "Upstream request failed: Model is unavailable.", "status": 400, "respon |
+| `opencode/nemotron-3.5-super-vl-free` | ❌ | 0 | 1.4 | {"type": "provider.quota", "message": "Free usage limit reached. Free models work in OpenCode (https://opencode.ai); sub |
+| `opencode/nemotron-3.5-lightning-free` | ❌ | 0 | 1.7 | {"type": "provider.quota", "message": "Free usage limit reached. Free models work in OpenCode (https://opencode.ai); sub |
+| `opencode/deepseek-v4.1-flash-free` | ❌ | 0 | 2.2 | {"type": "provider.quota", "message": "Free usage limit reached. Free models work in OpenCode (https://opencode.ai); sub |
+| `opencode/beam-free` | ❌ | 0 | 2.5 | {"type": "provider.quota", "message": "Free usage limit reached. Free models work in OpenCode (https://opencode.ai); sub |
+| `opencode/flint-40b-free` | ❌ | 0 | 2.6 | {"type": "provider.quota", "message": "Free usage limit reached. Free models work in OpenCode (https://opencode.ai); sub |
+| `opencode/big-pickle` | ❌ | 0 | 2.8 | {"type": "provider.quota", "message": "Free usage limit reached. Free models work in OpenCode (https://opencode.ai); sub |
+| `openrouter/google/gemma-4-31b-it:free` | ❌ | 0 | 89.7 | {"type": "provider.rate-limit", "message": "Provider returned error", "status": 429, "response": {"body": "{\"error\":{\ |
+| `openrouter/google/gemma-4-26b-a4b-it:free` | ❌ | 0 | 93.8 | {"type": "provider.rate-limit", "message": "Provider returned error", "status": 429, "response": {"body": "{\"error\":{\ |
+| `openrouter/xingchen-agi/xing4.0-29b-a4b:free` | ❌ | 0 | 104.8 | {"type": "provider.rate-limit", "message": "Provider returned error", "status": 429, "response": {"body": "{\"error\":{\ |
