@@ -1,32 +1,10 @@
 {
   "last_run": {
-    "geeknews": "2026-10-30T12:00:45+09:00",
-    "tech": "2026-10-30T12:00:45+09:00",
-    "youtube": "2026-10-30T12:00:45+09:00"
+    "geeknews": "2026-10-31T12:00:36+09:00",
+    "tech": "2026-10-31T12:00:36+09:00",
+    "youtube": "2026-10-31T12:00:36+09:00"
   },
   "last_weekly_at": "2026-10-26T12:00:50+09:00",
   "last_model": "opencode/deepseek-v4.1-flash-free",
-  "failed_since": {
-    "YouTube:Microsoft Developer": "2026-10-24T12:01:02+09:00",
-    "YouTube:Maker's Muse": "2026-10-24T12:01:02+09:00",
-    "YouTube:Google for Developers": "2026-10-25T12:00:58+09:00",
-    "YouTube:Google Cloud Tech": "2026-10-25T12:00:58+09:00",
-    "YouTube:NAVER D2": "2026-10-25T12:00:58+09:00",
-    "YouTube:LINE Developers Korea": "2026-10-25T12:00:58+09:00",
-    "YouTube:당근 팀": "2026-10-25T12:00:58+09:00",
-    "YouTube:토스": "2026-10-25T12:00:58+09:00",
-    "YouTube:Unreal Engine": "2026-10-25T12:00:58+09:00",
-    "YouTube:Unity Korea": "2026-10-25T12:00:58+09:00",
-    "YouTube:Blender Guru": "2026-10-25T12:00:58+09:00",
-    "YouTube:Game Maker's Toolkit": "2026-10-25T12:00:58+09:00",
-    "YouTube:Masahiro Sakurai on Creating Games": "2026-10-25T12:00:58+09:00",
-    "YouTube:Google DeepMind": "2026-10-26T12:00:50+09:00",
-    "YouTube:NVIDIA Developer": "2026-10-26T12:00:50+09:00",
-    "YouTube:Meta Developers": "2026-10-26T12:00:50+09:00",
-    "YouTube:AWS Developers": "2026-10-26T12:00:50+09:00",
-    "YouTube:SAP TechEd": "2026-10-26T12:00:50+09:00",
-    "YouTube:kakao tech": "2026-10-26T12:00:50+09:00",
-    "YouTube:GDC Festival of Gaming": "2026-10-26T12:00:50+09:00",
-    "YouTube:Cole Medin": "2026-10-29T12:00:51+09:00"
-  }
+  "failed_since": {}
 }
