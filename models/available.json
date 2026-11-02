@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-31T12:00:36+09:00",
+  "checked_at": "2026-11-02T12:01:01+09:00",
   "list_error": null,
   "opencode_free": [
     "opencode/beam-free",
@@ -17,56 +17,56 @@
       "model": "opencode/beam-free",
       "ok": true,
       "score": 100,
-      "seconds": 6.5,
+      "seconds": 6.0,
       "error": null
     },
     {
       "model": "opencode/big-pickle",
       "ok": true,
       "score": 95,
-      "seconds": 20.7,
+      "seconds": 23.4,
       "error": null
     },
     {
       "model": "opencode/deepseek-v4.1-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 7.2,
+      "seconds": 10.3,
       "error": null
     },
     {
       "model": "opencode/flint-40b-free",
       "ok": true,
       "score": 95,
-      "seconds": 22.4,
+      "seconds": 19.5,
       "error": null
     },
     {
       "model": "opencode/glm-5.3-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 6.5,
+      "seconds": 9.4,
       "error": null
     },
     {
       "model": "opencode/mimo-v2.6-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 7.2,
+      "seconds": 12.4,
       "error": null
     },
     {
       "model": "opencode/nemotron-3.5-lightning-free",
       "ok": true,
       "score": 95,
-      "seconds": 17.9,
+      "seconds": 34.3,
       "error": null
     },
     {
       "model": "opencode/nemotron-3.5-super-vl-free",
       "ok": true,
       "score": 100,
-      "seconds": 4.7,
+      "seconds": 5.7,
       "error": null
     }
   ],
@@ -76,11 +76,11 @@
     "opencode/beam-free",
     "opencode/glm-5.3-flash-free",
     "opencode/mimo-v2.6-flash-free",
-    "opencode/nemotron-3.5-lightning-free",
+    "opencode/flint-40b-free",
     "opencode/big-pickle",
-    "opencode/flint-40b-free"
+    "opencode/nemotron-3.5-lightning-free"
   ],
-  "seconds": 32.9,
+  "seconds": 56.2,
   "disappeared": [],
   "appeared": []
 }
