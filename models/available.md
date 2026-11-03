@@ -1,8 +1,9 @@
 # 사용 가능한 무료 모델
 
-- 점검 시각: 2026-11-02T12:01:01+09:00 (KST)
-- opencode 무료 모델 8개 발견, 정상 응답 8개
-- 이번 실행 사용 순서: `opencode/deepseek-v4.1-flash-free` → `opencode/nemotron-3.5-super-vl-free` → `opencode/beam-free` → `opencode/glm-5.3-flash-free` → `opencode/mimo-v2.6-flash-free`
+- 점검 시각: 2026-11-03T12:00:38+09:00 (KST)
+- opencode 무료 모델 9개 발견, 정상 응답 9개
+- 이번 실행 사용 순서: `opencode/deepseek-v4.1-flash-free` → `opencode/glm-5.3-flash-free` → `opencode/beam-free` → `opencode/big-pickle` → `opencode/mimo-v2.6-flash-free`
+- 새로 생김: `opencode/pulse-alpha-free`
 
 우선순위는 [`priority.txt`](./priority.txt)에 한 줄에 하나씩 적는다. 비어 있으면 마지막으로 성공한 모델 → 점수순.
 
@@ -10,11 +11,12 @@
 
 | 모델 | 상태 | 점수 | 응답(초) | 비고 |
 |---|---|---:|---:|---|
-| `opencode/nemotron-3.5-super-vl-free` | ✅ | 100 | 5.7 |  |
-| `opencode/beam-free` | ✅ | 100 | 6.0 |  |
-| `opencode/glm-5.3-flash-free` | ✅ | 100 | 9.4 |  |
-| `opencode/deepseek-v4.1-flash-free` | ✅ | 100 | 10.3 |  |
-| `opencode/mimo-v2.6-flash-free` | ✅ | 100 | 12.4 |  |
-| `opencode/flint-40b-free` | ✅ | 95 | 19.5 |  |
-| `opencode/big-pickle` | ✅ | 95 | 23.4 |  |
-| `opencode/nemotron-3.5-lightning-free` | ✅ | 95 | 34.3 |  |
+| `opencode/glm-5.3-flash-free` | ✅ | 100 | 2.8 |  |
+| `opencode/beam-free` | ✅ | 100 | 5.8 |  |
+| `opencode/big-pickle` | ✅ | 100 | 8.8 |  |
+| `opencode/deepseek-v4.1-flash-free` | ✅ | 100 | 9.1 |  |
+| `opencode/mimo-v2.6-flash-free` | ✅ | 100 | 11.1 |  |
+| `opencode/nemotron-3.5-super-vl-free` | ✅ | 100 | 12.4 |  |
+| `opencode/pulse-alpha-free` | ✅ | 100 | 12.5 |  |
+| `opencode/flint-40b-free` | ✅ | 100 | 13.4 |  |
+| `opencode/nemotron-3.5-lightning-free` | ✅ | 100 | 14.0 |  |
