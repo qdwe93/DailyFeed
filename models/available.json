@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-05T12:00:37+09:00",
+  "checked_at": "2026-11-06T12:00:54+09:00",
   "list_error": null,
   "opencode_free": [
     "opencode/beam-free",
@@ -19,86 +19,86 @@
       "model": "opencode/beam-free",
       "ok": true,
       "score": 100,
-      "seconds": 7.8,
+      "seconds": 11.8,
       "error": null
     },
     {
       "model": "opencode/big-pickle",
       "ok": true,
-      "score": 100,
-      "seconds": 9.5,
+      "score": 95,
+      "seconds": 20.8,
       "error": null
     },
     {
       "model": "opencode/crouton-alpha-free",
       "ok": true,
       "score": 100,
-      "seconds": 6.8,
+      "seconds": 5.8,
       "error": null
     },
     {
       "model": "opencode/deepseek-v4.1-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 8.9,
+      "seconds": 13.0,
       "error": null
     },
     {
       "model": "opencode/flint-40b-free",
       "ok": true,
       "score": 100,
-      "seconds": 14.3,
+      "seconds": 9.4,
       "error": null
     },
     {
       "model": "opencode/glm-5.3-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 3.1,
+      "seconds": 10.1,
       "error": null
     },
     {
       "model": "opencode/mimo-v2.6-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 6.3,
+      "seconds": 13.6,
       "error": null
     },
     {
       "model": "opencode/nemotron-3.5-lightning-free",
       "ok": true,
-      "score": 100,
-      "seconds": 10.7,
+      "score": 95,
+      "seconds": 27.5,
       "error": null
     },
     {
       "model": "opencode/nemotron-3.5-super-vl-free",
       "ok": true,
       "score": 100,
-      "seconds": 7.0,
+      "seconds": 8.2,
       "error": null
     },
     {
       "model": "opencode/pulse-alpha-free",
       "ok": true,
       "score": 100,
-      "seconds": 9.7,
+      "seconds": 4.4,
       "error": null
     }
   ],
   "order": [
     "opencode/deepseek-v4.1-flash-free",
-    "opencode/glm-5.3-flash-free",
-    "opencode/mimo-v2.6-flash-free",
+    "opencode/pulse-alpha-free",
     "opencode/crouton-alpha-free",
     "opencode/nemotron-3.5-super-vl-free",
+    "opencode/flint-40b-free",
+    "opencode/glm-5.3-flash-free",
     "opencode/beam-free",
+    "opencode/mimo-v2.6-flash-free",
     "opencode/big-pickle",
-    "opencode/pulse-alpha-free",
-    "opencode/nemotron-3.5-lightning-free",
-    "opencode/flint-40b-free"
+    "opencode/nemotron-3.5-lightning-free"
   ],
-  "seconds": 32.8,
+  "seconds": 49.8,
   "disappeared": [],
   "appeared": []
 }
