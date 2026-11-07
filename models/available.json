@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-06T12:00:54+09:00",
+  "checked_at": "2026-11-07T12:00:43+09:00",
   "list_error": null,
   "opencode_free": [
     "opencode/beam-free",
@@ -8,10 +8,11 @@
     "opencode/deepseek-v4.1-flash-free",
     "opencode/flint-40b-free",
     "opencode/glm-5.3-flash-free",
+    "opencode/iceman-free",
+    "opencode/inkling-2-small-free",
     "opencode/mimo-v2.6-flash-free",
     "opencode/nemotron-3.5-lightning-free",
-    "opencode/nemotron-3.5-super-vl-free",
-    "opencode/pulse-alpha-free"
+    "opencode/nemotron-3.5-super-vl-free"
   ],
   "openrouter_fallback_used": false,
   "probes": [
@@ -19,86 +20,98 @@
       "model": "opencode/beam-free",
       "ok": true,
       "score": 100,
-      "seconds": 11.8,
+      "seconds": 10.8,
       "error": null
     },
     {
       "model": "opencode/big-pickle",
       "ok": true,
-      "score": 95,
-      "seconds": 20.8,
+      "score": 100,
+      "seconds": 12.6,
       "error": null
     },
     {
       "model": "opencode/crouton-alpha-free",
       "ok": true,
       "score": 100,
-      "seconds": 5.8,
+      "seconds": 4.7,
       "error": null
     },
     {
       "model": "opencode/deepseek-v4.1-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 13.0,
+      "seconds": 12.0,
       "error": null
     },
     {
       "model": "opencode/flint-40b-free",
       "ok": true,
-      "score": 100,
-      "seconds": 9.4,
+      "score": 95,
+      "seconds": 17.1,
       "error": null
     },
     {
       "model": "opencode/glm-5.3-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 10.1,
+      "seconds": 3.0,
       "error": null
+    },
+    {
+      "model": "opencode/iceman-free",
+      "ok": true,
+      "score": 100,
+      "seconds": 7.9,
+      "error": null
+    },
+    {
+      "model": "opencode/inkling-2-small-free",
+      "ok": false,
+      "score": 0,
+      "seconds": 2.5,
+      "error": "{\"type\": \"provider.quota\", \"message\": \"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\", \"status\": 429, \"response\": {\"body\": \"{\\\"type\\\":\\\"error\\\",\\\"error\\\":{\\\"type\\\":\\\"FreeUsageLimitError\\\",\\\"message\\\":\\\"Fre"
     },
     {
       "model": "opencode/mimo-v2.6-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 13.6,
+      "seconds": 6.8,
       "error": null
     },
     {
       "model": "opencode/nemotron-3.5-lightning-free",
       "ok": true,
-      "score": 95,
-      "seconds": 27.5,
+      "score": 100,
+      "seconds": 14.4,
       "error": null
     },
     {
       "model": "opencode/nemotron-3.5-super-vl-free",
       "ok": true,
       "score": 100,
-      "seconds": 8.2,
-      "error": null
-    },
-    {
-      "model": "opencode/pulse-alpha-free",
-      "ok": true,
-      "score": 100,
-      "seconds": 4.4,
+      "seconds": 6.2,
       "error": null
     }
   ],
   "order": [
     "opencode/deepseek-v4.1-flash-free",
-    "opencode/pulse-alpha-free",
+    "opencode/glm-5.3-flash-free",
     "opencode/crouton-alpha-free",
     "opencode/nemotron-3.5-super-vl-free",
-    "opencode/flint-40b-free",
-    "opencode/glm-5.3-flash-free",
-    "opencode/beam-free",
     "opencode/mimo-v2.6-flash-free",
+    "opencode/iceman-free",
+    "opencode/beam-free",
     "opencode/big-pickle",
-    "opencode/nemotron-3.5-lightning-free"
+    "opencode/nemotron-3.5-lightning-free",
+    "opencode/flint-40b-free"
   ],
-  "seconds": 49.8,
-  "disappeared": [],
-  "appeared": []
+  "seconds": 38.3,
+  "disappeared": [
+    "opencode/pulse-alpha-free"
+  ],
+  "appeared": [
+    "opencode/iceman-free",
+    "opencode/inkling-2-small-free"
+  ]
 }
