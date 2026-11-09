@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-07T12:00:43+09:00",
+  "checked_at": "2026-11-09T12:00:53+09:00",
   "list_error": null,
   "opencode_free": [
     "opencode/beam-free",
@@ -20,98 +20,94 @@
       "model": "opencode/beam-free",
       "ok": true,
       "score": 100,
-      "seconds": 10.8,
+      "seconds": 8.3,
       "error": null
     },
     {
       "model": "opencode/big-pickle",
       "ok": true,
       "score": 100,
-      "seconds": 12.6,
+      "seconds": 8.6,
       "error": null
     },
     {
       "model": "opencode/crouton-alpha-free",
       "ok": true,
       "score": 100,
-      "seconds": 4.7,
+      "seconds": 14.2,
       "error": null
     },
     {
       "model": "opencode/deepseek-v4.1-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 12.0,
+      "seconds": 6.3,
       "error": null
     },
     {
       "model": "opencode/flint-40b-free",
       "ok": true,
       "score": 95,
-      "seconds": 17.1,
+      "seconds": 18.3,
       "error": null
     },
     {
       "model": "opencode/glm-5.3-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 3.0,
+      "seconds": 11.3,
       "error": null
     },
     {
       "model": "opencode/iceman-free",
       "ok": true,
       "score": 100,
-      "seconds": 7.9,
+      "seconds": 7.2,
       "error": null
     },
     {
       "model": "opencode/inkling-2-small-free",
-      "ok": false,
-      "score": 0,
-      "seconds": 2.5,
-      "error": "{\"type\": \"provider.quota\", \"message\": \"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\", \"status\": 429, \"response\": {\"body\": \"{\\\"type\\\":\\\"error\\\",\\\"error\\\":{\\\"type\\\":\\\"FreeUsageLimitError\\\",\\\"message\\\":\\\"Fre"
+      "ok": true,
+      "score": 100,
+      "seconds": 4.2,
+      "error": null
     },
     {
       "model": "opencode/mimo-v2.6-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 6.8,
+      "seconds": 9.9,
       "error": null
     },
     {
       "model": "opencode/nemotron-3.5-lightning-free",
       "ok": true,
-      "score": 100,
-      "seconds": 14.4,
+      "score": 95,
+      "seconds": 25.6,
       "error": null
     },
     {
       "model": "opencode/nemotron-3.5-super-vl-free",
       "ok": true,
       "score": 100,
-      "seconds": 6.2,
+      "seconds": 5.4,
       "error": null
     }
   ],
   "order": [
     "opencode/deepseek-v4.1-flash-free",
-    "opencode/glm-5.3-flash-free",
-    "opencode/crouton-alpha-free",
+    "opencode/inkling-2-small-free",
     "opencode/nemotron-3.5-super-vl-free",
-    "opencode/mimo-v2.6-flash-free",
     "opencode/iceman-free",
     "opencode/beam-free",
     "opencode/big-pickle",
-    "opencode/nemotron-3.5-lightning-free",
-    "opencode/flint-40b-free"
+    "opencode/mimo-v2.6-flash-free",
+    "opencode/glm-5.3-flash-free",
+    "opencode/crouton-alpha-free",
+    "opencode/flint-40b-free",
+    "opencode/nemotron-3.5-lightning-free"
   ],
-  "seconds": 38.3,
-  "disappeared": [
-    "opencode/pulse-alpha-free"
-  ],
-  "appeared": [
-    "opencode/iceman-free",
-    "opencode/inkling-2-small-free"
-  ]
+  "seconds": 48.1,
+  "disappeared": [],
+  "appeared": []
 }
