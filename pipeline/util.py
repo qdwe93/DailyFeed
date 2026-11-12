@@ -216,13 +216,25 @@ def parse_readme(root: Path = ROOT) -> dict:
     return {"tech": tech, "youtube": channels}
 
 
+def article_files(root: Path = ROOT) -> list[Path]:
+    """Published per-channel article files: <channel>/<YYYY년M월>/*.md only.
+
+    Duplicate detection must read only these. today.md, daily/, README.md, log/, docs and any
+    future notes repeat or merely mention article URLs and must never count as "already published".
+    """
+    files: list[Path] = []
+    for channel in CHANNELS:
+        folder = root / channel
+        if folder.is_dir():
+            files += [p for p in folder.rglob("*.md") if p.is_file()]
+    return sorted(files)
+
+
 def existing_urls(root: Path = ROOT) -> dict[str, str]:
-    """Map canonical URL -> file that already contains it."""
+    """Map canonical URL -> published article file that already contains it."""
     index: dict[str, str] = {}
-    for path in sorted(root.rglob("*.md")):
+    for path in article_files(root):
         rel = path.relative_to(root).as_posix()
-        if rel.startswith(("pipeline/", "work/", "docs/")) or rel.startswith("."):
-            continue
         try:
             text = path.read_text(encoding="utf-8", errors="replace")
         except OSError:

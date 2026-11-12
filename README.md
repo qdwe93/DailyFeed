@@ -3,6 +3,13 @@
 기술 뉴스, 기술 블로그, 기술 YouTube 영상과 GitHub Trending을 Markdown으로 보관하는 저장소입니다.
 수집·요약·업로드는 로컬 PC에서 `run.py auto` 하나로 자동 실행되며, 요약은 opencode의 **무료 LLM**이 맡습니다.
 
+> **📰 [today.md](./today.md)** — 가장 최근 실행일(KST)에 발행된 모든 채널의 기사 제목·원문 링크·요약을 한 페이지로 모은 통합본.
+> 지난 날짜의 통합본은 [`daily/YYYY-MM-DD.md`](./daily/)에 남습니다.
+>
+> - 날짜는 **수집일(실행일)** 기준입니다. 기사 게시일과 다를 수 있습니다.
+> - 통합본은 채널별 발행 파일(`geeknews/ tech/ youtube/ github/`)을 그대로 이어 붙인 것이며, 요약을 다시 만들지 않습니다.
+> - 모델이 없어 보류된 채널은 '보류'로, 발행 파일이 없는 채널은 '발행 파일 없음'으로 표시합니다.
+
 - 기준 시간대: **Asia/Seoul (KST)**
 - **매일 12:00 KST** (Windows 작업 스케줄러): GeekNews / Tech Feeds / YouTube Tech
   - 수집 범위: **직전 실행 이후** 새로 올라온 글 전부. PC가 꺼져 실행을 건너뛰어도 다음 실행이 빈 구간을 모두 가져옵니다.
@@ -16,7 +23,10 @@
 ```text
 DailyFeed/
 ├─ README.md / AGENT.md
+├─ today.md               # 최근 실행일의 전 채널 통합본 (자동 갱신)
+├─ daily/YYYY-MM-DD.md    # 날짜별 통합본 보관 (today.md와 같은 내용)
 ├─ run.py                 # 오케스트레이터 (auto = 정기 실행 전체)
+├─ tests/                 # 오프라인 회귀 테스트: python -m unittest discover -s tests -v
 ├─ pipeline/              # 수집·대체 수집·요약·렌더·발행
 ├─ models/
 │  ├─ available.md        # 매 실행 전 점검한 무료 모델 목록과 점수 (자동 갱신)
