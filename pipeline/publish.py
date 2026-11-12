@@ -8,7 +8,10 @@ from pathlib import Path
 from .util import NO_WINDOW, ROOT
 
 # Everything the pipeline writes. Staged with -A so renamed/removed daily files are committed too.
-OUTPUT_PATHS = ["geeknews", "tech", "youtube", "github", "models", "state", "log", "pipeline/overrides.json"]
+OUTPUT_PATHS = [
+    "today.md", "daily",
+    "geeknews", "tech", "youtube", "github", "models", "state", "log", "pipeline/overrides.json",
+]
 
 
 def git(*args: str, check: bool = True) -> subprocess.CompletedProcess:

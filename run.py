@@ -26,10 +26,11 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from urllib.parse import quote
 
-from pipeline import classify, extract, fetch, models, notify, pages, publish, render, rescue, state, summarize
+from pipeline import classify, digest, extract, fetch, models, notify, pages, publish, render, rescue, state, summarize
 from pipeline.util import (
     KST,
     ROOT,
+    article_files,
     canonical,
     in_window,
     month_dir,
@@ -61,15 +62,15 @@ class NetworkDown(RuntimeError):
 # --------------------------------------------------------------------- helpers
 
 
-def _existing_index(target: datetime) -> dict[str, str]:
-    """URLs already recorded anywhere except the target date's own files."""
+def _existing_index(target: datetime, root: Path | None = None) -> dict[str, str]:
+    """URLs already published in channel files (geeknews/tech/youtube/github), except the target
+    date's own files. today.md, daily/, README.md, log/ and docs are not article sources."""
+    root = root or ROOT
     stamp = target.strftime("%Y-%m-%d")
     compact = target.strftime("%Y%m%d")
     index: dict[str, str] = {}
-    for path in sorted(ROOT.rglob("*.md")):
-        rel = path.relative_to(ROOT).as_posix()
-        if rel.startswith(("pipeline/", "work/", "docs/", "log/", "models/", ".venv/")) or rel.startswith("."):
-            continue
+    for path in article_files(root):
+        rel = path.relative_to(root).as_posix()
         if path.name.startswith((stamp, compact)):
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
@@ -105,14 +106,14 @@ def _dedupe(items: list[dict], index: dict[str, str]) -> tuple[list[dict], list[
     return kept, dropped
 
 
-def _same_date_files(channel: str, target: datetime) -> list[Path]:
-    folder = ROOT / channel / month_dir(target)
+def _same_date_files(channel: str, target: datetime, root: Path | None = None) -> list[Path]:
+    folder = (root or ROOT) / channel / month_dir(target)
     return sorted(folder.glob(f"{target:%Y-%m-%d}_*.md")) if folder.exists() else []
 
 
-def _drop_stale_files(channel: str, target: datetime, keep: Path | None = None) -> list[Path]:
+def _drop_stale_files(channel: str, target: datetime, keep: Path | None = None, root: Path | None = None) -> list[Path]:
     removed = []
-    for path in _same_date_files(channel, target):
+    for path in _same_date_files(channel, target, root):
         if keep and path.resolve() == keep.resolve():
             continue
         path.unlink()
@@ -444,8 +445,11 @@ def load_summaries(date_dir: Path) -> dict:
     return data.get("items", data if isinstance(data, dict) else {})
 
 
-def render_channels(date_dir: Path, file_date: datetime, channels: list[str]) -> tuple[list[Path], list[Path], list[str]]:
+def render_channels(
+    date_dir: Path, file_date: datetime, channels: list[str], root: Path | None = None
+) -> tuple[list[Path], list[Path], list[str]]:
     """Write markdown for `channels`. Returns (written, removed, warnings)."""
+    root = root or ROOT
     candidates = json.loads((date_dir / "candidates.json").read_text(encoding="utf-8"))
     summaries = load_summaries(date_dir)
     written, removed, warnings = [], [], []
@@ -465,17 +469,34 @@ def render_channels(date_dir: Path, file_date: datetime, channels: list[str]) ->
         # Guard: never let a rerun silently drop links an earlier run already published today.
         new_urls = {canonical(i["url"]) for i in items}
         lost = set()
-        for path in _same_date_files(channel, file_date):
+        for path in _same_date_files(channel, file_date, root):
             lost |= {canonical(u) for u in urls_in_markdown(path.read_text(encoding="utf-8"))} - new_urls
         lost.discard("")
         if lost:
             warnings.append(f"{channel}: 기존 {file_date:%Y-%m-%d} 파일의 링크 {len(lost)}개가 새 결과에 없어 덮어쓰지 않음")
             continue
-        path = render.write_channel(channel, file_date, {"items": items})
-        removed += _drop_stale_files(channel, file_date, keep=path)
+        path = render.write_channel(channel, file_date, {"items": items}, root=root)
+        removed += _drop_stale_files(channel, file_date, keep=path, root=root)
         written.append(path)
-        print(f"wrote {path.relative_to(ROOT)}  items={len(items)}")
+        print(f"wrote {path.relative_to(root)}  items={len(items)}")
     return written, removed, warnings
+
+
+def write_digest_safe(
+    file_date: datetime, held: list[str] | None, warnings: list[str], root: Path | None = None, link_log: bool | None = None
+) -> list[Path]:
+    """Rebuild daily/<date>.md (+ today.md when the date is today) from the published channel files.
+
+    A failure never touches the existing today.md; it becomes a warning (log + notification).
+    """
+    try:
+        paths = digest.write_digest(file_date, root or ROOT, held=held, link_log=link_log)
+    except Exception as exc:  # noqa: BLE001 - surfaced through warnings
+        warnings.append(f"통합 문서(today.md/daily) 생성 실패, 기존 파일 유지: {type(exc).__name__}: {exc}"[:300])
+        return []
+    for path in paths:
+        print(f"wrote {path.relative_to(root or ROOT)}")
+    return paths
 
 
 def render_cmd(args) -> int:
@@ -483,6 +504,8 @@ def render_cmd(args) -> int:
     date_dir = WORK / file_date.strftime("%Y-%m-%d")
     candidates = read_json(date_dir / "candidates.json")
     written, removed, warnings = render_channels(date_dir, file_date, list(candidates["channels"]))
+    # A past --date only refreshes daily/<date>.md; today.md is replaced only for today's date.
+    write_digest_safe(file_date, [], warnings)
     for warning in warnings:
         print(f"! {warning}")
     if args.publish:
@@ -547,7 +570,11 @@ def weekly(args) -> int:
     if args.summarize:
         order = models.check(state.load().get("last_model"))["order"]
         summarize.summarize(date_dir, ["github"], order, {})
-    written, _, _ = render_channels(date_dir, run_date, ["github"])
+    written, _, warnings = render_channels(date_dir, run_date, ["github"])
+    if written:
+        write_digest_safe(run_date, None, warnings)  # held=None keeps what the day's digest recorded
+    for warning in warnings:
+        print(f"! {warning}")
     if args.publish and written:
         result = publish.publish_outputs(f"weekly: add {run_date:%Y%m%d} GitHub trending", push=not args.no_push)
         print(json.dumps(result, ensure_ascii=False, indent=2))
@@ -658,7 +685,10 @@ def notification_text(run: dict) -> str:
         elif pub.get("note"):
             lines.append(pub["note"])
     for path in run.get("file_paths", []):
-        lines.append(_github_link(path))
+        if Path(path).resolve() == (ROOT / digest.TODAY).resolve():
+            lines.append(f"📰 오늘의 통합본: {_github_link(path)}")
+        else:
+            lines.append(_github_link(path))
     if run.get("error"):
         lines.append(f"오류: {run['error'].strip().splitlines()[-1][:300]}")
     return "\n".join(lines)
@@ -747,6 +777,9 @@ def auto(args) -> int:
                     "cause": "trending", "cause_ko": "Trending 페이지 수집 실패", "method": None,
                     "entries": 0, "attempts": wpayload["rescue_attempts"],
                 })
+
+        # 6. today.md + daily/<date>.md from the files actually published above (no new LLM calls)
+        run["file_paths"] = write_digest_safe(file_date, run["held"], run["warnings"], link_log=True) + run["file_paths"]
 
         st["last_model"] = srep.get("last_model") or st.get("last_model")
         state.save(st)
