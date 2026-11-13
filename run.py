@@ -2,7 +2,7 @@
 """DailyFeed orchestrator.
 
     python run.py auto                         # scheduled entry point (Windows Task Scheduler, 12:00 KST)
-    python run.py models                       # probe opencode free models -> models/available.md
+    python run.py models                       # probe the summary model (agy) -> models/available.md
     python run.py doctor
     python run.py collect  [--date 2026-10-20]
     python run.py summarize [--date 2026-10-21]
@@ -10,7 +10,7 @@
     python run.py weekly   [--date YYYY-MM-DD] [--publish]
 
 `auto` does everything: model check -> collect everything newer than the previous run ->
-rescue failed sources -> summarize with opencode free models -> render -> GitHub weekly when
+rescue failed sources -> summarize with agy (gemini-4-hydrogen-high) -> render -> GitHub weekly when
 due -> commit/push -> Discord/Slack notification. Output files are named by run date (KST).
 """
 
@@ -847,7 +847,7 @@ def main(argv: list[str] | None = None) -> int:
     p_auto.add_argument("--no-rescue", action="store_true")
     p_auto.set_defaults(func=auto)
 
-    p_models = sub.add_parser("models", help="probe opencode free models -> models/available.md")
+    p_models = sub.add_parser("models", help="probe the summary model (agy) -> models/available.md")
     p_models.set_defaults(func=models_cmd)
 
     p_collect = sub.add_parser("collect", help="fetch sources into work/<date>/")
@@ -858,7 +858,7 @@ def main(argv: list[str] | None = None) -> int:
     p_collect.add_argument("--no-rescue", action="store_true")
     p_collect.set_defaults(func=collect)
 
-    p_sum = sub.add_parser("summarize", help="summarize work/<date>/ with opencode free models")
+    p_sum = sub.add_parser("summarize", help="summarize work/<date>/ with the summary model (agy)")
     p_sum.add_argument("--date")
     p_sum.set_defaults(func=summarize_cmd)
 

@@ -1,5 +1,7 @@
-"""Free-model discovery, probing, and ordering.
+"""Summary-model probing and ordering.
 
+Since 2026-11-13 check() only probes the fixed agy model(s) in AGY_MODELS. The text below describes
+the old opencode path, kept as check_opencode() for rollback:
 opencode's free lineup changes without notice, so every run lists what opencode offers,
 probes each free model with the same small summarizing task, and publishes the result
 to models/available.md. models/priority.txt (edited by hand) decides the order; with no
@@ -137,8 +139,35 @@ def order(probes: list[dict], last_model: str | None) -> list[str]:
     return ordered
 
 
+# 2026-11-13: summaries use agy (Antigravity CLI) only. opencode's free lineup changed too often.
+# check() probes these models in order; the old opencode discovery is kept as check_opencode() for rollback.
+AGY_MODELS = ["agy/gemini-4-hydrogen-high"]
+
+
 def check(last_model: str | None) -> dict:
-    """Discover + probe; fall back to OpenRouter free only when no opencode free model works."""
+    """Probe the fixed agy model(s). No opencode / OpenRouter discovery."""
+    started = time.monotonic()
+    probes = probe_all(AGY_MODELS, workers=1)
+    report = {
+        "checked_at": now_kst().isoformat(timespec="seconds"),
+        "backend": "agy",
+        "list_error": None,
+        "opencode_free": [],
+        "openrouter_fallback_used": False,
+        "probes": probes,
+        "order": order(probes, last_model),
+        "seconds": round(time.monotonic() - started, 1),
+        "appeared": [],
+        "disappeared": [],
+    }
+    write_json(AVAILABLE_JSON, report)
+    write_available_md(report)
+    ensure_priority_file()
+    return report
+
+
+def check_opencode(last_model: str | None) -> dict:
+    """Old behaviour (before 2026-11-13): discover + probe opencode free models, OpenRouter as last resort."""
     started = time.monotonic()
     models, error = list_models()
     opencode_free, openrouter_free = free_models(models)
@@ -166,14 +195,25 @@ def check(last_model: str | None) -> dict:
 
 
 def write_available_md(report: dict) -> None:
-    lines = [
-        "# 사용 가능한 무료 모델",
-        "",
-        f"- 점검 시각: {report['checked_at']} (KST)",
-        f"- opencode 무료 모델 {len(report['opencode_free'])}개 발견, "
-        f"정상 응답 {sum(1 for p in report['probes'] if p['ok'] and p['model'].startswith('opencode/'))}개",
-        f"- 이번 실행 사용 순서: {' → '.join(f'`{m}`' for m in report['order'][:5]) or '없음'}",
-    ]
+    if report.get("backend") == "agy":
+        lines = [
+            "# 요약 모델 (agy)",
+            "",
+            f"- 점검 시각: {report['checked_at']} (KST)",
+            "- 2026-11-13부터 요약은 agy(Antigravity CLI) 고정 모델만 쓴다. opencode 무료 모델 탐색은 하지 않는다.",
+            f"- 점검 모델: {', '.join(f'`{p['model']}`' for p in report['probes']) or '없음'}, "
+            f"정상 응답 {sum(1 for p in report['probes'] if p['ok'])}개",
+            f"- 이번 실행 사용 순서: {' → '.join(f'`{m}`' for m in report['order'][:5]) or '없음'}",
+        ]
+    else:
+        lines = [
+            "# 사용 가능한 무료 모델",
+            "",
+            f"- 점검 시각: {report['checked_at']} (KST)",
+            f"- opencode 무료 모델 {len(report['opencode_free'])}개 발견, "
+            f"정상 응답 {sum(1 for p in report['probes'] if p['ok'] and p['model'].startswith('opencode/'))}개",
+            f"- 이번 실행 사용 순서: {' → '.join(f'`{m}`' for m in report['order'][:5]) or '없음'}",
+        ]
     if report.get("openrouter_fallback_used"):
         lines.append("- ⚠️ opencode 무료 모델이 모두 실패해 OpenRouter `:free` 모델을 점검했다.")
     if report.get("appeared"):
@@ -203,7 +243,7 @@ def ensure_priority_file() -> None:
     PRIORITY_PATH.write_text(
         "# 요약에 쓸 모델 우선순위. 한 줄에 하나, 위에 있을수록 먼저 쓴다. '#' 뒤는 주석.\n"
         "# 후보는 available.md 표를 참고한다. 목록의 모델이 모두 실패하면 마지막 성공 모델 → 점수순으로 넘어간다.\n"
-        "# 예) opencode/deepseek-v4.1-flash-free\n",
+        "# 예) agy/gemini-4-hydrogen-high\n",
         encoding="utf-8",
         newline="\n",
     )

@@ -205,12 +205,12 @@ https://www.youtube.com/watch?v=...
 
 ## 10. 로컬 실행 파이프라인
 
-수집은 결정론적 스크립트가 맡고, 요약만 LLM(opencode 무료 모델)이 맡는다. 정기 실행과 수동 실행 모두 `run.py auto` 하나다.
+수집은 결정론적 스크립트가 맡고, 요약만 LLM(agy `gemini-4-hydrogen-high`, 2026-11-13부터)이 맡는다. 정기 실행과 수동 실행 모두 `run.py auto` 하나다.
 
 ```bash
 uv venv .venv && uv pip install -r requirements.txt        # 최초 1회
 python run.py auto                                         # 전체 실행 (정기 실행과 동일)
-python run.py models                                       # 무료 모델 점검만
+python run.py models                                       # 요약 모델 점검만
 python run.py collect | summarize | render [--publish]     # 단계별 실행
 python run.py doctor                                       # 저장소·소스 상태 점검
 ```
@@ -218,10 +218,10 @@ python run.py doctor                                       # 저장소·소스 �
 `auto` 순서:
 
 1. `git pull` — GitHub에서 고친 `models/priority.txt`를 반영한다.
-2. 무료 모델 점검 — `opencode models`의 opencode 무료 모델을 같은 요약 과제로 시험해 `models/available.md`를 갱신한다.
-   사용 순서: `priority.txt` → 마지막 성공 모델 → 점수순. opencode 무료 모델이 전부 실패할 때만 OpenRouter `:free`를 쓴다.
+2. 요약 모델 점검 — `models.AGY_MODELS`(agy `gemini-4-hydrogen-high`)를 같은 요약 과제로 시험해 `models/available.md`를 갱신한다.
+   opencode·OpenRouter 무료 모델 탐색은 하지 않는다. 모델이 실패하면 Tech/YouTube 요약은 다음 실행으로 보류한다.
 3. 수집 — 채널별 직전 실행 이후 항목. 실패한 소스는 원인을 분류한 뒤
-   피드 자동 탐색 → crawl4ai → Apify → Playwright → opencode 에이전트 웹 검색 순으로 다시 시도한다.
+   피드 자동 탐색 → crawl4ai → Apify → Playwright → agy 웹 검색(search_web) 순으로 다시 시도한다.
    GeekNews RSS(50건)가 직전 실행까지 닿지 않으면 `news.hada.io/past` 날짜 페이지로 채운다.
 4. 요약 — 4~5건씩 묶어 요청하고, JSON·5줄·한국어 검증에 실패한 항목만 다음 모델로 재시도한다.
    끝내 실패한 항목은 제목만 기록하고 로그에 남긴다. 사용 가능한 모델이 하나도 없으면 GeekNews만 올리고 Tech/YouTube는 보류한다.

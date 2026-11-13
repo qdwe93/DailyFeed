@@ -1,4 +1,4 @@
-"""Summaries via opencode free models: small batches, validated, retried on the next model.
+"""Summaries via the model order from models.check() (agy since 2026-11-13): small batches, validated, retried on the next model.
 
 Writes work/<dir>/summaries.json incrementally in the format `render` already reads, so a
 crashed run resumes where it stopped and a same-day rerun only summarizes new ids.

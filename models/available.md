@@ -1,8 +1,9 @@
-# 사용 가능한 무료 모델
+# 요약 모델 (agy)
 
-- 점검 시각: 2026-11-13T12:00:51+09:00 (KST)
-- opencode 무료 모델 12개 발견, 정상 응답 12개
-- 이번 실행 사용 순서: `opencode/deepseek-v4.1-flash-free` → `opencode/minimax-m3.1-flash-free` → `opencode/glm-5.3-flash-free` → `opencode/inkling-2-small-free` → `opencode/nemotron-3.5-super-vl-free`
+- 점검 시각: 2026-11-13T21:26:39+09:00 (KST)
+- 2026-11-13부터 요약은 agy(Antigravity CLI) 고정 모델만 쓴다. opencode 무료 모델 탐색은 하지 않는다.
+- 점검 모델: `agy/gemini-4-hydrogen-high`, 정상 응답 1개
+- 이번 실행 사용 순서: `agy/gemini-4-hydrogen-high`
 
 우선순위는 [`priority.txt`](./priority.txt)에 한 줄에 하나씩 적는다. 비어 있으면 마지막으로 성공한 모델 → 점수순.
 
@@ -10,15 +11,4 @@
 
 | 모델 | 상태 | 점수 | 응답(초) | 비고 |
 |---|---|---:|---:|---|
-| `opencode/minimax-m3.1-flash-free` | ✅ | 100 | 3.5 |  |
-| `opencode/glm-5.3-flash-free` | ✅ | 100 | 5.2 |  |
-| `opencode/inkling-2-small-free` | ✅ | 100 | 5.2 |  |
-| `opencode/nemotron-3.5-super-vl-free` | ✅ | 100 | 5.9 |  |
-| `opencode/beam-free` | ✅ | 100 | 9.1 |  |
-| `opencode/big-pickle` | ✅ | 100 | 10.7 |  |
-| `opencode/deepseek-v4.1-flash-free` | ✅ | 100 | 10.8 |  |
-| `opencode/nemotron-3.5-lightning-free` | ✅ | 100 | 11.9 |  |
-| `opencode/longcat-2.5-free` | ✅ | 100 | 12.6 |  |
-| `opencode/iceman-free` | ✅ | 100 | 12.7 |  |
-| `opencode/flint-40b-free` | ✅ | 100 | 13.3 |  |
-| `opencode/mimo-v2.6-flash-free` | ✅ | 100 | 14.4 |  |
+| `agy/gemini-4-hydrogen-high` | ✅ | 100 | 12.7 |  |

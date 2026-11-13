@@ -1,7 +1,7 @@
 # DailyFeed
 
 기술 뉴스, 기술 블로그, 기술 YouTube 영상과 GitHub Trending을 Markdown으로 보관하는 저장소입니다.
-수집·요약·업로드는 로컬 PC에서 `run.py auto` 하나로 자동 실행되며, 요약은 opencode의 **무료 LLM**이 맡습니다.
+수집·요약·업로드는 로컬 PC에서 `run.py auto` 하나로 자동 실행되며, 요약은 agy(Antigravity CLI)의 **Gemini 4 Hydrogen (High)** 가 맡습니다(2026-11-13 opencode 무료 모델에서 전환).
 
 > **📰 [today.md](./today.md)** — 가장 최근 실행일(KST)에 발행된 모든 채널의 기사 제목·원문 링크·요약을 한 페이지로 모은 통합본.
 > 지난 날짜의 통합본은 [`daily/YYYY-MM-DD.md`](./daily/)에 남습니다.
@@ -29,7 +29,7 @@ DailyFeed/
 ├─ tests/                 # 오프라인 회귀 테스트: python -m unittest discover -s tests -v
 ├─ pipeline/              # 수집·대체 수집·요약·렌더·발행
 ├─ models/
-│  ├─ available.md        # 매 실행 전 점검한 무료 모델 목록과 점수 (자동 갱신)
+│  ├─ available.md        # 매 실행 전 점검한 요약 모델 상태와 점수 (자동 갱신)
 │  └─ priority.txt        # 사용할 모델 우선순위 (사용자가 편집)
 ├─ state/run_state.json   # 채널별 마지막 실행 시각, 마지막 사용 모델
 ├─ log/YYYY-MM-DD.md      # 실행 로그: 수집 실패 원인과 대체 시도 기록
@@ -42,13 +42,13 @@ DailyFeed/
 > `github/2026년10월/2026-10-17_claude-plugins-offic.md`는 초기 설정 과정에서 생성한 Daily Trending 테스트 스냅샷입니다.
 > 2026-10-20까지의 파일은 "대상일 = 전날" 방식, 2026-10-21부터는 "직전 실행 이후" 방식입니다.
 
-## 무료 모델 관리
+## 요약 모델 관리
 
-1. 매 실행 전 `opencode models`에서 opencode 무료 모델(`-free`, 가격 0)을 찾아 같은 요약 과제로 시험합니다.
-2. 결과를 [`models/available.md`](./models/available.md)에 올립니다(응답 여부, 점수, 응답 시간, 새로 생기거나 사라진 모델).
-3. [`models/priority.txt`](./models/priority.txt)에 한 줄에 하나씩 모델을 적으면 위에서부터 사용합니다. GitHub 웹에서 고쳐도 다음 실행이 먼저 `git pull`해서 반영합니다.
-4. 우선순위가 비어 있거나 모두 실패하면 **마지막으로 성공한 모델 → 점수순**으로 넘어갑니다.
-5. opencode 무료 모델이 하나도 응답하지 않을 때만 OpenRouter `:free` 모델을 씁니다. 그것도 없으면 GeekNews만 올리고 Tech/YouTube는 다음 실행으로 보류합니다.
+1. 요약 모델은 `pipeline/models.py` 의 `AGY_MODELS` 로 고정합니다(현재 `agy/gemini-4-hydrogen-high`). opencode 무료 모델은 목록이 자주 바뀌어 2026-11-13에 쓰지 않기로 했습니다.
+2. 매 실행 전 그 모델을 같은 요약 과제로 시험해 [`models/available.md`](./models/available.md)에 올립니다(응답 여부, 점수, 응답 시간).
+3. agy 는 헤드리스·`--sandbox`·`--mode plan` 으로, 저장소 밖 `work/.agy` 에서 실행합니다. 프롬프트는 stdin(stream-json)으로 넘겨 길이 제한이 없습니다.
+4. 모델이 응답하지 않으면 GeekNews만 올리고 Tech/YouTube는 다음 실행으로 보류합니다.
+5. 예전 opencode 방식은 `models.check_opencode()` 와 `llm.run("opencode/...")` 로 남겨 두었습니다(되돌릴 때만 사용).
 
 ## 수집 실패 대응
 
@@ -58,7 +58,7 @@ DailyFeed/
 2. crawl4ai (헤드리스 브라우저)
 3. Apify `web-fetch` (실행당 최대 20회, 회당 약 $0.0016)
 4. Playwright
-5. opencode 에이전트 웹 검색 (게시 시각이 확인된 원문 URL만 채택)
+5. agy 웹 검색(search_web) (게시 시각이 확인된 원문 URL만 채택)
 
 본문 추출이 비는 글은 2~4번으로 본문을 다시 가져옵니다. GeekNews RSS(최신 50건)가 직전 실행 시점까지 닿지 않으면 `news.hada.io/past` 날짜 페이지로 빈 구간을 채웁니다. 모든 시도와 결과는 `log/`에 남깁니다.
 
@@ -67,7 +67,7 @@ DailyFeed/
 ```bash
 uv venv .venv && uv pip install -r requirements.txt   # 최초 1회
 .venv/Scripts/python.exe run.py auto                 # 정기 실행과 동일 (수동 실행도 이것)
-.venv/Scripts/python.exe run.py models               # 무료 모델 점검만
+.venv/Scripts/python.exe run.py models               # 요약 모델 점검만
 .venv/Scripts/python.exe run.py doctor               # 저장소·소스 점검
 .venv/Scripts/python.exe run.py collect --date 2026-10-20   # 특정 하루만 수집 (구 방식)
 ```
