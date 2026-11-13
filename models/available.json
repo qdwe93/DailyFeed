@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-12T12:01:07+09:00",
+  "checked_at": "2026-11-13T12:00:51+09:00",
   "list_error": null,
   "opencode_free": [
     "opencode/beam-free",
@@ -21,35 +21,35 @@
       "model": "opencode/beam-free",
       "ok": true,
       "score": 100,
-      "seconds": 8.5,
+      "seconds": 9.1,
       "error": null
     },
     {
       "model": "opencode/big-pickle",
       "ok": true,
       "score": 100,
-      "seconds": 7.3,
+      "seconds": 10.7,
       "error": null
     },
     {
       "model": "opencode/deepseek-v4.1-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 6.2,
+      "seconds": 10.8,
       "error": null
     },
     {
       "model": "opencode/flint-40b-free",
       "ok": true,
       "score": 100,
-      "seconds": 13.2,
+      "seconds": 13.3,
       "error": null
     },
     {
       "model": "opencode/glm-5.3-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 5.9,
+      "seconds": 5.2,
       "error": null
     },
     {
@@ -63,21 +63,21 @@
       "model": "opencode/inkling-2-small-free",
       "ok": true,
       "score": 100,
-      "seconds": 5.6,
+      "seconds": 5.2,
       "error": null
     },
     {
       "model": "opencode/longcat-2.5-free",
       "ok": true,
-      "score": 95,
-      "seconds": 23.0,
+      "score": 100,
+      "seconds": 12.6,
       "error": null
     },
     {
       "model": "opencode/mimo-v2.6-flash-free",
       "ok": true,
       "score": 100,
-      "seconds": 10.6,
+      "seconds": 14.4,
       "error": null
     },
     {
@@ -90,33 +90,33 @@
     {
       "model": "opencode/nemotron-3.5-lightning-free",
       "ok": true,
-      "score": 95,
-      "seconds": 34.1,
+      "score": 100,
+      "seconds": 11.9,
       "error": null
     },
     {
       "model": "opencode/nemotron-3.5-super-vl-free",
       "ok": true,
       "score": 100,
-      "seconds": 6.7,
+      "seconds": 5.9,
       "error": null
     }
   ],
   "order": [
     "opencode/deepseek-v4.1-flash-free",
     "opencode/minimax-m3.1-flash-free",
-    "opencode/inkling-2-small-free",
     "opencode/glm-5.3-flash-free",
+    "opencode/inkling-2-small-free",
     "opencode/nemotron-3.5-super-vl-free",
-    "opencode/big-pickle",
     "opencode/beam-free",
-    "opencode/mimo-v2.6-flash-free",
+    "opencode/big-pickle",
+    "opencode/nemotron-3.5-lightning-free",
+    "opencode/longcat-2.5-free",
     "opencode/iceman-free",
     "opencode/flint-40b-free",
-    "opencode/longcat-2.5-free",
-    "opencode/nemotron-3.5-lightning-free"
+    "opencode/mimo-v2.6-flash-free"
   ],
-  "seconds": 63.2,
+  "seconds": 46.5,
   "disappeared": [],
   "appeared": []
 }
