@@ -1,303 +1,525 @@
-# DailyFeed — 2026-11-16 (KST)
+# DailyFeed — 2026-11-17 (KST)
 
 <!-- dailyfeed-digest held= -->
 
-- 수집일: 2026-11-16
-- 통합 생성: 2026-11-16 12:05 KST
+- 수집일: 2026-11-17
+- 통합 생성: 2026-11-17 12:08 KST
 - 구분: 수집일(실행일) 기준. 기사 게시일과 다를 수 있음
-- 실행 로그: [log/2026-11-16.md](/log/2026-11-16.md)
+- 실행 로그: [log/2026-11-17.md](/log/2026-11-17.md)
 
 ## 빠른 이동
 
-- [GeekNews](#geeknews) — 48건
-- [Tech Feeds](#tech-feeds) — 3건
-- [YouTube Tech](#youtube-tech) — 10건
-- [GitHub Trending Weekly](#github-trending-weekly) — 10건
+- [GeekNews](#geeknews) — 50건
+- [Tech Feeds](#tech-feeds) — 28건
+- [YouTube Tech](#youtube-tech) — 18건
 
 ## GeekNews
 
-[채널별 원본](/geeknews/2026%EB%85%8411%EC%9B%94/2026-11-16_%ED%94%BC%ED%81%B4-AI-%EB%B9%84%EC%84%9C%EB%A5%BC-%ED%95%98%EB%A3%A8-%EC%8D%A8-%EB%B3%B4%EA%B3%A0%2C-%EA%B3%B5.md)
+[채널별 원본](/geeknews/2026%EB%85%8411%EC%9B%94/2026-11-17_Odin%EC%9C%BC%EB%A1%9C-%EC%9E%91%EC%84%B1%ED%95%9C-NES-%EC%97%90%EB%AE%AC%EB%A0%88%EC%9D%B4%ED%84%B0.md)
 
-- [피클 AI 비서를 하루 써 보고, 공개된 금고 코드까지 읽어 봤습니다](https://news.hada.io/topic?id=37188)
-- [Show HN: 순수 JAX 약 200줄로 구현한 DeepSeek V3](https://news.hada.io/topic?id=37189)
-- [Project Zero, 취약점 공개 기한을 90일에서 30일까지 단계적으로 단축](https://news.hada.io/topic?id=37190)
-- [Antigravity의 /teamwork로 과학과 엔지니어링 발전시키기](https://news.hada.io/topic?id=37191)
-- [사용자가 자기 데이터를 소유하게 해주고 싶다](https://news.hada.io/topic?id=37192)
-- [Show GN: Freeze - 맥 독에서 실수로 앱이 열리는 걸 막는 메뉴바 앱](https://news.hada.io/topic?id=37193)
-- [EFF, 항소법원에 자동 번호판 인식 데이터 검색의 영장 의무화 요청](https://news.hada.io/topic?id=37195)
-- [Show GN: 외부 의존성 없이 KERNEL32.dll만 쓰는 순정 C11 윈도우 로컬 에이전트 공구함 (5KB CLI · 69.4 µs MCP)](https://news.hada.io/topic?id=37197)
-- [Show GN: agent-otel-kit - Claude Code·Codex·Gemini CLI 사용량, 비용, 도구 호출을 한 대시보드로](https://news.hada.io/topic?id=37198)
-- [Show GN: 인디해커온라인 – 창업자, 개발자들의 온라인 오피스를 만든 이야기](https://news.hada.io/topic?id=37199)
-- [고칠 줄 몰라서가 아니라 불편한 줄 몰라서 – 기억해야 할 창구를 줄인 업무 환경 개선기](https://news.hada.io/topic?id=37201)
-- [AI 코딩 에이전트의 "테스트 모두 통과"를 믿기 전에 확인하는 9가지 (실측 사례 모음)](https://news.hada.io/topic?id=37202)
-- [Show GN: Agent Standup - 내 Claude Code·Codex 세션을 한국어 화상회의로 보여주는 도구](https://news.hada.io/topic?id=37203)
-- [미국 IRS의 무료 온라인 세금 신고 서비스 오픈소스 저장소(2025)](https://news.hada.io/topic?id=37206)
-- [브라질 Caixa 보험사 침해 사고로 고객 760만 명 전원의 이름과 납세자 번호 노출](https://news.hada.io/topic?id=37207)
-- [AI가 생성한 모든 코드는 오픈소스여야 한다](https://news.hada.io/topic?id=37208)
-- [Lutnick, 가족 사업과 맞물린 반도체 규제 완화 추진](https://news.hada.io/topic?id=37209)
-- [내가 좋아하는 현대 NES 게임들](https://news.hada.io/topic?id=37211)
-- [Rust와 ratatui로 만든 터미널 방치형 공장 게임](https://news.hada.io/topic?id=37212)
-- [강화학습을 시각적으로 이해하기](https://news.hada.io/topic?id=37214)
-- [Lean으로 미국 세법 형식화하기](https://news.hada.io/topic?id=37215)
-- [Claude라는 망상](https://news.hada.io/topic?id=37216)
-- [세계 각국 보안기관의 광고 기반 감시 시스템 사용 확인](https://news.hada.io/topic?id=37217)
-- [현대 LLM의 위치 임베딩 이해하기](https://news.hada.io/topic?id=37218)
-- [Turbo Pascal보다 크기가 큰 것들 (2011)](https://news.hada.io/topic?id=37219)
-- [DGX Station 2대에서 vLLM으로 GLM-5.3 로컬 서빙하기](https://news.hada.io/topic?id=37221)
-- [휴대폰 포렌식 도구는 잠긴 기기에서 어떻게 데이터를 꺼내나](https://news.hada.io/topic?id=37225)
-- [Show GN: 소장 노트 - 사진으로 소장품을 기록하고 찾아보는 안드로이드 앱](https://news.hada.io/topic?id=37226)
-- [이탈리아, 사진 개인정보 침해로 Meta에 8억 500만 유로 과징금 부과](https://news.hada.io/topic?id=37227)
-- [실전파 컴퓨터 과학자를 위한 도서 목록](https://news.hada.io/topic?id=37232&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Show GN: Poly Duo - ChatGPT와 Claude가 각자 답하고 서로 확인하는 무료 iPhone·Android 앱](https://news.hada.io/topic?id=37233)
-- [주요 C 프로젝트 40개의 메모리 관리 방식 조사](https://news.hada.io/topic?id=37234&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Show GN: SELF MAP - 답이 보이는 문항을 걷어낸, 가입 없는 성향 테스트 11개](https://news.hada.io/topic?id=37235)
-- [DBDelve - Rust와 GPUI로 만든 가벼운 오픈소스 데이터베이스 클라이언트](https://news.hada.io/topic?id=37236&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [이제 거의 무엇이든 만들 수 있다. 무엇을 만들 가치가 있을까?](https://news.hada.io/topic?id=37237&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Protomaps: 지도 타일 셀프 호스팅이 저렴하고 쉬워졌다](https://news.hada.io/topic?id=37239&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [오래된 Bitly 링크가 탈취되고 있음](https://news.hada.io/topic?id=37241&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [AI 시대, 새로운 게임 개발자는 어떻게 탄생할까](https://news.hada.io/topic?id=37243&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [새로운 풀스택 디자이너 - Figma 스케치에서 작동하는 데모까지](https://news.hada.io/topic?id=37244&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [X.com을 처음부터 다시 구축하기 - 서버 3개를 하나로](https://news.hada.io/topic?id=37245&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Jensen Huang, Nvidia CEO로 복귀할 가능성](https://news.hada.io/topic?id=37246&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Show GN: 프로젝트 엘리브 - 빠르고 저렴하게 도메인 등록하기](https://news.hada.io/topic?id=37248&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [국토부, 구글의 1:5,000 지도 국외 반출 보안조건 이행 확인](https://news.hada.io/topic?id=37249&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Show GN: agent-monitor - 어느 에이전트 세션이 내 답을 기다리는지 보여주는 macOS 메뉴바 앱](https://news.hada.io/topic?id=37251&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Show GN: Landlink - 인터넷 없이 통신하는 오픈소스 프로젝트](https://news.hada.io/topic?id=37252&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Vulcan 로켓, 비행 재개 발사 실패로 Amazon 위성 40기 손실](https://news.hada.io/topic?id=37253&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Jensen Huang, 측근들과 Nvidia CEO 복귀 논의](https://news.hada.io/topic?id=37254&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Show GN: GitMorning – 어제보다 새로 오르거나 순위가 오른 GitHub Trending만 보여 주는 Mac 메뉴 막대 앱 링...](https://news.hada.io/topic?id=37256)
+- [Odin으로 작성한 NES 에뮬레이터](https://news.hada.io/topic?id=37258)
+- [clice v1.0 출시: 모던 C++ 언어 서버](https://news.hada.io/topic?id=37259)
+- [Show HN: Agweb - 작업을 방해하지 않는 에이전트용 브라우저](https://news.hada.io/topic?id=37261)
+- [Qwen4-Max - 네이티브 비전과 100만 토큰 컨텍스트를 갖춘 장기 작업용 AI 모델](https://news.hada.io/topic?id=37262)
+- [Jiff - 시간대 처리를 중심에 둔 Rust 날짜와 시간 라이브러리](https://news.hada.io/topic?id=37263)
+- [Firefox용 uBlock Origin, 클릭 한 번으로 다른 사이트에 스크립트 주입 가능한 취약점 패치](https://news.hada.io/topic?id=37265)
+- [젠슨 황 이후, Nvidia는 어디로 가나?](https://news.hada.io/topic?id=37266)
+- [Ask GN: 브라우저 GUI 자동화 작업이 잠금(lock) 폴더가 남아서 멈췄습니다. 이런 잠금은 어떻게 설계하나요?](https://news.hada.io/topic?id=37270)
+- [Show GN: anyglance – 서버와 GPU 를 한 화면에서, 설치 5분](https://news.hada.io/topic?id=37272)
+- [Tor Project, 지속적인 DDoS 공격에 대응해 DoS 방어 긴급 수정 배포](https://news.hada.io/topic?id=37275)
+- [Show GN: Vibnote – 흩어진 아이디어를 한곳에 모으고 발전시키는 서비스](https://news.hada.io/topic?id=37276)
+- [Show GN: podori - 보안 점검·수정·테스트를 AI 코딩 에이전트에 맡기는 스킬 모음](https://news.hada.io/topic?id=37277)
+- [거의 무엇이든 만드는 방법](https://news.hada.io/topic?id=37279)
+- [Linux 7.4-rc3](https://news.hada.io/topic?id=37282)
+- [Show GN: BridgeLight - 반려동물을 위한 무료 3D 추모 정원 (개발자 없이 AI와 1인 제작)](https://news.hada.io/topic?id=37283)
+- [Show GN: MaaC – 악보를 코드로 쓰고 AI가 편곡까지 하게 만든 음악 언어와 Rust CLI](https://news.hada.io/topic?id=37285)
+- [Show GN: redfirst, PR이 추가한 테스트가 수정 전에도 통과하는지 확인하는 도구](https://news.hada.io/topic?id=37286)
+- [Debian, 6.1.0-55 커널 업데이트 후 무응답 발생](https://news.hada.io/topic?id=37287)
+- [도대체 w2rt6byl5nf1opmc-a.com은 뭐 하는 도메인인가?](https://news.hada.io/topic?id=37289)
+- [“…그리고 이 증명은 Lean으로 검증됐습니다”](https://news.hada.io/topic?id=37290)
+- [먹통 노트북을 되살리는 ThinkPad의 비밀 전원 버튼 코드 (2007)](https://news.hada.io/topic?id=37292)
+- [내부고발자, 6명 숨진 이란의 미군 기지 공격과 관련해 미 국방부 책임 제기](https://news.hada.io/topic?id=37294)
+- [Tell HN: 사기 목적으로 HN에서 이메일 주소가 수집되고 있음](https://news.hada.io/topic?id=37295)
+- [Coles, 사이버 보안 사고 발생](https://news.hada.io/topic?id=37298)
+- [Eclipse Mosquitto - 오픈 소스 MQTT 브로커](https://news.hada.io/topic?id=37299)
+- [Nvidia는 젠슨 황 논란 이전부터 어려움을 겪고 있었다](https://news.hada.io/topic?id=37301)
+- [Bank of America, Chase, U.S. Bank, Wells Fargo, Zelle에서 서비스 장애 신고](https://news.hada.io/topic?id=37302&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [소프트웨어가 구조적으로 무너지고 있다](https://news.hada.io/topic?id=37303&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Frame - 31.5인치 컬러 전자종이 디스플레이](https://news.hada.io/topic?id=37304&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [태양광 패널이 설치된 들판에서 양 방목하기](https://news.hada.io/topic?id=37305&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Microsoft, 대규모 이메일 장애 원인으로 7월 패치에 유입된 소프트웨어 결함 지목](https://news.hada.io/topic?id=37306&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Carnegie Mellon, 컴퓨터 과학 강의를 YouTube에 무료 공개](https://news.hada.io/topic?id=37307&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Show GN: Seed Money - 내 AI 에이전트에게 MCP로 매매를 맡길 수 있는 주식 트레이딩 시뮬레이션 게임](https://news.hada.io/topic?id=37308)
+- [Show GN: docs-suit - 문서 종류와 읽는 사람에 맞춰 AI 글쓰기 지침을 조립하는 한국어 도구](https://news.hada.io/topic?id=37309)
+- [AI 시대, 전 이제 뭘 해야 하나요? : 바뀐 것과 바뀌지 않은 것](https://news.hada.io/topic?id=37310)
+- [Show GN: Taskhand - 한 번 해 보이면 따라 하는 Windows 업무 자동화 (로컬 AI 내장·무료)](https://news.hada.io/topic?id=37312)
+- [Rust가 개발자로서의 나를 바꾼 방식](https://news.hada.io/topic?id=37313&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [GitHub에서 Codeberg로 이전하기](https://news.hada.io/topic?id=37314&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Show GN: wowTerminal – 한글 입력을 다듬은 무료 오픈소스 AI 터미널 (SSH·SFTP·tmux·로컬 LLM)](https://news.hada.io/topic?id=37315)
+- [AI 슬롭은 왜 이렇게 읽기 짜증날까?](https://news.hada.io/topic?id=37316&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [AVA - AI 에이전트용 데이터 분석 및 시각화 프레임워크](https://news.hada.io/topic?id=37317&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [United Airlines, 광범위한 시스템 장애 발생했다고 밝혀](https://news.hada.io/topic?id=37318&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [세계 최대 브랜드들, Optimizely를 통해 악성코드에 감염](https://news.hada.io/topic?id=37319&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [CI 시장은 세 갈래로 나뉘었다](https://news.hada.io/topic?id=37320&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Show GN: AI 코딩 에이전트의 '다 고쳤습니다' 거짓말을 검증하는 MCP 레이어 — AdaptOrch](https://news.hada.io/topic?id=37323)
+- [Branchless Programming - CPU 분기 예측과 분기 없는 프로그래밍 이해하기](https://news.hada.io/topic?id=37325&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Modern Web Guidance 1.0 - 코딩 에이전트에 최신 웹 개발 지침을 제공하는 스킬 모음](https://news.hada.io/topic?id=37324&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Windows 11, 사용하는 코딩 에이전트와 개발 도구 정보를 수집함](https://news.hada.io/topic?id=37327&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Show GN: Subscale - 여러 Tailscale 계정 중 주소별로 나눠 연결해주는 CLI 도구](https://news.hada.io/topic?id=37328&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [카파시식 LLM 위키를 업무에 반년 운영하며 남은 규칙과 실패](https://news.hada.io/topic?id=37331)
 
 ## Tech Feeds
 
-[채널별 원본](/tech/2026%EB%85%8411%EC%9B%94/2026-11-16_%EC%9E%90%EC%B2%B4-%EC%BD%94%EB%94%A9-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-haro-%EC%99%80-%EC%82%AC%EB%82%B4.md)
+[채널별 원본](/tech/2026%EB%85%8411%EC%9B%94/2026-11-17_Interspeech-2026%EC%97%90%EC%84%9C-D.md)
 
-### LayerX Engineering Blog
+### DeNA Engineering
 
-#### 자체 코딩 에이전트 'haro'와 사내 GPU로 탐색적 테스트 AI 에이전트 가동하기
-원문: https://tech.layerx.co.jp/entry/haro-et-agent
+#### Interspeech 2026에서 DeNA 음성 개발자가 본 음성 기술의 최전선
+원문: https://engineering.dena.com/blog/2026/11/interspeech-2026/
 
-- LayerX는 공개 전 기능의 탐색적 테스트를 사내 백그라운드 코딩 에이전트 'haro'와 사내 GPU에서 구동하는 오픈웨이트 모델 Qwen3.8-27B에 맡겨 약 10시간 동안 47개의 시나리오를 실행했다.
-- haro가 하루 PR의 절반 이상을 생성하며 코드 작성 속도가 빨라진 가운데, 화면·기능별 테스트가 놓치기 쉬운 기능 간 조합 오류를 찾기 위해 수작업과 시간이 많이 드는 탐색적 테스트 자동화를 추진했다.
-- 테스트 관점은 James A. Whittaker의 저서를 참고해 화면이 아닌 확인 목적별로 나눈 가이드북·FedEx·반사회적·강박관념 등의 '투어' 방식을 적용하며, 에이전트가 투어 순서를 정하고 라운드마다 미확인 항목을 기록해 다음 시나리오에 반영한다.
-- 역할을 분리해 Claude가 사양과 코드를 읽고 테스트 시나리오 작성 및 사후 원인 조사를 맡고, 사내 GPU의 Qwen3.8-27B는 시나리오를 바탕으로 다음 행동을 결정해 스크린샷을 보며 클릭·입력하는 화면 조작(실행당 수백~천 회 호출)을 담당한다.
-- 화면 내부만 보는 Qwen3.8-27B가 다른 화면에 표시된 값을 버그로 오인하는 등의 오류를 막기 위해, 화면을 조작하지 않는 Claude가 Datadog 서버 로그나 코드로 결과를 교차 검증한 뒤 확인된 문제를 티켓 초안으로 정리한다.
+- DeNA에서 음성 컴패니언용 캐스케이드형 음성 대화 시스템(음성 인식→대화 생성→음성 합성)을 개발하는 저자는 2026년 9월 27일부터 10월 1일까지 시드니에서 열린 제27회 Interspeech 2026에 참가해 연구 동향과 현장 교류 내용을 정리했다.
+- 이번 Interspeech 2026은 'Diversity & Equity – Speaking Together'를 주제로 70개국에서 2,200명 이상이 참가하고 논문 1,341건과 데모 발표 37건이 진행되며 역대 최대 규모로 개최되었다.
+- 음성 합성(TTS) 분야에서는 제로샷 합성의 자연스러움이 실용 수준에 도달하면서 연구 관심이 품질 향상에서 안정성과 세밀한 제어 및 스트리밍 TTS와 스타일 제어로 이동했다.
+- 음성 대화 분야에서는 무엇을 말할지보다 발화 종단 선행 예측, 음향·운율 특징량 기반 종단 검출, 맞장구 판단 등 언제 어떻게 반응할지로 초점이 옮겨갔다.
+- 음성 인식(ASR)에서는 Speech-LLM 구성이 표준화되며 LLM과 기타 인코더의 기능 분담 및 재학습 없는 환각 억제에 관심이 모였고, 평가는 단일 MOS 중심에서 용도별 적절성과 쌍대 비교 및 학습 보상 활용으로 확장되고 있다.
+
+### NAVER D2
+
+#### 카페 관리도구 개편기: 문서는 낡았고, 사람은 떠났고, 코드만 남았다.
+원문: https://d2.naver.com/helloworld/4049909
+
+- 네이버 사내 기술 교류 행사인 NAVER Engineering Day 10th에서 발표된 세션을 공개하는 글이다.
+- 코드만 남아 있던 14년 된 구 카페 관리도구를 AI와 함께 분석한 과정을 공유한다.
+- Storybook과 MSW로 화면과 동작을 재현하며 새로운 카페 스튜디오를 개발했다.
+- 개발 과정에서 기획, 디자인, BE와의 협업 방식과 일하는 방식이 어떻게 달라졌는지 다룬다.
+- 레거시 시스템 개편 개발자, AI 실무 활용 엔지니어, 화면과 정책을 함께 검증하려는 기획자·디자이너를 대상으로 프로젝트 개요부터 구 관리도구 분석, 신규 스튜디오 개발, 일하는 방식까지를 목차로 제시한다.
+
+#### 흩어진 행동을 연결하다: 네이버 전 지면의 사용자 행동을 학습하는 추천 모델 개발기
+원문: https://d2.naver.com/helloworld/1599966
+
+- 네이버 사내 기술 교류 행사인 NAVER Engineering Day 10th에서 발표된 추천 모델 개발 세션을 공개하는 글이다.
+- 네이버의 검색·피드·광고 등 다양한 도메인의 데이터와 추천 기술을 연결하는 버티컬 추천 모델의 개발 및 서비스 적용 경험을 소개한다.
+- 목차에는 개발 배경과 목표, VMs 시스템 구조, 리트리버와 통합 랭커, 지면별 적용 현황과 성과가 포함된다.
+- 크로스 도메인 추천과 시퀀스·생성형 추천에 관심 있는 독자를 대상으로 대규모 추천 모델의 실시간 추론 및 GPU 서빙 최적화를 다루는 VMs 서빙과 최적화 내용을 공유한다.
+- Foundation Model의 지식을 경량 모델로 전이하는 Knowledge Distillation 기반 도메인 간 지식 전이 방향과 향후 계획을 제시한다.
+
+#### Image AI 서빙 최적화: CPU와 GPU의 빈 시간을 줄여 H100 67장을 절감하기까지
+원문: https://d2.naver.com/helloworld/9994827
+
+- 네이버 사내 기술 교류 행사인 NAVER Engineering Day 10th에서 발표된 Image AI 서빙 최적화 세션을 공개하는 글이다.
+- SNOW의 16개 Image AI 서비스에서 응답 속도와 안정성을 높이면서 H100 환산 67.37장(약 67장)의 GPU 자원을 절감한 경험을 공유한다.
+- LitServe 전환을 통해 반복되는 이미지 인코딩·디코딩을 제거하고 CPU 전처리와 GPU 계산 사이의 대기 시간을 줄였다.
+- 워커 수, 스레드 수, CPU 한도와 코어 고정, Autoscaling 로직 개선 및 에이전트 실험과 검토를 통해 실제 트래픽에 맞춘 파라미터 반복 최적화를 진행했다.
+- 가벼운 작업을 CPU로 분리하고 여러 서비스를 단일 GPU에 함께 배치해 불필요한 연산과 요청 대기 비용을 제거했으며, 응답 속도·처리량·오류율·취소율·GPU 활용도 개선과 함께 향후 과제로 Image Harness 및 트래픽 맞춤 자동 최적화를 제시한다.
+
+#### 노트북을 닫아도 개발은 계속된다: 자율 그래프 주도 개발
+원문: https://d2.naver.com/helloworld/5976687
+
+- NAVER Engineering Day 10th에서 발표된 세션을 공개하는 글로, '자율 그래프 주도 개발'은 사람의 직접적인 지시 없이 그래프가 프로젝트 진행을 주도하는 방식이다.
+- AI Agent 루프가 스펙 문서와 코드를 작성하면 결정론적 코드가 이를 기계적으로 검사하고, 발생한 결함은 피드백 루프를 통해 자동으로 바로잡는다.
+- 사람이 AI를 호출하던 기존 방식과 달리 주도권이 역전되어 AI가 필요할 때만 사람을 호출하며, 그래프 운영 도구에는 서비스 지식이 포함되지 않는다.
+- 그래프는 Upstream, Spec-drive, Dev, Verify, Audit 노드로 구성되며, Verify는 배포된 코드를 E2E 테스트로 검증하고 Audit은 스펙의 논리적 결함을 찾는다.
+- 세션 목차에는 복잡한 AI 대화 구현 사례의 토큰 비용 $199.61, 루프가 프런티어 모델이 아니어도 충분하다는 점, 백엔드 개발 공수 86% 및 사람·AI 합산 전체 비용 71% 절감 성과가 포함되어 있다.
+
+### SmartHR Tech Blog
+
+#### 1인 PM도 고민하지 않는다! SmartHR의 서비스 개발——입사 반년 만에 느낀 PM을 지원하는 3가지 구조
+원문: https://tech.smarthr.jp/entry/2026/11/16/140258
+
+- SmartHR의 직원 포털 영역 AI 어시스턴트 기능을 혼자 담당하는 입사 반년 차 AI PM이 회사 내 3가지 지원 체계를 소개하는 글이다.
+- 전사 회의, PM 전체 정례, LT회 등에서 얻은 배움을 공유하고 Notion에 축적하는 문화가 있어, 이를 기반으로 AI의 조언을 받거나 타 PM의 경험을 미리 참고할 수 있다.
+- 모든 영역의 PM이 참여하는 주간 정례에서는 매주 1~2명이 프로젝트와 대처 사례를 공유해, 후발 제품 담당자가 앞으로 겪을 과제를 미리 대비할 수 있다.
+- '제판일체(製販一体)' 기조 아래 CS·세일즈·고객지원과 사내 백오피스 구성원이 고객 인터뷰 주선과 출시 전 사양·모크 리뷰에 협조해 1차 정보 확보가 수월하다.
+- 세일즈와 CS의 상담·면담 녹취록이 데이터베이스화되어 있어 분석용 스킬을 활용해 AI로 고객 요구와 수주 실패 요인을 자연어 분석할 수 있다.
+
+#### SmartHR는 RubyWorld Conference 2026에 협찬하고 1명이 발표합니다
+원문: https://tech.smarthr.jp/entry/2026/11/17/114939
+
+- SmartHR은 2026년 12월 3일부터 4일까지 시마네현 마쓰에시 쿠니비키 멧세에서 열리는 RubyWorld Conference 2026에 Silver 스폰서로 협찬한다.
+- SmartHR은 다수의 제품을 Ruby로 개발하고 있으며, Ruby 창시자 마쓰모토 유키히로의 거주지이자 'Ruby City MATSUE'인 마쓰에의 컨퍼런스 및 지역 기술 커뮤니티와의 연계를 중시해 협찬에 참여한다.
+- 애플리케이션 플랫폼 개발부 소속 itojum이 12월 4일 13시 25분부터 15분간 발표를 진행한다.
+- 발표는 'Ruby 합숙의 DXRuby 게임을 브라우저로 —— PicoRuby.wasm으로 게임 실행 환경 다시 만들기'라는 제목으로, 학생 시절 만든 DXRuby 게임을 PicoRuby.wasm으로 재구현하며 겪은 과제 해결과 OSS 기여 과정을 다룬다.
+- 행사장에서는 발표자 itojum과 DevRel 담당자 natty 등 SmartHR 멤버들이 참가자와 교류할 예정이며, 글 말미에서는 Ruby 개발자 채용도 안내하고 있다.
+
+### Toss Tech
+
+#### 같은 모델, 다른 예측
+원문: https://toss.tech/article/training-serving-skew
+
+- 추천 모델 학습에 Point-in-Time 조인을 적용하더라도 배치 피처의 온라인 저장소 업로드 지연으로 인해 학습과 서빙 시점의 피처가 달라지는 Training-Serving Skew가 발생한다.
+- 토스 추천 시스템에서는 학습과 서빙의 파티션 불일치, 업로드 중 피처 값과 파티션 정보 어긋남, 집계 제외 값이 온라인 저장소에 남아 서빙되는 세 가지 문제를 겪었다.
+- 피처 테이블마다 온라인 저장소 업로드 완료 시점이 달라 같은 요청 내에서도 테이블별로 다른 시각의 파티션이 사용되며, 학습 시 요청 시각 기준으로 파티션을 선택하면 서빙과 다른 데이터를 쓰게 된다.
+- 모든 추론 요청에서 실제 사용한 피처 값을 로그로 적재하는 방식은 하루 수십 TB의 로그가 쌓여 저장·전송·처리 비용과 다수 실험 동시 진행에 따른 부담이 크다고 판단했다.
+- 이에 피처 값 전체 대신 실제 서빙에 사용한 피처의 파티션과 조회 대상만 로그에 남겨 학습 시 동일한 값을 다시 조회하는 방법을 검토했다.
+
+### Google Official Blog
+
+#### 십 대들이 온라인 안전과 AI에 대해 실제로 생각하는 것
+원문: https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/what-teenagers-really-think-about-online-safety-and-ai/
+
+- Future Report 설문에 참여한 영국 십 대 6,000명 중 77%는 온라인에서 접한 내용을 신뢰할 수 있는지 항상 또는 자주 멈춰서 확인한다고 답했다.
+- 온라인 정보를 항상 확인하는 비율은 13~15세(33%)보다 16~18세(52%)에서 더 높게 나타났다.
+- 십 대의 81%는 허위 정보, 사기, 사이버 괴롭힘 문제에 대해 부모에게 도움을 요청할 것이라고 답했으며(13~15세 83%, 16~18세 79%), 10명 중 3명은 부모의 지도가 균형을 잡는 데 도움이 된다고 밝혔다.
+- 글은 온라인 접근을 차단할 경우 위험을 막는 대신 배움, 창의성, 대화, 자신감 등 기술을 잘 활용하며 얻는 요소도 함께 잃게 된다고 지적했다.
+- 십 대의 3분의 2는 창의적 프로젝트(67%)나 학습(65%)을 위해 적어도 주 몇 차례 이상 AI를 사용하며, 단순한 정답보다 원리를 이해하도록 돕는 경우에 가치를 둔다.
+
+#### 십 대의 온라인 뉴스 및 정보 탐색 지원하기
+원문: https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/helping-teens-navigate-online-news-and-information/
+
+- 영국 십 대 6,000명을 대상으로 한 구글의 'The Future Report'에 따르면 응답자의 83%가 알고리즘 추천을 통해 정보를 접하며, 어려운 주제를 이해할 때는 영상 콘텐츠를 선호하고 창의성과 학습을 위해 AI 챗봇을 매일 활용한다.
+- 십 대들은 AI로 생성되거나 조작된 콘텐츠가 늘어나면서 온라인 정보 환경을 탐색하기가 점점 더 복잡해지고 있다고 인식했다.
+- Internet Matters의 자체 조사에서도 이러한 콘텐츠 증가로 인해 어린이들이 피드의 뉴스를 덜 신뢰하게 되고 온라인에서 참과 거짓을 구별할 수 있을지 더 우려하는 것으로 나타났다.
+- 글은 영국이 평생 민주적 참여 확대를 목표로 투표 연령을 16세로 낮출 예정인 상황에서, 젊은 세대가 온라인 뉴스와 정치, 시사를 자신 있게 다룰 수 있는 환경과 역량이 중요하다고 밝혔다.
+- 십 대들은 출처 교차 확인(49%), 웹사이트와 작성자 신뢰도 점검(48%), 부모나 신뢰할 수 있는 어른과의 대화(45%) 등의 검증 전략을 사용하고 있으며, 글은 이러한 정보 탐색의 책임이 청소년에게만 맡겨져서는 안 된다고 강조했다.
+
+#### 온라인 안전에 대한 십 대들의 목소리 듣기
+원문: https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/listening-to-teens-on-online-safety/
+
+- Childnet은 온라인 안전 논의에서 아동과 청소년의 시각을 반영하는 것이 중요하며, 청소년들도 온라인을 안전하고 긍정적인 공간으로 만들기 위해 훨씬 더 많은 변화가 필요하다고 본다고 전했다.
+- 구글의 'The Future Report'(영국 십 대 6,000명 이상 대상)에서는 67%가 매일 창의적으로 AI 도구를 사용한다고 답했고, Childnet의 2026년 Safer Internet Day 조사에서는 8~17세의 97%가 AI 도구를 사용하며 58%가 AI로 삶이 나아졌다고 밝혔다.
+- Childnet 조사에서 청소년의 71%는 AI가 많은 시간을 절약해 준다고 답했으며, 64%는 AI가 빠르게 조언을 얻는 가장 좋은 방법이라는 데 동의했다.
+- 감정적 의존 측면에서는 십 대의 41%가 또래들이 정서적 지원이나 문제 해결을 위해 AI에 크게 의존한다고 느꼈고, 14%는 다른 사람에게 말하기 어려운 주제를 AI와 논의하며, 구글 보고서에서는 18%(16~18세는 20%)가 AI와 '친구처럼' 대화한다고 답했다.
+- 또한 청소년의 60%는 타인이 AI를 이용해 자신의 부적절한 이미지를 만들 수 있다는 점을 우려했으며, 창의성과 학업, 정서적 지원 및 우정에 미치는 영향에 대한 걱정도 함께 나타냈다.
+
+#### 블랙 프라이데이 최적의 할인 찾기 및 스마트한 쇼핑 방법
+원문: https://blog.google/products-and-platforms/products/shopping/black-friday-cyber-monday-shopping-tips-2026/
+
+- Universal Cart는 여러 판매처의 관심 상품을 한곳에 모아 가격 하락 및 재입고 알림과 판매처 프로모션 코드를 제공하며, Google Wallet 기반 카드 혜택에 맞춰 결제 수단을 추천하고 Google Pay나 판매처 사이트에서 결제할 수 있게 한다.
+- 구글 검색의 AI Mode와 Gemini 앱에서는 받는 사람의 특징과 예산 등을 일상 언어로 설명하면 고객 리뷰, 사진, 매장 재고 정보가 포함된 맞춤형 선물 아이디어를 받아볼 수 있다.
+- Price Insights 기능을 통해 구글 상품 목록에서 판매처별 가격을 비교하고 과거 가격 추이를 통해 현재 가격이 낮은지, 보통인지, 높은지 확인할 수 있으며, 'Track price'나 AI Mode로 가격 하락 알림을 받을 수 있다.
+- 안드로이드와 iOS용 구글 앱의 Google Lens를 이용하면 오프라인 매장에서 상품 사진을 찍어 제품 세부 정보, 고객 리뷰, 유사한 스타일을 즉시 확인할 수 있다.
+- 사용자는 Google Lens로 촬영한 상품에 대해 다른 색상 유무나 어울리는 추가 선물 등 후속 질문도 이어서 할 수 있다.
+
+#### 연말연시 여행과 준비를 돕는 Ask Maps 신규 기능
+원문: https://blog.google/products-and-platforms/products/maps/ask-maps-holiday-travel-features-2026/
+
+- Ask Maps로 일자별 일정과 팁, 각 정거장의 번호가 매겨진 지도 핀이 포함된 여행 일정을 만들고 이를 가족·친구와 공유하거나 데스크톱에서 Google Docs로 내보낼 수 있다.
+- 채팅 기록의 'itinerary' 배지나 Ask Maps를 통해 일정을 열면 실시간 교통 상황, 영업 여부, 다음 목적지의 분위기를 확인할 수 있으며 이동 중에도 경유지 추가와 바로 길 찾기가 가능하다.
+- 경로 안내를 실행하면 주차 및 전기차 충전 위치, 날씨, 지연 가능성, 통행료 등 실시간 조건을 포함한 'Know before you go' 안내를 제공한다.
+- 새로운 에이전트 기능을 이용해 Ask Maps가 미용, 반려동물 돌봄, 자동차 및 주택 수리 예약을 온라인으로 검색하고 지역 업체에 대신 전화해 주변 업체의 예약 가능 시간대를 보여준다.
+- 사용자가 저장해 둔 장소 목록을 조회해 특정 인원과 시간 조건에 맞춰 실시간으로 방문 가능한 장소를 찾아준다.
+
+#### Google Maps 트렌드로 추수감사절 연휴 교통 혼잡과 인파 피하기
+원문: https://blog.google/products-and-platforms/products/maps/holiday-thanksgiving-travel-trends-2026/
+
+- 추수감사절 당일에는 특히 오후 12시 이후 도로가 대체로 한산하며, 장거리 이동은 수요일 오전 9시 이전이나 오후 6시 이후, 화요일 오후 1시 이전이나 오후 6시 이후, 또는 일요일·월요일 이른 출발이 권장된다.
+- 가장 혼잡한 시간대는 수요일 정오~오후 3시, 화요일 오후 3~5시, 추수감사절 전 금요일 오후 3~5시, 블랙 프라이데이 오전 11시~오후 3시이며, 일요일 귀가는 정오 이전이나 오후 3시 이후 출발이 유리하다.
+- 식료품점은 추수감사절 전 토·일요일 오후 2시경 가장 붐비며 월요일~수요일 오후 4시 이전이 한산하고, 제과점은 토요일 오전 11시 혼잡 시간을 피해 월요일~수요일 정오 이전 방문이 좋다.
+- 영화관은 추수감사절 전후 토요일 오후 7시경이 가장 붐비며 블랙 프라이데이 오후 5시 이전에는 비교적 조용하게 관람할 수 있다.
+- 이 시기에 미국 전역에서 검색 관심이 크게 증가하는 주요 명소로는 산호세의 Christmas In The Park, 루이빌의 Louisville Mega Cavern, 뉴욕의 Wollman Rink와 Rockefeller Center, 댈러스의 Vitruvian Park가 포함된다.
+
+#### 연말연시 계획에 도움을 주는 Google 검색의 4가지 기능
+원문: https://blog.google/products-and-platforms/products/search/holiday-prep-search-2026/
+
+- Google 앱(Android 및 iOS 지원)의 Search Live 아이콘을 눌러 카메라를 비추고 음성으로 질문하면 요리 중 발생한 문제의 해결 방법과 추가 안내 링크를 실시간으로 받을 수 있다.
+- Google 앱 검색창의 Lens 아이콘으로 사진을 찍거나 스크린샷을 올리면(Android에서는 Circle to Search도 지원) 장식 요소별 구매 링크와 인근 매장 재고 옵션을 찾아준다.
+- 검색의 AI Mode에 여행 목적지와 날짜, 선호 조건을 입력하면 편의 시설, 투숙객 리뷰, 사진을 함께 비교할 수 있는 시각적 숙소 목록을 제공한다.
+- 숙소 예약 시 여행 파트너 사이트로 이동해 예약하거나, 'Continue on Google' 옵션이 표시되면 AI Mode 화면 내에서 Google Pay로 바로 결제를 마칠 수 있다.
+- AI Mode 안에서 음식 종류, 인원수, 희망 시간을 입력해 이용 가능한 식당 테이블을 예약하거나, 공연 및 이벤트 티켓을 찾아 비교할 수 있다.
+
+#### Ask Maps, 유럽 30여 개국으로 확대 출시
+원문: https://blog.google/products-and-platforms/products/maps/ask-maps-is-coming-to-europe/
+
+- 최신 지도 데이터와 Gemini 모델을 기반으로 복합적인 현실 질문에 답하는 Ask Maps가 유럽 30여 개국으로 확대 출시된다.
+- Ask Maps는 5억 명 이상의 기여자가 남긴 리뷰를 포함한 3억 개 이상의 장소 정보를 바탕으로 사용자 맞춤형 응답을 제공한다.
+- 사용자는 즉시 휴대전화를 충전할 수 있는 곳이나 야간 조명이 있는 공공 테니스장 찾기 등 위치 기반의 구체적인 질문을 할 수 있다.
+- 각 정거장의 날씨와 주차에 관한 실시간 정보 및 'Know Before You Go' 팁이 포함된 여행 일정을 생성할 수 있다.
+- 저장된 수백 개의 장소를 직접 스크롤하지 않고도 30분 이내에 5명이 이용할 수 있는 장소 등 조건에 맞는 목록 내 장소를 몇 초 만에 검색할 수 있다.
+
+#### 구글 TPU의 새로운 AI 학습 성능 벤치마크 공개
+원문: https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/training-performance-benchmarks-tpus/
+
+- 구글 클라우드는 최신 MLPerf Training v6.1 벤치마크 라운드에서 7세대 Ironwood TPU와 NVIDIA Grace Blackwell GPU를 아우르는 10개의 결과를 공개했다.
+- 이번 결과는 프론티어 사전 학습과 최초의 에이전트 강화학습(RL) MLPerf 벤치마크를 포함하며, 구글 클라우드의 AI Hypercomputer 아키텍처를 기반으로 실리콘·네트워킹·오픈 소프트웨어의 공동 설계를 반영했다.
+- Ironwood 사전 학습에서는 8,192개의 Ironwood TPU가 1.70분 만에 목표 모델의 벤치마크 기준 품질에 도달했으며, 최대 4,096개 칩까지 96%의 효율로 확장됐다.
+- Ironwood 에이전트 강화학습에서는 640개의 Ironwood TPU가 코드 생성과 학습을 동시에 실행해 학습 칩의 대기 시간을 3% 미만으로 유지하며 18.02분 만에 목표 코딩 정확도(목표 0.69 대비 0.765)를 달성했다.
+- 구글 클라우드 A4X Max 인스턴스에서는 256개의 NVIDIA GB300 GPU가 31.96분 만에 사전 학습 목표 품질에 도달했으며, 에이전트 강화학습 벤치마크에서도 A4X 및 A4X Max 제출 결과 5건이 함께 공개됐다.
+
+#### Gemini Notebook으로 노트, 리서치, 소스를 인터랙티브 사이트로 변환
+원문: https://blog.google/innovation-and-ai/products/gemini-notebook/interactive-sites/
+
+- Gemini Notebook은 사용자가 복잡한 정보를 빠르게 이해할 수 있도록 소스를 인터랙티브 사이트로 변환하는 기능을 출시했다.
+- 사용자는 Gemini Notebook 채팅창에 “make me a site”와 함께 업무나 학습을 위해 만들고 싶은 내용에 대한 설명을 입력해 시작할 수 있다.
+- 생성 가능한 예시로는 시험 대비용 시각 설명 자료(인터랙티브 주기율표나 역사 연표 등), 분기별 매출 성과 같은 데이터를 탐색하는 인터랙티브 대시보드, 작업과 마감일을 정리하는 프로젝트 관리 트래커가 있다.
+- 사이트가 생성된 후에는 “Open in a new tab”을 선택해 직접 상호작용하거나 다른 사람과 공유할 수 있다.
+- 이 기능은 Google Workspace 구독자를 포함한 18세 이상의 글로벌 Gemini Notebook 웹 사용자에게 순차 적용되며, 모바일 앱에도 곧 출시될 예정이다.
+
+#### 앱 개발자의 구축·수정·성장을 돕는 Google AdMob의 새로운 AI 도구
+원문: https://blog.google/products/publisher-connections/new-google-admob-tools/
+
+- 구글은 광고 설정 관리, 통합 오류 수정, 브랜드 안전성 감사 등의 수작업을 줄이기 위해 Google AI로 구축된 Ask AdMob, AdMob 에이전트 스킬, 출시 예정인 MCP 서버를 도입한다고 밝혔다.
+- Ask AdMob은 AdMob 계정에 내장된 Gemini 기반 대화형 에이전트로, 문제 해결 허브를 통해 설정 이상 징후와 SDK 통합 문제를 탐지하고 앱 내 광고 로딩 상태를 파악해 수익에 영향을 미치는 문제의 해결 방안을 제안한다.
+- Ask AdMob은 동종 업계 벤치마크를 활용해 예상 수익 상승폭과 함께 고가치 SDK 비더를 추천하고, 제3자 네트워크 설정을 자동으로 점검해 오타나 최저가(floor price) 불일치를 찾아낸다.
+- 사용자는 AdMob UI에서 자연어 프롬프트로 맞춤형 브랜드 안전성 규칙을 설정할 수 있으며, 모든 제안은 적용 전 사용자가 직접 검토하고 승인해야 한다.
+- 구글은 향후 몇 달 동안 Ask AdMob 기능 테스트를 시작하고 내년 후반에는 사용자를 대신해 작업을 수행하는 기능을 확장할 계획이며, AdMob 에이전트 스킬과 출시 예정인 MCP 서버는 Google Mobile Ads Next-Gen SDK 마이그레이션 등 광고 코드 구축·편집·검증을 위한 사전 테스트된 플레이북을 AI 에이전트에 제공한다.
+
+#### 자율 공격 시대의 도래
+원문: https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gtig-ai-threat-tracker-q4-2026/
+
+- 최신 AI Threat Tracker 보고서에 따르면 공격자들은 사람의 개입 없이 소프트웨어 업데이트를 지속적으로 스캔하기 위해 자율형 LLM 프레임워크를 사용하고 있다.
+- 이러한 자율형 LLM 프레임워크는 소프트웨어 업데이트에서 어떤 결함이 패치되었는지 파악하고 해당 결함에 대한 공격을 자동으로 구축한다.
+- 구글은 기계 속도로 진행되는 위협을 인간의 속도로 방어하는 것은 실현 가능하지 않다고 밝히며 에이전트 시대의 보안을 위한 Google AI Threat Defense를 제시했다.
+- Google AI Threat Defense는 Gemini 및 기타 프론티어 모델, Wiz의 컨텍스트 및 우선순위 지정, CodeMender의 자동 패치, Mandiant의 전문성을 결합한다.
+- 이 방식은 공격자가 악용하기 전에 결함을 지속적으로 찾아 수정하도록 설계되었으며, 전체 보고서는 Google Cloud Threat Intelligence 블로그에서 제공된다.
+
+#### Gemini 앱에 66종의 지역별 음성 출시
+원문: https://blog.google/innovation-and-ai/products/gemini-app/regional-voices/
+
+- 구글은 Android 및 iOS용 Gemini 앱에 66종의 새로운 지역 음성을 출시하고 있다.
+- 지원 대상에는 미국 영어, 영국 영어, 인도 영어, 힌디어, 브라질 포르투갈어, 인도네시아어, 한국어가 포함되며 각 언어별 맞춤 옵션이 제공된다.
+- 각 음성은 과장된 억양 대신 자연스러운 운율과 일상적인 명료함에 맞춰 조정되었으며 지역 특유의 리듬, 음높이, 억양 변화를 반영한다.
+- 선택한 음성은 Gemini Live에서의 아이디어 구상, 언어 연습, 채팅의 듣기 아이콘을 통한 상세 답변 낭독 등 앱 전반에 걸쳐 유지된다.
+- 사용자는 Gemini Live의 점 세 개 메뉴나 앱 설정의 Gemini 음성 메뉴에서 새 음성을 미리 들어보고 선택할 수 있다.
 
 ### OpenAI
 
-#### 과학을 위한 OpenAI의 새로운 블로그
-원문: https://openai.com/index/our-new-blog-for-science
+#### 의료 팀을 위한 컴퓨터 사용 에이전트 발전
+원문: https://openai.com/index/advancing-computer-use-for-healthcare-teams
 
-- OpenAI는 과학자와 학술 연구자들이 AI를 활용해 발견한 성과와 연구 방식을 공유할 수 있는 공간으로 OpenAI 과학 블로그를 개설했다.
-- 해당 블로그에서는 OpenAI와 협력자 및 과학계의 새로운 연구 결과와 진행 상황, 과학 컴퓨팅·데이터 분석·문헌 탐색·실험 계획에서의 모델 활용법과 검증 및 한계, 그리고 연구자들의 현장 경험과 논의를 다룬다.
-- 지난 9월 OpenAI의 내부 시스템은 유체 운동 방정식에 관한 오랜 난제인 나비에-스토크스 존재성과 매끄러움 문제를 다룬 증명을 생성했다.
-- 10월에는 특정 수 이하의 소수 개수를 추정하는 고전 공식의 오차 한계를 좁힌 준리만 가설 연구를 비롯해 파동 집중, 효율적 계산의 한계, 상호작용 양자장론의 수학적 기초에 관한 수학·컴퓨터과학·물리학 결과를 공개했다.
-- 생물학 분야에서는 PerturbAI 및 Scripps Research와 협력해 GPT-Rosalind 기반의 수천 개 에이전트가 수백만 개의 생쥐 뇌세포 기존 실험 데이터를 분석했다.
+- 컴퓨터 사용 에이전트는 클릭, 입력, 애플리케이션 간 이동을 통해 의료 팀이 기존에 사용하는 소프트웨어에서 다단계 워크플로를 수행한다.
+- OpenAI는 Abridge, Ambience, Cigna Healthcare, CVS Health 등의 의료 기관과 협력해 사전 승인 요청, 진료 의뢰, 퇴원 계획, 내원 간 환자 연락에 컴퓨터 사용 기능을 적용하고 있다.
+- 의료 팀, 개발자, 개별 임상의는 OpenAI API, ChatGPT for Healthcare, ChatGPT for Clinicians를 통해 해당 기능을 이용할 수 있으며, 조직은 HIPAA 준수 워크플로 지원, 승인 및 접근 권한 설정, 감사 로그 기록을 구성할 수 있다.
+- 합성 환자 데이터를 사용한 MRI 요청 데모에서 에이전트는 EHR의 진료 기록, 물리치료 기록, 이전 영상 자료를 검토해 MRI 처방, 진료 기록, 환자 회신 초안을 작성한 뒤 보험사 포털에서 사전 승인 요청을 준비한다.
+- 의사의 의견을 반영해 설계된 임상의 EHR 받은편지함 작업에서 GPT-6 Astra를 평가한 결과, 검토된 325개 작업 중 99%가 환자 위해 가능성 기준에서 임상적으로 안전한 것으로 평가되었다.
 
-#### 격자 위 표준 모형 정의를 향한 한 걸음
-원문: https://openai.com/index/step-toward-defining-the-standard-model
+#### ChatGPT for Healthcare의 새로운 진료 지원 기능
+원문: https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare
 
-- OpenAI 과학 블로그의 첫 객원 기고에서 UC 산타바바라 입자이론 그룹 리더이자 카블리 이론물리연구소 상임 연구원인 물리학자 Nathaniel Craig는 GPT-6 Astra와 함께 표준 모형의 격자 정의 후보를 연구한 과정을 소개했다.
-- 입자물리학의 표준 모형은 알려진 기본 입자와 강한 힘·약한 힘·전자기력의 세 가지 기본 힘을 기술하며, 수소의 21cm 전파 방출부터 대형 강입자 충돌기 충돌까지 18자릿수에 걸친 에너지 규모에서 이론과 실험이 일치해 왔다.
-- 그러나 50년이 넘는 역사에도 불구하고 상호작용을 작은 보정항으로 취급하지 않고 전체 이론에 비섭동적 정의를 부여하는 기초적인 문제가 해결되지 않은 상태였다.
-- Craig는 시공간을 나타내는 격자 위에 표준 모형의 정의 후보를 제안하는 10월 프리프린트를 GPT-6 Astra의 도움을 받아 작성했으며, 자신이 구상했으나 모든 경우를 증명하지 못했던 전략을 Astra가 구체적 구성으로 바꾸고 세부 증명을 주도했다고 설명했다.
-- 기존에는 상호작용이 없는 상태를 먼저 정확히 푼 뒤 작은 보정을 더하는 섭동 이론으로 전자 자성의 세기를 1조분의 몇 수준까지 예측해 왔으나, 표준 모형의 핵심 영역 중 상당수는 섭동 이론의 범위 밖에 존재한다.
+- OpenAI는 ChatGPT for Healthcare에 컴퓨터 사용 에이전트 고도화, 의학 근거를 검색·평가·인용하는 임상 검색 기능 개선, 그리고 20개 이상의 신규 헬스케어 플러그인을 도입했다.
+- 컴퓨터 사용 에이전트는 화면 읽기, 클릭, 입력, 애플리케이션 간 이동을 통해 EHR, 병원 정책, 예약 시스템, 보험사 포털 등 기존 의료 소프트웨어 전반에서 다단계 작업을 수행한다.
+- OpenAI는 접근 제어 및 감사 로그 기능과 함께 Abridge, Ambience, Cigna Healthcare, CVS Health 등의 의료 기관과 협력해 진료 의뢰 처리, 시스템 간 문서 이동, 진료 팀 필요 정보 통합에 에이전트를 배포하고 있다.
+- 데모에서는 임상의가 ChatGPT 앱의 음성 기능으로 MRI 요청 후속 조치를 요청하면 에이전트가 환자 차트를 검토해 검토용 처방과 환자 회신 초안을 작성한다.
+- 보호 대상 건강 정보를 포함하는 HIPAA 준수 워크플로를 지원하려면 조직은 OpenAI와의 BAA에 포함된 적격 서비스를 사용하고 필수 보안 및 보존 설정을 적용하며 연결된 시스템까지 보호 조치를 확장해야 한다.
+
+#### 외부 독립 기관과의 1단계 내재형 평가 착수
+원문: https://openai.com/index/our-first-phase-of-embedded-assessments
+
+- OpenAI는 1단계 내재형 평가를 위해 Apollo Research, METR, Transluce, Goodfire 등 4개 독립 평가 기관과 계약을 체결했다.
+- 내재형 평가는 독립 전문가에게 모델 체크포인트, 소스 코드, 학습 및 평가 데이터, 모니터링 시스템, 기술 문서, 연구진·엔지니어와의 논의 등 내부 자원에 대한 심층 접근 권한을 장기간 제공해 모델 정렬과 안전장치의 효과를 평가하는 방식이다.
+- 초기 평가는 학습 및 내부 사용 과정에서의 정렬과 안전장치에 초점을 맞추며, 안전 사례를 보완하고 White House Accord on Super Intelligence에 따른 독립 평가 약속을 뒷받침한다.
+- 시범 평가에서 Apollo Research는 모델이 개발자의 의도에 반하여 은밀히 행동할 수 있는지와 OpenAI의 안전장치가 그러한 행동을 탐지할 수 있는지를 평가한다.
+- Apollo Research는 학습, 안전 테스트, 내부 사용의 증거를 바탕으로 학습이 전복 행위를 유도하지 않았는지, 강력한 평가와 레드티밍에서 전복 행위가 유발되지 않는지, 내부 사용 중 전복 시도가 없었는지, 전복의 추론 과정이 탐지 가능한지 등 4가지 주장을 2단계에 걸쳐 평가한다.
+
+#### LVMH 미디어 부문, OpenAI와 전략적 파트너십 발표
+원문: https://openai.com/index/lvmh-media-division-partnership
+
+- 2026년 11월 16일 파리에서 LVMH 그룹 미디어 부문과 OpenAI는 전 매체에 AI 활용을 지원하고 ChatGPT를 통해 저널리즘 접근성을 높이는 전략적 계약을 체결했다고 발표했다.
+- 이 계약에는 미디어 부문 팀들이 일상 업무에 맞춘 AI 애플리케이션을 개발할 수 있도록 OpenAI 도구와 ChatGPT Enterprise를 배포하는 내용이 포함된다.
+- 뉴스룸 팀들은 문서 조사, 문서 비교, 초기 번역 등의 활용 사례를 탐색해 현장 취재와 조사·분석에 더 많은 시간을 투입하는 것을 목표로 한다.
+- 이 파트너십은 ChatGPT가 관련 사용자 질문에 응답할 때 출처 표기와 원문 기사 직접 링크를 포함한 LVMH 미디어 부문 콘텐츠의 요약 및 발췌문을 제공하도록 지원한다.
+- LVMH 그룹 미디어 부문인 Groupe Les Echos-Le Parisien은 17개 미디어 브랜드를 보유하고 약 700명의 기자를 포함한 1,800명의 직원이 일하며 프랑스에서 매월 2,700만 명 이상에게 도달한다.
+
+#### 최전선의 과학: 과학자들은 ChatGPT를 어떻게 사용하는가
+원문: https://openai.com/index/science-at-the-frontier
+
+- OpenAI 경제 연구팀은 학술 연구자용 ChatGPT 여름 파일럿에 참여한 과학자 1,819명이 보낸 58만 건 이상의 과학 관련 메시지를 연구하고 251명을 대상으로 설문조사를 실시했다.
+- 설문 참여자들은 AI 없이 같은 품질로 동일한 작업을 수행하는 데 1.9배의 시간이 걸렸을 것으로 추정했으며, 발견 일정 질문에 답한 응답자의 98%는 AI가 해당 분야의 발견을 가속할 것으로 예상했다.
+- OpenAI는 기본적으로 프로그램 참여자의 데이터를 모델 학습에 사용하지 않으며, 개인정보 보호를 위해 자동 분류기로 연구 활동 유형만 분류하고 실제 메시지나 ChatGPT 응답 원문은 열람하지 않았다.
+- 아이디어 구상 관련 메시지 분석에서 과학자가 아이디어를 가져와 ChatGPT와 함께 다듬은 경우가 36%, 과학자가 구체적인 질문을 제시한 경우가 35%, ChatGPT가 연구 질문을 제안하도록 한 경우가 23%, 기타가 6%를 차지했다.
+- 더 빠른 발견을 예상한 과학자들이 복수로 답한 367개 이유 중에는 연구를 더 빠르게 완료함(52%), 더 유망한 연구 질문을 찾음(23%), 더 폭넓은 질문을 탐구함(14%), 기타(11%)가 포함됐다.
+
+#### 과학자들을 위한 AI 접근성 확대
+원문: https://openai.com/index/expanding-chatgpt-for-academic-researchers
+
+- OpenAI는 전 세계 최대 20만 명의 연구자에게 ChatGPT 무료 접근 권한을 제공하기 위해 '학술 연구자용 ChatGPT(ChatGPT for Academic Researchers)' 프로그램을 확대한다.
+- 7월 파일럿으로 시작된 이 프로그램의 다음 라운드 신청은 11월 23일 월요일에 시작되며, 자격을 갖춘 선착순 5만 명의 신청자에게 본인과 최대 2명의 공동 연구자가 사용할 수 있는 ChatGPT Plus 무료 이용권이 수여된다.
+- 파일럿 사용량을 검토한 결과 대부분 참가자가 ChatGPT Plus 한도 내에 머문 것으로 확인됨에 따라, 다음 라운드부터는 기존의 ChatGPT Pro 제공 및 추첨제 선발 대신 ChatGPT Plus 제공과 선착순 선발 방식을 적용한다.
+- 참여자는 OpenAI의 프런티어 모델과 연구에서의 ChatGPT 활용 교육을 받을 수 있으며, 프로그램을 통해 공유된 데이터는 기본적으로 모델 학습에 사용되지 않는다.
+- 7월 파일럿 시작 이후 33개국 2만 명의 연구자가 참여했으며, 하버드 의과대학 연구자의 결핵 치료 관련 약물 표적 탐색과 플로리다 자연사박물관 연구팀의 박물관 표본 사진 데이터베이스화 등에 쓰였다.
+
+#### 새로운 도구와 지원으로 온라인 아동 성 착취 대응 강화
+원문: https://openai.com/index/strengthening-online-child-safety
+
+- OpenAI는 아동 성 착취물(CSAM) 탐지 도구, 유해 행위 중단 및 도움 안내 개입 기능, 개발자용 실무 자료, 아동 안전 법집행 수사관 지원을 새롭게 공개한다.
+- 새로 출시된 이미지 분류기는 AI로 생성된 자료를 포함해 잠재적 CSAM의 시각적 징후를 탐지하고, 검토자가 우선 확인이 필요한 이미지를 판단할 수 있도록 점수를 반환한다.
+- 이 도구는 CSAM이 AI로 생성되었을 가능성을 나타내는 구체적인 신호를 갖추고 폭넓게 제공되는 최초의 CSAM 분류기다.
+- OpenAI 연구팀은 CyberTipline을 운영하는 비영리 단체 국립실종학대아동센터(NCMEC)의 지원을 받아 실제 배포 환경에 맞게 이 분류기를 학습·평가·설계했다.
+- OpenAI는 심사를 통과한 기관에 OpenAI API를 통해 이 분류기를 무료로 제공하며, 도구 접근성 공유를 위해 Tech Coalition 및 ROOST와 협력하고 있다.
 
 ## YouTube Tech
 
-[채널별 원본](/youtube/2026%EB%85%8411%EC%9B%94/2026-11-16_AI-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EC%97%90%EA%B2%8C-%EC%BD%94%EB%93%9C-%EB%B3%91%ED%95%A9%EC%9D%80-%EB%A7%A1%EA%B2%A8%EB%8F%84.md)
+[채널별 원본](/youtube/2026%EB%85%8411%EC%9B%94/2026-11-17_SAP-Business-Data-Cl.md)
+
+### SAP
+
+#### SAP Business Data Cloud의 SAP Lakehouse 신기능 요약
+https://www.youtube.com/watch?v=PMcDfp9PGTM
+
+- SAP Business Data Cloud 내 SAP Lakehouse의 새로운 기능을 소개하는 영상입니다.
+- Philipp Herzig가 SAP 및 비-SAP 시스템 간 불필요한 데이터 이동 없이 데이터를 접근·조회·공유하는 방법을 설명합니다.
+- Dremio 통합을 통해 데이터를 이동하지 않는 연합 데이터 접근(Federated data access)을 지원합니다.
+- 네이티브 Apache Iceberg와 Apache Polaris 기반 카탈로그를 제공합니다.
+- 이를 통해 기업 시스템 전반의 데이터 상호운용성을 높이는 구성을 다룹니다.
+
+### NVIDIA Developer
+
+#### VSS 3.3과 Cosmos로 NVIDIA Jetson 기반 시각 AI 에이전트 가속화
+https://www.youtube.com/watch?v=c0gdviC_OeI
+
+- NVIDIA Jetson 엣지 AI 플랫폼에서 VSS 3.3 블루프린트, Cosmos, Jetson 에이전트 스킬을 결합한 시각 AI 에이전트 개발 워크플로우를 다룹니다.
+- Jetson Agent Skills를 사용해 코딩 에이전트가 대상 하드웨어 리소스를 점검하고 JetPack 및 컨테이너 호환성을 확인해 런타임과 추론 환경을 구성합니다.
+- VSS 3.3 에이전트 스킬을 활용해 자연어 기반 애플리케이션 요청을 설정된 배포 구성으로 변환합니다.
+- Cosmos가 이벤트 검증을 위한 영상 이해를 제공하며, 영상 검색·알림·이벤트 검토 기능을 Jetson 상의 단일 워크플로우로 통합합니다.
+- 엣지 환경의 메모리 및 연산 제약을 고려해 배포를 검증하고 기능을 추가하는 과정을 안내합니다.
+
+#### 두 개의 프롬프트로 학습용 데이터셋 구축하기: Encord·Voxel51 사례 | Cosmos Labs
+https://www.youtube.com/watch?v=c5or9gzM6Zg
+
+- NVIDIA Cosmos Data Factory 스킬과 블루프린트를 사용해 한 번의 프롬프트로 환경을 설정하고 다음 프롬프트로 데이터 워크플로우를 실행하는 방법을 다룹니다.
+- NVIDIA, Voxel51, Encord가 참여해 자율주행, 로보틱스, 비전 AI 에이전트용 학습 데이터 큐레이션·증강·생성·라벨링 기법을 소개합니다.
+- Voxel51은 Porsche가 NVIDIA Cosmos Data Factory를 기반으로 자율주행 차량 데이터를 큐레이션하고 증강하는 사례를 발표합니다.
+- Encord는 ANYbotics와 함께 Cosmos Data Factory를 활용해 로봇 점검의 이상 탐지용 합성 데이터를 구축한 사례를 설명합니다.
+- 기존 데이터 증강과 희소 학습 예제 생성 방법을 다루며, NVIDIA Cosmos 3의 사후 학습 및 배포에 대한 실시간 질의응답도 진행됩니다.
+
+#### vLLM으로 두 대의 NVIDIA DGX Station에서 GLM-5.3 서빙하기
+https://www.youtube.com/watch?v=opRXPRnSkxk
+
+- 7,530억 파라미터 MoE 모델인 GLM-5.3의 NVFP4 체크포인트(약 464GB)가 단일 NVIDIA GB300 GPU 메모리(252GB)를 초과하므로, ConnectX-8로 연결한 두 대의 NVIDIA DGX Station에 vLLM과 텐서 병렬화를 적용해 CPU 오프로드 없이 GPU 메모리에만 가중치를 적재한다.
+- 두 DGX Station에서 RDMA 연결용 네트워크 값을 수집하고 고정(pinned) 체크포인트를 내려받아 두 번째 시스템에 복사한 뒤, 양쪽에서 동일한 vLLM 스크립트를 실행해 단일 OpenAI 호환 API로 모델을 서빙한다.
+- API 헬스 체크, TCP 소켓으로 폴백하지 않고 GPU가 네트워크를 통해 직접 통신하는지 확인하는 RDMA 검사, 각 GPU의 vLLM 워커를 확인하는 nvidia-smi 점검 및 채팅 요청 응답 확인으로 서비스를 검증한다.
+- NVIDIA AIPerf와 SPEED-Bench Coding 프롬프트로 동시 요청 수 1과 8의 테스트 및 1·8·16·32 기준 참고 결과를 제시해 동시성 증가에 따른 사용자당 처리량과 요청 지연 시간 변화를 측정한다.
+- 전체 벤치마크와 단계별 실행 명령어가 정리된 NVIDIA 기술 블로그 및 두 대의 DGX Station 연결 플레이북(Connect Two DGX Stations playbook) 링크를 제공한다.
+
+### NAVER D2
+
+#### 네이버 전 지면의 사용자 행동을 학습하는 추천 모델 개발기
+https://www.youtube.com/watch?v=Cc22uWO8i5c
+
+- NAVER Engineering Day 10th 사내 기술 교류 행사에서 발표된 세션으로, 네이버의 검색·피드·광고 등 다양한 도메인 데이터와 추천 기술을 연결하는 버티컬 추천 모델의 개발 및 서비스 적용 경험을 소개한다.
+- 목차상 개발 배경과 목표, VMs 시스템 구조, VMs 리트리버와 통합 랭커, 지면별 적용 현황과 성과를 차례로 다룬다.
+- 여러 서비스와 도메인의 사용자 행동 데이터를 활용한 크로스 도메인 추천과 시퀀스 기반 추천·생성형 추천 등 다양한 추천 모델의 개발 및 서비스 적용에 관심 있는 대상을 위한 세션이다.
+- 대규모 추천 모델의 실시간 추론, GPU 서빙 최적화 및 VMs 서빙과 최적화 내용을 공유한다.
+- 파운데이션 모델(Foundation Model)의 지식을 경량 모델로 전이하는 지식 증류(Knowledge Distillation) 기반의 도메인 간 지식 전이 방향과 향후 계획을 설명한다.
+
+### NVIDIA Developer
+
+#### NVIDIA Nemotron 3.5 Super VL을 활용한 오픈 모델 인도 언어 AI
+https://www.youtube.com/watch?v=qtsh2OmbQqM
+
+- NVIDIA와 IIT Madras AI4Bharat 연구소가 22개 인도 언어를 지원하는 오픈 모델 기반 인도 언어 AI 협력을 소개하는 라이브스트림 세션이다.
+- 22개 언어에 걸친 3조 토큰 규모의 오픈 인도 언어 데이터셋과 선별된 영어 콘텐츠를 인도 언어 학습 데이터로 변환하는 데이터 생성 파이프라인을 다룬다.
+- 수학, STEM, 코드 및 인도 언어 특화 역량을 포함한 15개 이상의 평가 항목으로 구성된 인도 언어 LLM 벤치마크 스위트의 구축과 공개 내용을 설명한다.
+- 텍스트와 이미지를 처리·추론하고 대량의 특화 작업을 수행하는 자율 에이전트용으로 제작된 멀티모달 오픈 모델 Nemotron 3.5 Super VL의 아키텍처와 학습 기법, 설계 원칙을 소개한다.
+- 공개된 가중치·학습 레시피·데이터셋을 활용한 도메인 및 작업별 커스터마이징 가능성과 멀티 모델 에이전트 파이프라인 통합 방법을 다룬다.
+
+#### 음성 인식을 넘어: Nemotron 3.5 Transcribe | Nemotron Labs
+https://www.youtube.com/watch?v=HXMbNl5KgeA
+
+- Nemotron 3.5 Transcribe는 약 40억 개의 활성 파라미터를 갖는 300억 파라미터 규모의 오픈 웨이트 MoE 모델로, 단일 체크포인트에서 40개 언어 전사, 화자 식별, 번역 및 오디오 이해를 제공한다.
+- NVIDIA 엔지니어와 Hugging Face 파트너가 모델의 기능을 소개하고 녹음된 오디오로 라이브 데모를 진행하며 Hugging Face에서 NVIDIA NeMo 또는 transformers로 실행하는 방법을 설명한다.
+- 이름, 전문 용어, 도메인 어휘에 대한 인식 정확도를 높이기 위해 문맥 기반 프롬프팅을 활용하는 방법을 다룬다.
+- 단일 체크포인트에서 화자 식별과 번역이 작동하는 원리와 Granary v2 데이터셋을 사용해 모델을 자체 도메인에 맞게 적응시키는 방법을 소개한다.
+- 녹음된 오디오에 적합한 오프라인 모델과 실시간 사용을 위한 스트리밍 인식기를 각각 언제 사용해야 하는지 설명한다.
+
+### NAVER D2
+
+#### 카페 관리도구 개편기: 문서는 낡았고, 사람은 떠났고, 코드만 남았다.
+https://www.youtube.com/watch?v=RnRZR-rz5ks
+
+- 네이버 사내 기술 교류 행사인 NAVER Engineering Day 10th에서 발표된 세션을 공개한 영상이다.
+- 코드만 남아 있던 14년 된 구 카페 관리도구를 AI와 함께 분석한 내용을 다룬다.
+- Storybook과 MSW로 화면과 동작을 재현하며 새로운 카페 스튜디오를 개발한 과정을 설명한다.
+- 개발 과정에서 기획, 디자인, BE와의 협업 및 일하는 방식이 어떻게 달라졌는지 공유한다.
+- 레거시 시스템 개편 개발자, AI 실무 활용 엔지니어, 화면과 정책을 함께 검증하려는 기획자·디자이너를 대상으로 프로젝트 개요, 구 관리도구 분석, 신규 스튜디오 개발, 일하는 방식, 마무리 순서로 진행한다.
+
+#### Image AI 서빙 최적화: CPU와 GPU의 빈 시간을 줄여 H100 67장을 절감하기까지
+https://www.youtube.com/watch?v=FHbA-aaQbGg
+
+- 네이버 사내 기술 교류 행사인 NAVER Engineering Day 10th에서 발표된 세션을 공개한 영상이다.
+- SNOW의 16개 Image AI 서비스에서 응답 속도와 안정성을 높이면서 H100 환산 약 67장의 GPU 자원을 절감한 경험을 공유한다.
+- 기존 서빙 구조의 문제를 살펴보고 LitServe 전환을 통해 불필요한 연산과 CPU·GPU 대기 시간을 줄인 과정을 소개한다.
+- 실제 트래픽에 맞춘 파라미터 조정과 작업 분리 및 여러 서비스의 GPU 공유 적용 과정을 다룬다.
+- 총 절감 기여량과 누적 개선 및 향후 과제를 정리하며 Image AI 서빙 엔지니어를 발표 대상으로 한다.
+
+#### Image AI 서빙 최적화: CPU와 GPU 유휴 시간을 줄여 H100 GPU 67장 절감하기
+https://www.youtube.com/watch?v=w3EL9TSPK3U
+
+- SNOW의 16개 이미지 AI 서비스를 LitServe로 이전한 발표 영상으로 한국어 버전 링크도 함께 안내한다.
+- 지연 시간과 안정성을 개선하면서 H100 환산 약 67대의 GPU 자원을 절감한 과정을 설명한다.
+- 연산 간소화, CPU·GPU 유휴 시간 감소, 트래픽 기반 튜닝, GPU 공유를 통한 최적화 기법을 소개한다.
+- 목차는 도입, LitServe 전환, 파라미터 튜닝, GPU 공유 및 추가 최적화, 결과와 향후 과제로 구성된다.
+- 지연 시간을 줄이고 GPU 활용률을 높이려는 이미지 AI 모델 서빙 엔지니어를 대상으로 한다.
+
+#### 노트북을 닫아도 개발은 계속된다: 자율 그래프 주도 개발
+https://www.youtube.com/watch?v=kVLht_OuxA4
+
+- 네이버 사내 기술 교류 행사인 NAVER Engineering Day 10th에서 발표된 세션을 공개한 영상입니다.
+- 자율 그래프 주도 개발은 사람의 직접적인 지시 없이 그래프가 프로젝트 진행을 주도하는 방식입니다.
+- 스펙 문서와 코드는 AI Agent 루프가 작성하며, 결정론적 코드가 이를 기계적으로 검사합니다.
+- 발생한 결함은 피드백 루프를 통해 자동으로 바로잡고, AI가 필요할 때만 사람을 호출하여 주도권을 역전시킵니다.
+- 자율 그래프 주도 개발 방법론에 관심 있는 개발자와 기획자를 대상으로 배경, 실행 과정, 어려움 극복, 성과 및 임팩트 순서로 진행됩니다.
 
 ### Cole Medin
 
-#### AI 에이전트에게 코드 병합은 맡겨도 배포는 맡기지 않는 이유
-https://www.youtube.com/watch?v=mAlsfafDW-U
+#### 내가 검증하는 속도보다 빠르게 코드를 작성하는 AI 에이전트
+https://www.youtube.com/watch?v=83NRvB_Gusk
 
-- 발표자는 AI 에이전트에게 밤새 코드를 병합하도록 맡길 수는 있지만, 프로덕션에 바로 배포하는 것은 신뢰하지 않는다고 설명한다.
-- 테스트와 코드 리뷰만으로는 코드가 올바르게 보이는지 여부만 확인할 수 있다.
-- LaunchDarkly는 변경 사항이 프로덕션에 라이브로 적용된 이후의 동작을 제어하고 모니터링하는 기능을 제공한다.
-- LaunchDarkly가 출시한 Release Autopilot에서는 기존에 엔지니어가 담당하던 피처 플래그 작업을 에이전트가 수행한다.
-- 이 작업에는 위험도 분류, 성공 지표 설정, 카나리 릴리스로 시작하는 자동 배포 계획 수립, 기능 단위 관측 가능성 확보 및 플래그 정리가 포함된다.
-
-### OpenAI
-
-#### 모질라가 GPT-6 Cyber로 파이어폭스 취약점을 찾고 수정하는 방법
-https://www.youtube.com/watch?v=PkAmyub12K8
-
-- 모질라는 파이어폭스의 방어력을 강화하기 위해 수십 년간 축적한 보안 엔지니어링에 AI 에이전트를 결합하고 있다.
-- 모질라의 브라이언 그린스테드는 OpenAI의 클린트 기블러와 함께 조사 우선순위 지정, 취약점 테스트 및 검증, 관련 버그 패턴 탐색, 수정안 개발 지원 방식을 논의한다.
-- 두 사람은 GPT-6 Cyber가 기존에 알려진 일부 버그가 당초 파악했던 것보다 더 심각할 수 있음을 밝혀내 우선 처리할 문제를 정하는 데 기여한 사례도 다룬다.
-- 모질라는 보안 워크플로우 전반에서 2025년부터 2026년 사이에 버그 발견 및 수정 건수가 약 8배 증가했다.
-- 영상에서는 모질라 팀이 이 과정에서 얻은 교훈과 향후 브라우저 보안에 대해 지향하는 목표를 공유한다.
+- Sonar의 2027 State of Code 보고서에서 개발자와 엔지니어링 매니저의 76%는 검증 가능한 속도보다 빠르게 AI 코드를 생성한다고 응답했습니다.
+- 영상 제작자는 에이전트가 24시간 풀 리퀘스트를 여는 소프트웨어 팩토리를 운영하며 동일한 문제를 겪고 있다고 설명합니다.
+- AI 코드는 겉보기에 올바른 경우가 많아지면서 미묘한 버그가 검수를 빠져나가는 현상이 나타납니다.
+- 이를 다루기 위해 에이전트가 코드를 자유롭게 작성하더라도 에이전트가 제어하지 않는 검사를 통과해야만 병합되도록 제한합니다.
+- Sonar와의 협업으로 제작된 영상이며 본문에 해당 보고서 전체를 확인할 수 있는 링크가 포함되어 있습니다.
 
 ### Unreal Engine
 
-#### Epic AI MegaJam | Fal.ai의 에이전트 기반 게임 개발
-https://www.youtube.com/watch?v=2mmltqQ0r50
+#### Bluey’s Happy Snaps | 게임 프로필 | Unreal Engine
+https://www.youtube.com/watch?v=TWD7bTUEZKs
 
-- Fal.ai의 아펙 파니그라히(Apek Panigrahi)가 언리얼 엔진, 블렌더, 브라우저에서 여러 AI 에이전트를 지휘해 게임을 개발하는 방식을 소개한다.
-- 이 과정에서 VIPER 11과 멀티플레이어 슈터 게임 Glory or Death를 포함한 총 3개의 게임을 제작한 사례를 다룬다.
-- 기존의 콘셉트부터 폴리싱까지의 파이프라인을 1인 제작자가 중첩된 스레드 형태로 운영하는 워크플로를 설명한다.
-- 언리얼 엔진 5.9 라이브 데모와 참조 이미지를 바탕으로 블렌더 씬을 구축하는 시연을 포함한다.
-- 렌더링 작업을 fal의 서버리스 GPU 팜으로 전송해 처리하는 과정을 다루며 Epic AI MegaJam 관련 링크를 함께 안내한다.
+- 게임로프트 브리즈번(Gameloft Brisbane)이 언리얼 엔진 5의 애니메이션 도구와 기술을 활용해 2D 애니메이션 《블루이(Bluey)》의 세계를 3D로 구현한 사례를 소개한다.
+- 《Bluey’s Happy Snaps》는 블루이와 빙고가 원작 애니메이션의 장소를 탐험하며 아빠의 오래된 카메라로 사진을 찍어 스크랩북을 채우는 게임이다.
+- 개발팀은 원작 특유의 시각적 스타일을 게임에 담아내기 위해 언리얼 엔진을 전면적으로 도입했다.
+- 영상에서는 언리얼 엔진 5의 애니메이션 툴셋이 게임 속 캐릭터들을 구현하는 데 수행한 역할을 살펴본다.
+- 메타데이터 해시태그로 Sequencer, ControlRig, UnrealInsights 등의 언리얼 엔진 관련 도구가 함께 명시되어 있다.
 
-### AWS Developers
+### NVIDIA Developer
 
-#### 수백만 달러 절감 사례: 마크 브루커 & 카 온스톳 | Strands Decider 스탠드업
-https://www.youtube.com/watch?v=szKqAMSijvQ
+#### 배달 로봇이 예기치 못한 상황에 대비하도록 돕는 방법
+https://www.youtube.com/watch?v=Xi_NPUw0wkc
 
-- Strands Decider를 만든 AWS의 마크 브루커(Marc Brooker)가 프로젝트 시작 배경과 의사결정 모델의 중요성을 설명한다.
-- 아마존 내부 티켓팅 팀의 카 온스톳(Carr Onstott)이 티켓 라벨링 작업에서 Claude Sonnet 4.6을 Strands Decider로 교체한 사례를 소개한다.
-- 모델 교체 결과 호출 속도가 크게 빨라졌고 비용을 약 98% 절감해 연간 수백만 달러를 아꼈다고 밝힌다.
-- Strands Decider는 오픈소스 Strands Agents 프로젝트의 실험 조직인 Strands Labs가 개발한 소형 오픈 의사결정 모델이다.
-- 코드에서 바로 사용할 수 있도록 빠른 타입 기반(typed) 의사결정을 출력하도록 설계되었으며 커뮤니티 질의응답 형식으로 진행된다.
-
-### Unreal Engine
-
-#### Epic AI MegaJam | Meshy의 AI 3D 에셋 제작 시연
-https://www.youtube.com/watch?v=_RTIUm2ckSE
-
-- Meshy가 자사 AI 3D 제작 플랫폼을 활용해 아이디어 단계부터 3D 에셋을 제작하는 과정을 소개한다.
-- 텍스트, 이미지 또는 3D 에이전트(3D Agent)와의 채팅을 통해 3D 모델을 생성하는 시연을 진행한다.
-- 생성된 모델에 텍스처 적용, 리깅, 애니메이션 작업을 수행하는 데모를 보여준다.
-- 제작한 3D 에셋을 엔진으로 직접 가져와 프로젝트에 활용하는 과정을 설명한다.
-- Epic AI MegaJam 행사의 일환으로 진행된 세션이며 관련 공지 및 itch.io 잼 페이지 링크를 함께 제공한다.
+- 코코 로보틱스(Coco Robotics)의 배달 로봇은 Uber Eats, DoorDash, Deliveroo, Wolt 등의 플랫폼을 통해 배달을 수행하고 있다.
+- 이 영상은 한 번의 배달 주행 기록을 여러 엣지 케이스(edge-case) 테스트 세트로 활용하는 방식을 다룬다.
+- 코코 로보틱스는 NVIDIA Cosmos를 사용해 실제 운행 중인 로봇의 주행 영상(fleet video)을 새로운 장면 변형으로 변환한다.
+- 이를 통해 로봇이 실제 도로에서 드문 돌발 상황을 마주하기 전에 사전에 대응 연습을 할 수 있도록 한다.
+- NVIDIA Developer 채널에서 공개한 영상으로 #Robotics, #robotdelivery, #NVIDIACosmos 태그가 포함되어 있다.
 
 ### Google Cloud Tech
 
-#### 워크로드에 맞는 Looker MCP 통합 방식 선택하기
-https://www.youtube.com/watch?v=24WH740Xn9M
+#### Looker CLI 심층 분석
+https://www.youtube.com/watch?v=3FmEdUNeqIw
 
-- Looker AI 에이전트를 위한 적절한 통합 경로를 선택하는 방법을 다루는 Google Cloud Tech 영상이다.
-- 네이티브 Looker-Managed MCP Server와 오픈소스 MCP Toolbox for databases 간의 주요 차이점을 분석한다.
-- 워크로드에 가장 적합한 통합 접근 방식을 고를 수 있도록 두 가지 방식을 비교해 설명한다.
-- 발표자는 Chrissie Goodrich이며 영상에서 언급된 주요 제품은 Looker이다.
-- 설명란에 Looker Managed MCP Server와 데이터베이스용 MCP Toolbox 시작 가이드 링크가 제공된다.
+- Google Cloud Tech 채널에서 Chrissie Goodrich가 진행하는 Looker CLI 관련 심층 논의 영상이다.
+- Looker CLI는 Looker 및 에이전트(Agents)와 함께 수행할 수 있는 작업 범위를 확장해 주는 도구다.
+- 이 도구는 성능 보고서, 지속적 개발(continuous development) 도구, 전체 API 엔드포인트 모음을 제공한다.
+- 영상에는 Looker CLI를 활용해 워크플로우 속도를 높이는 방법을 다루는 데모와 예제가 포함되어 있다.
+- 관련 제품으로 Looker가 언급되었으며 추가 학습을 위한 별도 유튜브 영상 링크가 함께 안내되어 있다.
 
-### Unreal Engine
+### Cole Medin
 
-#### Epic AI MegaJam | Tripo 소개
-https://www.youtube.com/watch?v=gjEN2tSqESs
+#### AI 소프트웨어 팩토리의 5가지 유형 설명
+https://www.youtube.com/watch?v=r5iPi8RL7A8
 
-- Tripo가 Unreal Engine 및 UEFN용 AI 3D 모델 생성 서비스를 어떻게 제공하는지 소개하는 영상이다.
-- 텍스트나 이미지로부터 몇 초 만에 게임에 바로 적용 가능한 3D 모델을 생성하는 과정을 시연한다.
-- 깔끔한 쿼드 토폴로지와 조절 가능한 폴리곤 수를 지원하는 3D 모델 생성 기능을 다룬다.
-- 스마트 UV 매핑, 자동 리깅, 애니메이션을 포함한 내장 후처리 도구로 에셋을 다듬는 방법을 설명한다.
-- 설명란에 2026 Epic AI MegaJam 관련 안내 페이지와 itch.io 행사 링크가 함께 포함되어 있다.
+- AI 소프트웨어 팩토리의 개념과 대표적인 다섯 가지 유형의 장단점을 설명하며 통제와 자율성의 균형을 다룹니다.
+- 다섯 가지 유형으로 다크 팩토리, 플릿 팩토리, PR 팩토리, 릴리스 팩토리, 자가 개선 팩토리를 순서대로 소개합니다.
+- 인간 개입(Human in the Loop)의 수준과 그 변화 방식을 함께 살펴봅니다.
+- 발표자의 릴리스 팩토리 내부 구성 사례를 공유하고 상황별 팩토리 선택 기준을 제시합니다.
+- 오픈소스 AI 소프트웨어 팩토리 저장소(coleam00/ai-software-factory)와 12월 2일 라이브 부트캠프 정보를 안내합니다.
 
-### Google Cloud Tech
+### NVIDIA Developer
 
-#### 노코드로 완성형 AI 앱 구축 과정 따라가기
-https://www.youtube.com/watch?v=-nRo5q63b2Y
+#### GTC DC 개발자 커뮤니티 애프터 아워즈
+https://www.youtube.com/watch?v=SdmuM4NLEsM
 
-- 단계별 구현 계획을 Google Antigravity에 전달해 스마트 개인 트레이너 앱을 노코드로 구축하는 Build It 에피소드이다.
-- 프로젝트 설정과 자동화 검사부터 백엔드 서버, 운동 트래커, AI 코치 채팅, AI 리빙 메모리까지 5개 마일스톤을 순서대로 구현한다.
-- 브라우저 콘솔 확인, 브라우저 캐싱 버그 수정, Gemini API 키 로딩 점검 등 실제 구축 과정에서 발생한 오류를 디버깅하는 과정을 다룬다.
-- 단일 운동을 수정할 때 한 주 전체 운동이 덮어써지던 버그의 원인을 AI 코치의 컨텍스트 출처에서 찾아 앱이 컨텍스트를 전달하도록 시스템을 변경해 해결한다.
-- 설명란에 구간별 챕터 목록과 함께 프롬프트·아티팩트, Builder Central, Google Antigravity 리소스 링크가 제공된다.
+- NVIDIA Developer가 GTC DC를 주제로 진행하는 개발자 중심의 라이브 대담이다.
+- 오픈 모델, AI 에이전트, AI 안전성, 가속 컴퓨팅 등 GTC DC의 주요 기술 주제를 다룬다.
+- 헬스케어, 금융 서비스, 피지컬 AI, 정부 분야에서의 기술 적용 잠재력을 논의한다.
+- 기술들이 실제 워크플로와 연결되는 방식과 GTC DC에서 살펴볼 내용을 소개한다.
+- 학습 및 구축 기회를 찾을 수 있는 곳을 안내하며 실시간 질문을 받아 대화를 이어간다.
 
-#### Gemini 4 Argon 데모: Google AI Studio에서 3D 앱 리믹스 및 Firebase 연동
-https://www.youtube.com/watch?v=yQADxQU0trc
+#### GTC DC 개발자 커뮤니티 스포트라이트
+https://www.youtube.com/watch?v=ON4Jq8aajWI
 
-- The Google Cloud Show의 한 세그먼트로, Google 빌더 빌리 제이콥슨, 루크 슐랭언, 몰리 페티트가 Google AI Studio에서 Gemini 4 Argon을 활용해 기존 3D 웹 앱을 수정하는 시연을 진행합니다.
-- 출연진들은 Gemini 4 Argon Builders Showcase의 앱을 불러온 뒤 단일 프롬프트와 음성-텍스트 지시를 사용해 앱을 커스터마이징합니다.
-- 3D 체스판 앱에서는 음성-텍스트 프롬프트로 테두리의 추상 기호를 전통적인 문자·숫자 좌표로 바꾸고 체스 말을 밝은 네온 색상으로 변경한 뒤 'Knight to E5' 같은 이동을 테스트합니다.
-- 3D 레이싱 게임에서는 Gemini 4 Argon에 프롬프트를 입력해 사용자 인증과 실시간 공유 리더보드 기능을 추가합니다.
-- Google AI Studio 내에서 한 번의 클릭으로 Firebase Authentication과 Cloud Firestore를 활성화해 실시간 로그인과 데이터베이스 추적을 구성한 뒤 출연진들이 직접 레이싱 대결을 펼칩니다.
-
-### Unreal Engine
-
-#### Epic AI MegaJam | Hyper3D
-https://www.youtube.com/watch?v=HNW5kXNBE5g
-
-## GitHub Trending Weekly
-
-[채널별 원본](/github/2026%EB%85%8411%EC%9B%94/2026-11-16_Astryx-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95%EA%B3%BC-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8.md)
-
-### 1. meta/astryx
-
-https://github.com/meta/astryx
-
-- 언어: TypeScript
-- 이번 주 증가: 13,501 stars this week
-- React 19 이상과 StyleX 기반으로 구축되었으며 150개 이상의 접근성 준수 컴포넌트, 브랜드 테마, 다크 모드, 템플릿 및 CLI를 제공하는 오픈소스 디자인 시스템이다.
-- 사전 빌드된 CSS와 타입이 지정된 React 컴포넌트를 별도 빌드 플러그인 없이 가져와 사용할 수 있고, 내부 구성 요소를 직접 조합하거나 소스를 추출(swizzle)하고 className으로 스타일을 재정의할 수 있다.
-
-### 2. anthropics/skills
-
-https://github.com/anthropics/skills
-
-- 언어: Python
-- 이번 주 증가: 6,077 stars this week
-- Claude가 특정 작업을 반복적으로 수행할 수 있도록 동적으로 불러오는 지침, 스크립트, 리소스 폴더 형태의 에이전트 스킬 구현체를 모아둔 공개 저장소이다.
-- 각 스킬은 지침과 메타데이터가 담긴 SKILL.md 파일을 포함한 독립 폴더로 구성되어 있으며, 문서 생성 및 편집, 웹 앱 테스트, MCP 서버 생성, 기업 워크플로 등 다양한 예제를 제공한다.
-
-### 3. sherlock-project/sherlock
-
-https://github.com/sherlock-project/sherlock
-
-- 언어: Python
-- 이번 주 증가: 10,412 stars this week
-- 여러 소셜 네트워크에서 사용자 이름(username)으로 소셜 미디어 계정을 찾는 Python 기반 프로젝트이다.
-- 단일 사용자명을 기준으로 소셜 네트워크 전반에서 관련 계정을 추적하는 용도로 소개되어 있다.
-
-### 4. backnotprop/plannotator
-
-https://github.com/backnotprop/plannotator
-
-- 언어: TypeScript
-- 이번 주 증가: 1,719 stars this week
-- 플러그인, 훅, 명령어로 Claude Code, Codex, Gemini CLI 등 여러 AI 코딩 에이전트 및 개인 비서와 연동되어, 에이전트의 계획, 스펙, HTML, 메시지 등에 브라우저에서 주석을 달고 피드백을 전달하는 로컬 리뷰 도구이다.
-- 로컬 변경 사항이나 원격 PR의 diff를 검토해 코멘트와 코드 제안을 작성해 에이전트에게 돌려보낼 수 있으며, Git, GitButler, Jujutsu(jj), Perforce(p4), GitHub, GitLab과 함께 동작한다.
-
-### 5. vercel-labs/agent-browser
-
-https://github.com/vercel-labs/agent-browser
-
-- 언어: Rust
-- 이번 주 증가: 4,217 stars this week
-- AI 에이전트가 셸 명령으로 브라우저를 한 단계씩 제어할 수 있게 해주는 네이티브 Rust 기반 CLI로, 명령 간에 브라우저를 열어 둔 상태로 작업을 이어간다.
-- snapshot 명령으로 웹페이지를 접근성 트리 기반의 텍스트와 요소 참조(@e1 등)로 반환하며, CSS 선택자·텍스트·XPath·시맨틱 로케이터도 지원하고 숨겨지거나 비활성화된 대상에 대한 클릭은 실패로 처리한다.
-
-### 6. ZhuLinsen/daily_stock_analysis
-
-https://github.com/ZhuLinsen/daily_stock_analysis
-
-- 언어: Python
-- 이번 주 증가: 4,548 stars this week
-- 중국 A주·홍콩·미국·일본·한국·대만 주식과 ETF의 시세, 기술 지표, 뉴스, 재무 데이터를 수집해 LLM으로 매매 판단용 의사결정 리포트를 생성합니다.
-- GitHub Actions·Docker·로컬 스케줄러로 정기 실행할 수 있으며 웹/데스크톱 워크벤치와 텔레그램·슬랙·이메일 등 메신저 자동 알림을 지원합니다.
-
-### 7. we-promise/sure
-
-https://github.com/we-promise/sure
-
-- 언어: Ruby
-- 이번 주 증가: 4,556 stars this week
-- 개발이 중단된 개인 재무·자산 관리 앱 Maybe Finance의 오픈소스 코드를 커뮤니티가 이어받아 유지·관리하는 포크 프로젝트입니다.
-- Docker를 이용해 사용자가 직접 서버에 셀프 호스팅하여 운영할 수 있습니다.
-
-### 8. milind-soni/OpenMausBot
-
-https://github.com/milind-soni/OpenMausBot
-
-- 언어: TypeScript
-- 이번 주 증가: 5,463 stars this week
-- 로컬에서 실행되는 Claude나 Codex 에이전트를 메신저 연락처처럼 두고 대화하며 작업을 확인·승인할 수 있는 오픈소스 데스크톱 앱입니다.
-- 각 봇마다 별도의 모델, 성격, 클라우드 가상 머신 및 연동 앱을 부여할 수 있으며 macOS·Windows·Ubuntu용 설치 파일을 제공합니다.
-
-### 9. google/elephant-goldfish-model
-
-https://github.com/google/elephant-goldfish-model
-
-- 언어: Python
-- 이번 주 증가: 5,060 stars this week
-- 프로젝트 맥락을 유지해 명세서를 작성하는 Elephant와 이전 대화 없이 초안을 검토해 숨은 가정을 찾는 Goldfish 역할로 나누어 문서를 설계·리뷰하는 AI 어시스턴트 플러그인입니다.
-- ChatGPT·Codex 데스크톱, Antigravity, Claude Code, Codex CLI 등 여러 코딩 에이전트 환경에 설치해 사용할 수 있습니다.
-
-### 10. google-deepmind/mujoco
-
-https://github.com/google-deepmind/mujoco
-
-- 언어: C++
-- 이번 주 증가: 1,922 stars this week
-- 로보틱스·생체역학·그래픽·머신러닝 분야의 연구와 개발을 위해 다관절 접촉 동역학을 시뮬레이션하는 C API 기반 물리 엔진입니다.
-- 내장 XML 컴파일러와 데스크톱·웹(WebAssembly) 시각화 뷰어를 지원하며 Python 바인딩과 Unity 플러그인을 제공합니다.
+- NVIDIA Developer가 GTC DC에서 AI 에이전트의 산업별 적용을 주제로 진행하는 세션이다.
+- 개발자가 특화 에이전트에 접근하는 방식과 모델을 기업 지식에 연결하는 방법을 살펴본다.
+- 안전성 및 배포 관련 과제를 해결하는 방안을 다룬다.
+- 대담과 데모를 통해 헬스케어, 금융 서비스, 정부 분야의 행사 주제를 개발자용 실무 내용으로 연결한다.
+- 다음 프로젝트에 활용할 도구와 리소스를 소개하고 실시간 청중 질의응답을 진행한다.
