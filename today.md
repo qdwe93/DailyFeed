@@ -1,225 +1,403 @@
-# DailyFeed — 2026-11-23 (KST)
+# DailyFeed — 2026-11-24 (KST)
 
 <!-- dailyfeed-digest held= -->
 
-- 수집일: 2026-11-23
-- 통합 생성: 2026-11-23 12:03 KST
+- 수집일: 2026-11-24
+- 통합 생성: 2026-11-24 12:05 KST
 - 구분: 수집일(실행일) 기준. 기사 게시일과 다를 수 있음
-- 실행 로그: [log/2026-11-23.md](/log/2026-11-23.md)
+- 실행 로그: [log/2026-11-24.md](/log/2026-11-24.md)
 
 ## 빠른 이동
 
-- [GeekNews](#geeknews) — 61건
-- [Tech Feeds](#tech-feeds) — 0건
-- [YouTube Tech](#youtube-tech) — 4건
-- [GitHub Trending Weekly](#github-trending-weekly) — 10건
+- [GeekNews](#geeknews) — 41건
+- [Tech Feeds](#tech-feeds) — 19건
+- [YouTube Tech](#youtube-tech) — 16건
 
 ## GeekNews
 
-[채널별 원본](/geeknews/2026%EB%85%8411%EC%9B%94/2026-11-23_ClawDOS-DOS%EC%9A%A9-AI-%EC%BD%94%EB%94%A9-%EC%97%90.md)
+[채널별 원본](/geeknews/2026%EB%85%8411%EC%9B%94/2026-11-24_Internet-Archive%EC%9D%98-%EC%9E%8A%ED%9E%8C.md)
 
-- [ClawDOS - DOS용 AI 코딩 에이전트](https://news.hada.io/topic?id=37604)
-- [Show GN: TermiPlus - 물리 키보드 + Gboard 한글 입력이 안 깨지는 안드로이드 SSH 터미널 앱](https://news.hada.io/topic?id=37605)
-- [내 미술 작품 웹사이트의 기술 아키텍처가 꽤 마음에 든다](https://news.hada.io/topic?id=37607)
-- [젠슨 황의 추락은 실리콘밸리 가속주의자들에게 악재임](https://news.hada.io/topic?id=37608)
-- [결재 서류를 쌓아 두던 부장에서 보고받는 사장으로 – Claude Code 매니저 세션 만들기](https://news.hada.io/topic?id=37609)
-- [Show GN: SeohoKim Loop - AI별 초안·검토·개선을 연결하는 오픈소스 데스크톱 앱](https://news.hada.io/topic?id=37610)
-- [영국 냉장고, 해커 공격에 대비한 보안 조치 시행](https://news.hada.io/topic?id=37612)
-- [Zero C# - 런타임이나 GC 없는 C#](https://news.hada.io/topic?id=37613)
-- [Show GN: 반가워 - 무료 1:1 한-영 언어 교환 서비스](https://news.hada.io/topic?id=37614)
-- [Show GN: NeuroTerm, 사람과 AI 에이전트가 함께 쓰는 터미널](https://news.hada.io/topic?id=37615)
-- [Show GN: 나만의 온라인 서재 - 완독기록, 독서통계, AI 취향분석 - page0127.(페이지읽다)](https://news.hada.io/topic?id=37619)
-- [앞으로 나올 100개의 Rust GUI를 위한 조언](https://news.hada.io/topic?id=37620)
-- [사내 설치형 Git 서버·CI/CD 비교 – GitLab·Gitea·OneDev·GitHub Enterprise Server, 무료판에서 되는 ...](https://news.hada.io/topic?id=37621)
-- [Leonida - GTA 6 Xbox 버전의 PC 재컴파일 프로젝트](https://news.hada.io/topic?id=37622)
-- [추론 제공업체의 데이터 처리 사고](https://news.hada.io/topic?id=37625)
-- [2028년 Anthropic 전력의 87%는 가스, 11%는 석탄에서 공급될 전망](https://news.hada.io/topic?id=37626)
-- [Go로 PostgreSQL 확장 개발하기](https://news.hada.io/topic?id=37627)
-- [심각한 사이버공격 배후에 막대한 자금력을 갖춘 세력이 있는 것으로 추정](https://news.hada.io/topic?id=37628)
-- [나스닥, 2026년 상승분 모두 반납](https://news.hada.io/topic?id=37629)
-- [Show GN: 맹고 - 관심 분야 소식만 골라 AI로 요약하고 출근길에 읽어 주는 앱](https://news.hada.io/topic?id=37632)
-- [Show GN: Agent Office - Claude Code 서브에이전트가 일하는 모습을 픽셀 사무실로 보여주는 뷰어](https://news.hada.io/topic?id=37633)
-- [Show GN: SubPulse: 은행 연결 없이 브라우저 로컬에서 구독 결제일과 무료 체험 만료를 알려주는 크롬 확장 프로...](https://news.hada.io/topic?id=37634)
-- [Upload2Shell(CVE-2026-125396) - Ghostscript 샌드박스를 우회하는 문서 처리 취약점](https://news.hada.io/topic?id=37635)
-- [PcapAnalyzer - 27개 문제 탐지기를 갖춘 셀프 호스팅 pcap 분석기](https://news.hada.io/topic?id=37636)
-- [AI 시대, 컴퓨터공학과 소프트웨어공학적 사고의 가치](https://news.hada.io/topic?id=37637)
-- [Show GN: Mixpeek - S3 버킷의 동영상과 이미지 내부 검색](https://news.hada.io/topic?id=37638)
-- [AI는 모두에게 같은 조언을 하고 있다](https://news.hada.io/topic?id=37639)
-- [Pandex - MCP로 AI 에이전트에 공식 유럽 법률 자료 제공](https://news.hada.io/topic?id=37640)
-- [AI가 똑똑해지면 의식도 생길까](https://news.hada.io/topic?id=37641)
-- [Show GN: Folkbench Pelican Database - 507개 AI 모델의 펠리컨 그림을 모은 오픈소스 데이터베이스](https://news.hada.io/topic?id=37643)
-- [Show HN: 플레이어가 LLM의 하위 에이전트가 되는 게임을 만들었습니다](https://news.hada.io/topic?id=37644)
-- [Fast-Anything: 전체를 Rust로 재작성하지 말고, 느린 5%만 재작성하라](https://news.hada.io/topic?id=37645)
-- [리만 가설 Lean 증명의 검증 파일](https://news.hada.io/topic?id=37646)
-- [AI 에이전트는 적힌 것을 지킨다](https://news.hada.io/topic?id=37647)
-- [Open Social Web Alliance - 개방형 소셜 웹의 공동 거버넌스와 인프라 구축을 위한 연합](https://news.hada.io/topic?id=37648)
-- [퍼플렉시티와 지능: OpenAI의 공동 개발 한계선 제안](https://news.hada.io/topic?id=37649)
-- [Show HN: OpenComputer - Devin의 오픈소스 대안](https://news.hada.io/topic?id=37650)
-- [성인만 사는 가구, 2026년 상반기 장난감 매출의 55% 차지](https://news.hada.io/topic?id=37651)
-- [AI 공급망 보안: 카나리 토큰이 발견한 것들](https://news.hada.io/topic?id=37652)
-- [Mojang을 위한 포트 스캐닝](https://news.hada.io/topic?id=37653)
-- [남성에게 더 가혹한가? 갈등 상황에서 LLM의 성별 비대칭적 도덕 판단 평가](https://news.hada.io/topic?id=37656)
-- [테스트를 위한 더 나은 어휘](https://news.hada.io/topic?id=37662)
-- [AI가 기후에 재앙이 되어가고 있다](https://news.hada.io/topic?id=37664&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Show HN: The Riemann Proof Handbook - 리만 가설의 Lean 증명 코드를 수학으로 풀어 쓴 책](https://news.hada.io/topic?id=37665&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Show GN: 바이브코딩 웹앱들을 설치 없이 바로 여는 웹앱 스토어, 와플(Waffle)](https://news.hada.io/topic?id=37666)
-- [Show GN: 티메이트 - Play 비공개 테스트(12명·14일)를 개발자끼리 서로 해 주는 품앗이 앱](https://news.hada.io/topic?id=37668)
-- [Show GN: Vi3w - 3D 모델을 올리면 휴대폰 브라우저에서 여는 AR 링크와 QR을 만드는 웹AR 도구](https://news.hada.io/topic?id=37669)
-- [Inkling, Qwen, Unsloth로 시작하는 로컬 AI 입문 가이드](https://news.hada.io/topic?id=37670&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Show GN: XenoCI - GitHub Actions 맥 빌드를 Mac mini M4에서 돌리는 러너](https://news.hada.io/topic?id=37673&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [연구자가 AI 공급망에 카나리 200만 개를 심자 드러난 개인정보 보호 참사](https://news.hada.io/topic?id=37675&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Words - AI 응답을 실시간으로 표시하는 고속 Markdown 렌더러](https://news.hada.io/topic?id=37676&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [빠른 속도는 디자인 결정이다](https://news.hada.io/topic?id=37677&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [이제 우리는 모두 주니어 인재다](https://news.hada.io/topic?id=37680&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Nyx, 세계에서 가장 오래된 인터넷 서비스 제공업체](https://news.hada.io/topic?id=37681&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [P vs. NP 해결에 도전하는 AI 에이전트 군집](https://news.hada.io/topic?id=37682&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [HUMAN.md](https://news.hada.io/topic?id=37683&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [디자이너와 함께 일하기](https://news.hada.io/topic?id=37684&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Alibaba에서 구한 RISC-V 보드에 NixOS 구동하기](https://news.hada.io/topic?id=37685&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [에이전트 시대의 Postgres 데이터베이스](https://news.hada.io/topic?id=37687&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
-- [Show GN: 얌얌 - 오늘 날씨로 먹을 음식과 가까운 맛집을 추천하는 웹](https://news.hada.io/topic?id=37688)
-- [GL.iNet 보안 공지 2026-11-20: 라우터와 KVM 악성코드 감염 대응](https://news.hada.io/topic?id=37689&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Internet Archive의 잊힌 영상으로 만든 무료 대안 TV 네트워크](https://news.hada.io/topic?id=37690)
+- [GitHub Actions는 유효하지 않은 YAML도 허용함](https://news.hada.io/topic?id=37696)
+- [XNU Linux: Linux에서 완전한 OS X GUI 사용자 공간 실행](https://news.hada.io/topic?id=37700)
+- [Show GN: Heirloom - AI가 바꾼 코드의 동작을 머지 전에 직접 확인하는 플러그인](https://news.hada.io/topic?id=37703)
+- [자유를 위한 투쟁: BSD는 어떻게 AT&T 라이선스에서 벗어났나](https://news.hada.io/topic?id=37705)
+- [그렇다, Lean 코드 1,700만 줄은 정말 많다](https://news.hada.io/topic?id=37710)
+- [GLM-5.4: Z.ai의 첫 Loop Transformer로 범용 코딩을 향해](https://news.hada.io/topic?id=37712)
+- [리만 가설 Lean 증명의 트리맵](https://news.hada.io/topic?id=37713)
+- [젠슨 황, NVIDIA CEO로 복귀](https://news.hada.io/topic?id=37717)
+- [GTA 6, 모든 플레이어의 개인 행동 프로필 구축 의혹](https://news.hada.io/topic?id=37718)
+- [보안 지옥의 다음 단계](https://news.hada.io/topic?id=37719)
+- [Show GN: VerifyLens - AI가 짠 코드가 요구사항대로인지 근거 코드 줄과 테스트로 보여 주는 오픈소스](https://news.hada.io/topic?id=37720)
+- [Nvidia, Jensen Huang을 CEO로 복귀시킴](https://news.hada.io/topic?id=37721)
+- [Nospeaker - 햅틱 모터로 MacBook 트랙패드가 말하게 만들기](https://news.hada.io/topic?id=37722)
+- [Win4wine - 실제 Windows XP 셸을 Linux 데스크톱으로 실행](https://news.hada.io/topic?id=37723)
+- [Ladybird 브라우저, 알파 버전 공개](https://news.hada.io/topic?id=37724&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Show GN: 검은망고 - AI 툴·앱·웹·게임을 한눈에 모으고 소개 기사까지 써주는 서비스 마켓](https://news.hada.io/topic?id=37725)
+- [Docker, AI 에이전트 보안으로 영역 확장하며 새 브랜드 공개](https://news.hada.io/topic?id=37726&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Cyberleek, GTA 6 Xbox 빌드 실행 파일 공개](https://news.hada.io/topic?id=37727&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Kagi Mail 공개 베타 - 개인정보 보호 중심의 이메일과 캘린더 서비스](https://news.hada.io/topic?id=37728&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [얀 르쿤, “다리오 아모데이는 오픈 모델을 불법화하고 통제권을 유지하려 위험을 과장하고 있다”](https://news.hada.io/topic?id=37729&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Show GN: WebDecoy Node SDK - Node.js에서 봇 탐지 규칙을 로컬로 검증](https://news.hada.io/topic?id=37730&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [“Arm의 요청에 따라 이 사이트는 2026년 12월 4일 운영을 종료합니다”](https://news.hada.io/topic?id=37731&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Apple, 9년간 운영한 내 오픈소스 앱을 EU App Store에서 삭제](https://news.hada.io/topic?id=37732&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Show GN: PQ-Proof - PQC 전환이 끝났는지 전환 전후 코드를 비교해 판정하는 오프라인 도구](https://news.hada.io/topic?id=37733&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [SSH 키를 디스크에 보관하지 말자](https://news.hada.io/topic?id=37734&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [모든 체에서 VP ≠ VNP](https://news.hada.io/topic?id=37736&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Show GN: 한라산 기원 – "절대 봇 금지" 현판 옆에 원격 MCP 뒷문을 열어둔 3D 바둑·체스 역튜링 대국장](https://news.hada.io/topic?id=37738)
+- [경영진과 대화하는 법: 논쟁하기 전에 금액으로 환산하라](https://news.hada.io/topic?id=37739&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [OpenAI와 Cisco, 실행 중인 Linux 시스템을 보호하는 오픈소스 런타임 Shirudo 공개](https://news.hada.io/topic?id=37740&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [shirudo - 에이전트 시대를 위한 BPF 라이브 패치 인프라](https://news.hada.io/topic?id=37741&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Pine - 파일과 메시지, 기기 변화에 반응해 작업하는 AI 에이전트 하네스](https://news.hada.io/topic?id=37742&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [FastFrames - 실시간 상호작용이 가능한 저지연 영상 생성](https://news.hada.io/topic?id=37743&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Stalwart, 이제 Microsoft Exchange를 그대로 대체할 수 있음](https://news.hada.io/topic?id=37744&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [평가는 AI 엔지니어링에서 가장 과소평가된 역량이다](https://news.hada.io/topic?id=37745&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Show GN: 깨워줄게 - AI 캐릭터 목소리로 깨워주는 안드로이드 모닝콜 알람](https://news.hada.io/topic?id=37746)
+- [Jensen Huang의 복귀는 미국 역사상 최대 국가안보 스캔들](https://news.hada.io/topic?id=37748&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [NariQ: BF16 수준의 Qwen3.8-27B를 10GB 파일에 담다](https://news.hada.io/topic?id=37749&utm_source=geeknews&utm_medium=rss&utm_campaign=news)
+- [Show GN: 인플루언서·프리랜서·홈케어 매칭 플랫폼 MatchCore 매치코어](https://news.hada.io/topic?id=37751)
+- [GPUI가 독립 저장소를 갖게 됨](https://news.hada.io/topic?id=37752)
+- [Show GN: CRAMA FILE – 파일을 서버에 안 올리는 무료 PDF·이미지 도구 21종](https://news.hada.io/topic?id=37753)
 
 ## Tech Feeds
 
-[채널별 원본](/tech/2026%EB%85%8411%EC%9B%94/2026-11-23_Tech-Feeds.md)
+[채널별 원본](/tech/2026%EB%85%8411%EC%9B%94/2026-11-24_Jetpack-Compose-%EA%B8%B0%EB%B0%98-%EC%BB%A4.md)
 
-해당 날짜에 확인된 신규 글 없음.
+### NAVER D2
+
+#### Jetpack Compose 기반 커스텀 3D 캐러셀 개발기
+원문: https://d2.naver.com/helloworld/2957037
+
+- NAVER Engineering Day 10th에서 공개된 세션으로, ThingsBook Tech의 윤여준이 ThingsBook 서비스의 카드 덱 UI를 개발한 경험을 공유한다.
+- 카드가 비스듬히 겹쳐 쌓이고 넘길 때마다 간격과 기울기가 변하는 3D 카드 덱을 LazyRow 대신 Jetpack Compose로 직접 구현했다.
+- Float 값 하나로 모든 카드를 움직이는 구조를 통해 매 프레임 변하는 값을 리컴포지션 없이 화면에 반영하는 방법을 설명한다.
+- 3D로 기울인 UI에서 터치 영역이 어긋나는 버그를 직접 판정으로 해결한 과정과 LazyRow 없이 Paging3의 다음 페이지 로드를 제어한 방법을 다룬다.
+- 복잡한 인터랙션 UI나 성능·설계에 관심 있는 Android 개발자 및 AI를 활용해 복잡한 UI를 만들고 싶은 개발자를 대상으로 하며, AI와 함께 만들며 빨라진 부분과 안 됐던 부분도 소개한다.
+
+#### 부족한 건 모델이 아니라 팀 문서였다: 팀 공유 지식층 Third Brain 구축기
+원문: https://d2.naver.com/helloworld/2622882
+
+- NAVER Engineering Day 10th에서 발표된 세션으로, NAVER 테크 플랫폼에서 Observability를 담당하는 이권재와 김보규가 작성했다.
+- AI가 답을 맞히지 못하는 이유가 모델 자체가 아니라 팀 문서의 부재에 있음을 확인한 과정을 다룬다.
+- 팀 위키를 AI가 읽고 쓸 수 있는 공유 지식층인 'Third Brain'으로 구축해 운영한 경험을 공유한다.
+- 목차에는 문서를 작성할 위치, 문서 업데이트 주체, AI가 작성한 내용의 신뢰성과 실제 동작 여부 등이 포함된다.
+- 팀 지식을 정리하는 방법을 고민하는 개발자를 주요 발표 대상으로 삼고 있다.
+
+#### Devops Agent 리포트 오이데~ 평가 야호~
+원문: https://d2.naver.com/helloworld/0118355
+
+- NAVER Engineering Day 10th에서 공개된 세션으로, 네이버 검색 FE Infrastructure 팀의 윤정현과 조문기가 발표했다.
+- 통합검색 알람이 발생했을 때 1분 이내에 장애 1차 진단 리포트를 이슈로 남기는 Devops Agent를 소개한다.
+- 에이전트가 생성한 진단 리포트 결과를 평가해 시스템 정확도를 도출한 이야기를 다룬다.
+- 목차는 Devops Agent 소개와 에이전트 특성으로 인한 문제, 평가 기준 설정, 평가 시스템 구성·구축 및 미래 방향으로 구성된다.
+- LLM 기반의 이상 신호 분석 시스템이나 평가 시스템을 운영하려는 독자를 발표 대상으로 한다.
+
+#### 온톨로지, 구축에서 활용까지. 질문이 답을 설계한다.
+원문: https://d2.naver.com/helloworld/5037527
+
+- NAVER Engineering Day 10th에서 공개된 세션으로, NAVER Cloud의 FDE(Forward Deployed Engineer) 이영륜이 물류회사 가상 사례를 통해 온톨로지의 구축과 활용 전 과정을 소개한다.
+- 스키마 대신 고객 질문에서 출발해 Object, Property, Link, Action 네 요소를 도출했으며, 데모 모델은 Object Type 60개, Link 63개, Action 31개로 구성되었다.
+- 화면 데모에서는 Explorer·에이전트·운영 앱이 같은 모델로 답을 내고 용어를 정규화하며, Human 승인이 필요할 때 에이전트가 승인 대기 상태로 정지하는 과정을 보여준다.
+- LLM 단독의 환각 위험과 RAG의 최신 상태 보장 어려움에 비해 온톨로지는 정확한 조회와 쓰기 Action을 지원하지만 가장 높은 비용이 든다고 비교한다.
+- 고객 요구를 여섯 가지 항목으로 분해하는 FDE의 역할을 설명하며, 온톨로지가 모든 질문의 정답은 아니므로 질문에 가장 맞는 도구를 골라야 한다고 정리한다.
+
+#### Spark 배치 파이프라인 Distributed Tracing 도입
+원문: https://d2.naver.com/helloworld/2526679
+
+- 2026년 11월 23일 NAVER D2에 등록된 글로, 네이버 사내 기술 교류 행사인 NAVER Engineering Day 10th 발표 세션을 공개한 내용이다.
+- NAVER Data Solution 소속 김경범과 박남규가 작성했으며 Spark 배치 처리의 관측성 확보와 성능 최적화에 관심 있는 개발자를 발표 대상으로 한다.
+- Apache Spark가 지원하지 않는 분산 추적을 비즈니스 로직 수정 없이 플러그인 형태로 제공해 연관 애플리케이션들을 한 흐름으로 잇는 방법을 소개한다.
+- 관측 결과를 성능 개선과 AI Agent 진단에 연결한 경험을 공유한다.
+- 목차상 Observability, 분산추적과 OpenTelemetry, 배치 파이프라인, 해결 과정 및 결과와 AI Agent를 순서대로 다룬다.
+
+#### GPU 노드 검증 자동화: 상시 점검부터 부하 검증까지
+원문: https://d2.naver.com/helloworld/7131556
+
+- 2026년 11월 23일 NAVER D2에 등록된 NAVER Engineering Day 10th 공개 세션이며, NAVER Cloud의 AI Cloud Product 소속 유용혁과 이지환이 작성했다.
+- GPU 노드의 하드웨어 고장을 워크로드 시작 전에 찾아내는 검증 시스템을 소개한다.
+- 상시 점검, 부하 검증, preflight로 구성된 검증 설계를 Kubernetes Operator로 자동화한 구현 과정과 운영 현황 및 남은 과제를 다룬다.
+- Kubernetes 기반 GPU 클러스터 플랫폼 엔지니어와 장애 탐지·검증 자동화를 추진하는 MLOps 및 Infra 엔지니어를 대상으로 한다.
+- 대규모 학습 중 느린 노드나 고장 노드를 겪어 본 ML 엔지니어도 발표 대상에 포함된다.
+
+#### 뇌를 닮은 세컨드 브레인: 토큰 낭비 없는 RAG
+원문: https://d2.naver.com/helloworld/5087915
+
+- 2026년 11월 23일 NAVER D2에 등록된 NAVER Engineering Day 10th 공개 세션으로, NAVER Chat Platform의 신동민이 작성했다.
+- 기존 RAG의 텍스트 덤프와 토큰 낭비 한계를 극복하고 인지 메모리 논문 기법을 결합해 지식 자율 진화와 99% 재현율을 달성하는 AI 메모리 아키텍처 Haema(해마)를 소개한다.
+- 기억 저장, 불러오기, 작업 기억, 세션 나누기, 판정 게이트로 이루어진 Haema의 층 구조와 질문 처리 여섯 단계 및 긴 대화를 위한 세션 롤오버를 설명한다.
+- 문장 고르기, 중복 제거, 통째로 넣는 RAG와의 재현율·토큰 비교, 세션 롤오버, 긴 코딩 과제 기억 시험 등 실측 결과를 제시한다.
+- RAG 검색 효율·답변 품질 개선이나 AI 에이전트의 메모리 관리와 토큰 비용 절감에 관심 있는 개발자를 대상으로 팀 적용 시 설정과 측정 지표를 다룬다.
+
+#### 새벽 3시 54분, Agent가 먼저 분석하고 처리했습니다
+원문: https://d2.naver.com/helloworld/1126768
+
+- 2026년 11월 23일 NAVER D2에 등록된 NAVER Engineering Day 10th 공개 세션으로, NAVER WEBTOON에서 Data Engineering을 담당하는 김시온이 작성했다.
+- 개발과 운영 당번을 함께 맡아 새벽 알림에 대응하던 온콜 업무에서 원인 탐색부터 직접 조치까지 AI Agent에게 맡기도록 구성한 열한 달의 경험을 공유한다.
+- 1단계인 조사하는 Agent 단계에서는 알림을 한 곳으로 모으고 기억과 지식을 제공하며 응답 형식을 정해 조사 사례를 다룬다.
+- 2단계인 손을 쓰는 Agent 단계에서는 능력, 판정, 안전망에 대한 세 가지 기준을 검토하고 무인 조치 사례를 정리한다.
+- 개발과 서비스 운영(온콜)을 겸하는 엔지니어, 운영 업무에 AI Agent를 적용하려는 개발자, 사내 Agent 도입을 검토하는 팀을 대상으로 운영 결과와 향후 계획을 제시한다.
+
+#### AI 신입사원을 뉴스 데이터 시니어로 키우는 레포, news-data
+원문: https://d2.naver.com/helloworld/3284900
+
+- NAVER Engineering Day 10th에서 발표된 세션으로, AI 에이전트가 뉴스 데이터를 직접 찾고 추출·분석까지 수행하는 하네스 레포 news-data를 소개한다.
+- 스키마만으로 컬럼 의미를 알기 어렵고 문서가 wiki·GitHub·코드 주석 및 담당자 머릿속에 흩어져 있어 SQL과 Spark는 잘 쓰지만 조직 사정은 모르는 AI 에이전트의 문제를 해결하고자 만들었다.
+- 처음부터 문서를 모두 모으지 않고 실제 업무를 맡기며 작업마다 회고를 쓰고 PR로 레포에 되돌리는 작업 루프로 에이전트를 성장시킨다.
+- 요청 한 건은 규칙 로드, 스킬 선택, 요청·데이터 파악, 승인 후 실행·검증, 회고·반영의 다섯 단계를 거쳐 처리된다.
+- 업무 40건을 처리하며 이슈부터 회고 PR까지 중앙값 1.6시간을 기록했고, 검토 병목·정합성·방향성의 세 가지 한계에 부딪혀 다음 단계로 계획과 실행을 리모트 데이터 에이전트로 옮기는 방향을 제시한다.
+
+### SmartHR Tech Blog
+
+#### '개발자 커뮤니티와의 관계 발전 모델' 공개
+원문: https://tech.smarthr.jp/entry/2026/11/24/101808
+
+- 2023년 8월 출범한 SmartHR의 DevRel 유닛이 3주년을 기념해 개발자 커뮤니티와의 관계 구축을 다루는 사내 문서인 '개발자 커뮤니티와의 관계 발전 모델'을 공개했다.
+- Google 스프레드시트 형태의 이 표는 종합 레벨, 활동 항목, 종합 레벨별 상태 이미지의 세 블록으로 나뉘며 항목마다 5개 레벨을 정의한다.
+- SmartHR은 Ruby나 프론트엔드 등 개별 커뮤니티별 표와 일본 개발자 커뮤니티 전체의 종합 레벨만 기록한 표를 만들어 연초 위치를 셀 색상으로 기록해 연도별 추이를 추적하고 DevRel 로드맵을 수립한다.
+- 레벨의 기준은 인간관계를 관계 구축기 5계층과 관계 붕괴기 5계층으로 나타낸 'Knapp's relational development model'에서 관계 구축기만 참고해 설정했다.
+- SmartHR은 CRE와 Ruby 커뮤니티를 종합 레벨 4로, 그 외 대부분을 레벨 1~2로 두고 있으며, 종합 레벨에 연동되는 활동 항목으로 테크 블로그 전문 지식 발신, 협찬, 이벤트 참가, 이벤트 운영, 등단, 코드 기여의 6가지를 운영한다.
+
+### Toss Tech
+
+#### 목적마다, 상품마다 늘던 모델을 하나로: 금융 도메인에 멀티태스크 학습 적용하기
+원문: https://toss.tech/article/multi-task-learning-in-finance
+
+- 토스는 새 마케팅 목적이나 상품이 생길 때마다 개별 트리 모델을 하나씩 추가하면서 모델 수가 수십~수백 개로 늘어나 운영과 개선 부담이 커지는 문제를 겪었다.
+- 여러 과제를 함께 학습해 얻은 공유 표현을 다른 모델에 전달하던 이전 글(TASTE)과 달리, 이번 글은 금융 도메인에서 여러 과제의 예측값 자체를 하나의 멀티태스크 모델(MTL)로 맞혀 마케팅과 서비스에 바로 적용하는 데 집중했다.
+- 개별 모델이 수백 개로 늘어나면 모델별 학습·배포·모니터링 파이프라인과 장애 지점이 증가하고 잦은 재학습과 새 데이터 실험이 어려워지며 데이터가 적은 과제나 신규 상품에는 적용하기 어렵다.
+- 멀티태스크 학습은 입력을 요약하는 공통 부분은 공유하고 과제별 예측을 내는 출력층만 분리해 파이프라인과 재학습을 하나로 통합하며, 새 과제는 출력층 추가로, 새 상품은 상품 정보 입력으로 대응해 확장성을 확보한다.
+- 토스가 구축한 두 MTL 모델은 예측 대상은 서로 다르지만 사내 ML 플랫폼 위에서 데이터 준비·학습·예측·평가와 매일 재학습이 돌아가는 동일한 뼈대를 공유한다.
+
+### ZOZO TECH BLOG
+
+#### '어느 것이 최신?'을 없애다 — md 파일의 SSOT로 시작하는 생성형 AI 활용
+원문: https://techblog.zozo.com/entry/20261124-knowledge-base
+
+- ZOZOMO부 OMO블록 팀은 Devin과 Claude 등 여러 LLM을 개발·운영에 활용하면서 Slack·Confluence·Box의 정보를 원정보로 취급하고 Git으로 관리하는 md 파일만을 신뢰할 수 있는 유일한 정보원(SSOT)으로 정했다.
+- 원정보를 생성형 AI에 직접 읽히면 다른 프로젝트 내용에 필요한 정보가 묻히고 오래되거나 모순된 정보가 섞여 잘못된 답이 나오며 토큰 소비 비용도 커지는 문제가 발생했다.
+- 변경 이력과 리뷰가 남고 AI가 직접 읽고 쓰며 차분을 검토하기 쉽도록 Git과 md 형식을 선택했으며, 각 기사에는 출처 URL을 남기고 Slack·Confluence·Google Meet 회의록 등에서 필요한 내용을 추출해 등록하는 흐름을 지향한다.
+- SSOT의 정확성을 유지하기 위해 기사마다 유효·초안·비권장·아카이브 상태와 리뷰 주기를 부여하고 린터와 CI 검증, 신선도 및 링크 헬스 체크, 생성형 AI를 통한 기사 간 사실 모순 검출을 자동화했다.
+- 개발 중에는 MCP를 통해 리포지토리를 벗어나지 않고 지식을 검색·등록할 수 있으며, Claude Code의 Routines를 사용해 아직 동기화되지 않은 머지 PR을 1회 최대 5건씩 꺼내 도메인 규칙이나 API·DB 설계 등의 변경 사항을 지식 베이스에 반영한다.
+
+### Google Official Blog
+
+#### Introducing file slicing controls in the Gemini API
+원문: https://blog.google/innovation-and-ai/technology/developers-tools/file-slicing-controls/
+
+
+
+#### A more tailored Google Search that’s uniquely yours
+원문: https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/
+
+
+
+#### Organize and share your holiday memories with these five updates in Google Photos.
+원문: https://blog.google/products-and-platforms/products/photos/google-photo-tools-holiday-season-2026/
+
+
+
+#### See what 6 builders are making with Gemini 4 Hydrogen
+원문: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-hydrogen-builders/
+
+
+
+#### Gemini Canvas로 활용할 수 있는 4가지 기능
+원문: https://blog.google/innovation-and-ai/products/gemini-app/gemini-canvas-tasks/
+
+- Gemini Canvas는 채팅 화면 옆에 배치되는 대화형 작업 공간을 제공한다.
+- 3D 시각화 도구나 브라우저에서 플레이할 수 있는 게임 등의 웹 앱과 미니게임을 제작할 수 있다.
+- 노트나 PDF 파일을 대화형 퀴즈, 플래시카드, 샌드박스 형태의 맞춤형 학습 도구로 변환할 수 있다.
+- 스프레드시트를 매출 추적기, 가격 계산기, 작업 목록 같은 업무 생산성 도구로 바꿀 수 있다.
+- 캔버스에서 텍스트를 직접 강조 표시해 어조를 조정하거나 문구를 다듬고 제안서 구조를 재편집할 수 있다.
+
+### OpenAI
+
+#### Richpanel, 30일 만에 고객 지원 업무 50% 자동화 지원
+원문: https://openai.com/business/customer-stories/richpanel-ai-customer-support
+
+- Richpanel은 AI 고객 지원 에이전트의 도구 및 절차 구성에 GPT-6 Astra와 GPT-6.1 Sol을 사용하고, 고객 대화 처리에는 GPT-6 Luna를 활용한다.
+- 현장 배치 엔지니어 역할을 대신해 에이전트 설정을 담당하는 AI 관리자인 Boss AI를 구축해 일선 지원 에이전트, 코파일럿, 품질 보증 에이전트의 도구 호출 절차를 작성하도록 했다.
+- Boss AI에는 다른 에이전트가 따를 도구와 절차를 생성할 때 정확도를 우선시해 GPT-6 Astra와 GPT-6.1 Sol이 적용된다.
+- 수십만 건의 대화를 처리하는 일선 지원 에이전트와 코파일럿, 품질 보증 에이전트에는 상호작용당 비용과 지능의 균형을 고려해 GPT-6 Luna 등 경제적인 모델을 사용한다.
+- Richpanel CEO Amit RG에 따르면 회사는 2026년 10월 인터뷰 시점 기준 직전 6개월 동안 약 300건의 AI 고객 지원 도입을 완료했다.
+
+#### OpenAI와 Cisco, Shirudo 소개
+원문: https://openai.com/index/introducing-shirudo
+
+- OpenAI와 Cisco는 보안 팀이 패치를 배포하는 동안 리눅스 시스템을 보호할 수 있도록 지원하는 오픈소스 런타임인 Shirudo를 출시합니다.
+- 통제된 테스트에서 Codex가 생성한 쉴드는 실행 중인 Elasticsearch 서비스를 재시작하지 않고도 Java4Shell 익스플로잇 시도를 차단했습니다.
+- Shirudo는 리눅스 eBPF 기술을 사용해 의심스러운 활동을 관찰하고, 정상 요청은 통과시키면서 취약점을 노출하는 동작을 차단하는 쉴드를 사전 모니터링과 운영자 승인을 거쳐 실행 중인 시스템에 배포합니다.
+- 또한 보안 팀이 배포 권한을 유지한 상태에서 에이전트가 프로그래밍 가능한 제어 기능으로 취약점을 조사하고 표적 쉴드를 개발·검증할 수 있도록 설계되고 있습니다.
+- 쉴드는 로드 전 암호화 서명·검증과 리눅스 eBPF 검증기 및 커널 보안 제어를 거치며, TPM(Trusted Platform Module)을 통해 보호 기능의 로드·제거에 대한 검증 가능한 기록을 지원합니다.
 
 ## YouTube Tech
 
-[채널별 원본](/youtube/2026%EB%85%8411%EC%9B%94/2026-11-23_AI-%EC%84%9C%EB%B9%84%EC%8A%A4-%EB%B3%B4%EC%95%88-%EA%B0%95%ED%99%94%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%9E%85%EB%A0%A5.md)
+[채널별 원본](/youtube/2026%EB%85%8411%EC%9B%94/2026-11-24_Spark-%EB%B0%B0%EC%B9%98-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8-Distr.md)
+
+### NAVER D2
+
+#### Spark 배치 파이프라인 Distributed Tracing 도입
+https://www.youtube.com/watch?v=j5JTYVcYNC0
+
+- 네이버 사내 기술 교류 행사인 NAVER Engineering Day 10th에서 발표된 세션을 공개한 영상이다.
+- Apache Spark가 지원하지 않는 분산 추적을 비즈니스 로직 수정 없이 플러그인 형태로 제공하는 방법을 소개한다.
+- 분산 추적을 통해 배치 파이프라인 내 연관된 애플리케이션들을 하나의 흐름으로 연결하는 해결 과정을 다룬다.
+- 관측 결과를 성능 개선과 AI Agent 진단에 연결해 활용한 경험과 결과를 공유한다.
+- Observability와 OpenTelemetry 개념을 포함하며 Spark 배치 처리의 관측성 확보와 성능 최적화에 관심 있는 개발자를 대상으로 한다.
+
+#### GPU 노드 검증 자동화: 상시 점검부터 부하 검증까지
+https://www.youtube.com/watch?v=bbIkpqdsKQg
+
+- 네이버 사내 기술 교류 행사인 NAVER Engineering Day 10th에서 발표된 세션을 공개한 영상이다.
+- 워크로드가 시작되기 전에 GPU 노드의 하드웨어 고장을 탐지하는 검증 시스템을 소개한다.
+- 상시 점검, 부하 검증, preflight로 구성된 검증 설계와 이를 Kubernetes Operator로 자동화한 구현 과정을 다룬다.
+- 검증 시스템 도입의 필요성과 함께 실제 운영 현황 및 남은 과제를 공유한다.
+- Kubernetes 기반 GPU 클러스터를 운영하는 플랫폼 엔지니어, MLOps 및 Infra 엔지니어, ML 엔지니어를 대상으로 한다.
+
+#### 뇌를 닮은 세컨드 브레인: 토큰 낭비 없는 RAG
+https://www.youtube.com/watch?v=-bt-Jci53no
+
+- 네이버 사내 기술 교류 행사인 NAVER Engineering Day 10th에서 발표된 세션을 공개한 영상이다.
+- 기존 RAG의 텍스트 덤프 방식과 요청마다 토큰이 다시 읽히며 발생하는 토큰 낭비 문제를 다룬다.
+- 인지 메모리 논문 기법을 결합해 지식 자율 진화와 99% 재현율을 달성하는 AI 메모리 아키텍처 Haema(해마)의 구조를 소개한다.
+- 구현 후 측정한 결과와 실제 팀에 적용하는 내용을 목차로 구성하여 설명한다.
+- RAG의 검색 효율 및 답변 품질 개선과 AI 에이전트 메모리 관리 및 토큰 비용 절감에 관심 있는 개발자를 대상으로 한다.
+
+#### 새벽 3시 54분, Agent가 먼저 분석하고 처리했습니다
+https://www.youtube.com/watch?v=I3Is_hHuRUI
+
+- 네이버 사내 기술 교류 행사인 NAVER Engineering Day 10th에서 발표된 세션이다.
+- 개발과 운영 당번을 함께 맡으며 새벽 알림에 대응하는 업무에서 원인 파악부터 직접 조치까지 AI Agent에 맡긴 경험을 공유한다.
+- 발표 내용은 어느 조직에나 있는 운영 문제에 대한 도입부로 시작해 1단계 '조사하는 Agent', 2단계 '손을 쓰는 Agent', 결론 순으로 구성된다.
+- 개발과 서비스 온콜 운영을 겸하는 엔지니어와 AI Agent에게 조사·조치 같은 실제 운영 업무를 맡기려는 개발자를 주요 대상으로 한다.
+- 사내 환경에서 Agent 도입을 검토하는 팀이 참고할 수 있는 단계별 적용 사례를 다룬다.
+
+#### AI 신입사원을 뉴스 데이터 시니어로 키우는 레포, news-data
+https://www.youtube.com/watch?v=OcjEEEgL8Do
+
+- 네이버 사내 기술 교류 행사인 NAVER Engineering Day 10th에서 발표된 세션이다.
+- AI 에이전트가 뉴스 데이터를 직접 찾고 추출·분석까지 수행하는 하네스 레포지토리 'news-data'를 소개한다.
+- 작업마다 배운 내용을 회고와 PR로 되돌려 도메인을 모르던 에이전트를 시니어 수준으로 성장시키는 과정과 운영 중 겪은 한계 및 향후 방향을 공유한다.
+- AGENTS.md, 스킬, 규칙 등으로 에이전트의 작업 방식을 설계하거나 사내 도메인·데이터 업무를 맡기려는 개발자와 데이터 엔지니어·분석가를 대상으로 한다.
+- 스키마의 한계와 흩어진 문서 등 도입 배경부터 배운 순서대로 지식을 쌓고 스스로 점검하며 실제 업무를 처리하는 방식, 한계와 향후 방향 순으로 진행된다.
 
 ### kakao tech
 
-#### AI 서비스 보안 강화를 위한 입력 가드레일 모델 FENCE 개발 | 요새를 넘어오는 이미지 공격에 대비하기: FENCE | 신뢰와 안전
-https://www.youtube.com/watch?v=XLIAG5umPhA
+#### 같은 문장인데 토큰이 달라지는 이유 | 음성 언어모델은 어디서부터 시작될까? LM-SPT 개발 및 모델 적용기 | Model & Agent
+https://www.youtube.com/watch?v=8GQQaDh1_ac
 
-- 카카오뱅크 금융기술연구소에서 멀티모달 LLM과 AI 안전성을 연구하는 김미래가 이프카카오 2026 세션으로 발표한 영상이다.
-- 금융 서비스가 LLM을 넘어 VLM으로 확장되면서 이미지를 이용한 보안 위협이 기존 가드레일을 무너뜨릴 수 있는 문제를 다룬다.
-- AI 서비스 보안 강화를 위해 입력 가드레일 모델인 FENCE를 개발한 내용을 소개한다.
-- 금융 FAQ 기반의 프롬프트 어택 벤치마크 FENCE로 15종의 VLM을 평가한 취약점 분석 결과를 공유한다.
-- 멀티모달 환경에서의 향후 AI 안전성 평가 방향을 함께 제시한다.
+- 카카오의 기술 행사 ifkakao26에서 진행된 세션 영상이다.
+- 최신 음성 언어모델의 성능과 효율을 좌우하는 '음성의 토큰화' 방식을 핵심 주제로 다룬다.
+- 기존 코덱의 한계를 보완하기 위해 자체 개발한 새로운 음성 코덱 'LM-SPT'의 설계 과정을 설명한다.
+- 자체 개발한 'LM-SPT'를 카카오의 옴니모달 모델 'Kanana-o'에 적용해 얻은 결과를 공유한다.
+- 카카오에서 멀티모달 및 옴니모달 언어모델을 연구·개발하는 조대진과 강우영이 발표를 맡았다.
 
-#### 배치 코드의 일관된 관리 | 배치 코드 한 줄도 고치지 않고, 흩어진 수천 개 배치를 통제하는 법 | 신뢰와 안전
-https://www.youtube.com/watch?v=ixn1wTh5hT0
+### Cole Medin
 
-- 카카오페이 정산플랫폼 개발자인 황상일과 김도영이 이프카카오 2026 백엔드 세션에서 발표한 영상이다.
-- 흩어진 수천 개의 파편화된 배치 작업을 기존 배치 코드의 수정 없이 일관되게 관리하고 통제하는 방법을 다룬다.
-- 미승인 배치 실행의 사전 차단, 실시간 모니터링, 실행 이력 추적을 하나의 플랫폼으로 일원화한 방안을 설명한다.
-- 단일 플랫폼으로 배치 관리 과정을 통합한 카카오페이의 아키텍처를 소개한다.
-- 통합 배치 관리 플랫폼을 구축하면서 축적한 노하우를 공유한다.
+#### 해커들이 노리는 AI 코딩 에이전트 보안 강화 방법
+https://www.youtube.com/watch?v=0q0UbO4oqgQ
 
-### 당근 팀
+- 공격자들이 AI를 활용해 취약점을 더 빠르게 찾고 악용하며 최근 다수의 공격이 코딩 에이전트를 직접 겨냥하고 있다는 점을 다룬다.
+- 백도어를 다운로드하는 설정 파일과 키를 탈취하는 패키지 등 최근 몇 주간 실제 발생한 공격 사례를 소개한다.
+- 대화 기록에 남은 자격 증명, 허용 목록에 저장된 비밀번호, 탈취된 AI 키를 악용하는 LLM재킹(LLMjacking) 등 주요 보안 위협을 설명한다.
+- 에이전트가 실행하는 내용을 점검하고 모든 API 키에 한도를 설정하며 비밀 정보를 에이전트로부터 분리하는 기본 보안 조치를 안내한다.
+- 시크릿 보호 훅(secrets guard hook)이 포함된 무료 agent-config-audit 스킬을 GitHub에 공개하고 에이전트 설정 전체를 감사하는 실행 과정을 시연한다.
 
-#### 당근페이 라이브톡 #2 어쩌다 결제 도메인에서 이걸 만들었을까?
-https://www.youtube.com/watch?v=eVwguSGS7O8
+### Claude
 
-- 오후 6시 50분부터 접속할 수 있으며 라이브 채팅으로 질문을 받아 답변하는 당근페이 라이브톡의 두 번째 세션이다.
-- 당근페이 중고거래 결제팀의 PM 제이케이, PD 벤, BE 코너, FE 피터가 출연해 결제팀이 택배예약과 바로구매를 만들게 된 비하인드를 다룬다.
-- 직거래 중심이던 당근에서 비대면 거래의 가능성을 발견한 이야기를 다룰 예정이다.
-- 6개월 시한부 TF로 시작한 택배예약과 리얼월드에서 부딪힌 예상 밖의 에피소드를 공유할 예정이다.
-- 바로구매라는 새로운 거래 경험을 만들어낸 과정을 함께 이야기할 예정이다.
+#### 이번 달 Claude의 모든 신규 업데이트
+https://www.youtube.com/watch?v=EuOg5f_Egns
 
-#### 당근페이 라이브톡 #3 팀원 모두 오프라인은 처음입니다만
-https://www.youtube.com/watch?v=7gRsyaPD7u4
+- 지난 달 출시된 Claude의 주요 신규 기능과 함께 놓치기 쉬운 소규모 업데이트들을 소개한다.
+- 주요 출시 항목으로 Claude Fable 5.2, Claude Duet, Personal Finance in Claude를 다룬다.
+- 추가 업데이트 항목으로 Claude Meetings와 Claude Whiteboards, Claude Sheets, Claude Data를 안내한다.
+- 인터랙티브 커넥터(Interactive connectors)와 데스크톱용 Claude Code(Claude Code on desktop) 업데이트도 함께 포함한다.
+- 소개된 기능 중 여러 항목이 베타 단계이거나 순차적으로 배포 중이며 설명란의 링크를 통해 각 항목의 세부 내용을 확인할 수 있다.
 
-- 오후 6시 50분부터 접속할 수 있으며 라이브 채팅으로 질문을 받아 답변하는 당근페이 라이브톡의 세 번째이자 마지막 세션이다.
-- 당근페이 현장결제팀의 사업개발 매니저(BDM) 제프, 프론트엔드 엔지니어(FE) 예나, 안드로이드 엔지니어 아스터, 백엔드 엔지니어(BE) 윈터가 출연한다.
-- 오프라인 경험 없이 간편결제가 많은 시장에서 현장결제에 뛰어들게 된 배경을 다룰 예정이다.
-- 7주 만에 현장결제를 만들어낸 과정과 서버가 터지던 순간들의 이야기를 공유할 예정이다.
-- 가설의 연속인 상황에서도 방법을 찾아가고 있는 과정을 함께 나눌 예정이다.
+### Google Cloud Tech
 
-## GitHub Trending Weekly
+#### 구글 엔지니어들이 프로덕션 환경에서 AI 에이전트를 구축하는 방법 (전체 로드맵)
+https://www.youtube.com/watch?v=BKVDdL1InsA
 
-[채널별 원본](/github/2026%EB%85%8411%EC%9B%94/2026-11-23_Plannotator.md)
+- 구글 엔지니어 5명이 제미나이 같은 모델을 기반으로 프롬프트 엔지니어링에서 벗어나 루프 및 하네스 엔지니어링으로 전환하는 프로덕션 AI 에이전트 아키텍처를 설명한다.
+- 1단계(Learn)에서는 간결한 맵과 영구 마크다운 메모리로 컨텍스트를 관리하며, 오픈소스 Agent Skills와 Google Cloud Developer Plugin이 발견·활성화·실행의 3단계 점진적 공개를 통해 컨텍스트 창을 초과하지 않고 도메인 지식을 제공한다.
+- 2단계(Guard)에서는 에이전트가 테스트를 우회해 통과시키지 못하도록 빠르고 결정론적인 가드레일, Git 훅, 시크릿 스캐너, 엄격한 재시도 제한으로 에이전트 동작을 통제한다.
+- 3단계(Review)에서는 대화형 요약, Repo Walkthrough 시각화 도구, 제미나이를 활용한 멀티모달 UI 비디오 QA, 오디오 리뷰로 대규모 AI 생성 풀 리퀘스트를 검토하는 방법을 다룬다.
+- 4단계(Score)에서는 도구 사용, 비결정론적 궤적, 멀티턴 메모리, 멀티 에이전트 핸드오프를 다루는 4가지 실전 평가 패턴을 소개한다.
 
-### 1. backnotprop/plannotator
+### AWS Developers
 
-https://github.com/backnotprop/plannotator
+#### Strands Box로 명령어 한 줄에 AI 에이전트 샌드박스 실행하기
+https://www.youtube.com/watch?v=Z18kFF3uhSA
 
-- 언어: TypeScript
-- 이번 주 증가: 2,815 stars this week
-- Claude Code, Codex, Gemini CLI 등 AI 코딩 에이전트 및 개인 비서와 플러그인·훅·명령어로 연동되어 계획, 사양, HTML, 메시지 등을 브라우저에서 주석 처리하고 피드백을 전달하는 로컬 리뷰 환경입니다.
-- Git, GitButler, Jujutsu, Perforce, GitHub, GitLab의 로컬 변경 사항과 원격 PR diff에 코멘트 및 코드 제안을 남겨 에이전트에게 다시 전송하는 코드 리뷰 기능을 제공합니다.
+- Strands Box는 AWS가 공개한 무료 오픈소스 에이전트 샌드박스로, Mac과 Linux에서 컨테이너나 VM, AWS 계정 없이 명령어 하나로 Claude Code, Codex, Kiro CLI의 접근 범위를 제한해 실행한다.
+- Open, Scoped, 읽기 전용 정책을 바탕으로 에이전트가 접근할 파일, 네트워크 대상, 도구를 선택할 수 있으며 Amazon Bedrock 사용 등 기존 Claude Code 설정을 가져와 초기 프로필을 구성한다.
+- 데모에서는 .env 파일 읽기를 차단하는 과정과 Dogwood 정책 및 사용자 정의 Slack 프로필 구성을 시연한다.
+- 에이전트가 실제 토큰을 확인하지 못하도록 하는 자격 증명 주입 방식과 감사 로그 및 10분 규칙을 설명한다.
+- 정책 편집과 원격 에이전트 실행, 그리고 실행 중 정책 변경 방법을 다룬다.
 
-### 2. google-labs-code/stitch-skills
+### Google Cloud Tech
 
-https://github.com/google-labs-code/stitch-skills
+#### 단순 RAG가 에이전트 메모리로 실패하는 이유와 대안
+https://www.youtube.com/watch?v=gau6i7AJ6jw
 
-- 언어: TypeScript
-- 이번 주 증가: 2,683 stars this week
-- Agent Skills 오픈 표준을 따르며 Stitch MCP 서버 및 Google Stitch와 연동되도록 설계된 에이전트 스킬과 플러그인 모음입니다.
-- 디자인(stitch-design), 빌드 및 컴포넌트(stitch-build), 유틸리티(stitch-utilities) 플러그인으로 구성되며 Codex, Antigravity, Gemini CLI, Claude Code, Cursor, OpenCode에서 사용할 수 있습니다.
+- 단순 벡터 RAG는 "뉴욕에서 샌프란시스코로 이사했다"와 같은 정보 변경 시 두 진술을 모두 검색해 충돌을 해결하거나 어느 쪽이 현재 사실인지 구분하지 못한다.
+- 이 영상은 플랫 프롬프팅(Flat Prompting), 벡터 DB 기반 단순 RAG(Naive RAG), 오픈 지식 그래프(Open Knowledge Graphs) 등 3가지 표준 에이전트 메모리 옵션을 비교한다.
+- Gemini 플랫폼의 Vertex AI Memory Bank가 백그라운드에서 비동기로 실행되며 엔티티 추출, 중복 제거, 충돌 해결, 사실 업데이트를 몇 줄의 코드로 처리하는 방식을 설명한다.
+- Laxmi Harikumar와 Miles Libbey가 발표자로 참여하며 제목 아래 링크된 AI Agent Clinic 전체 빌드 에피소드를 안내한다.
+- 관련 제품 및 태그로 Antigravity, Gemini, Gemini 플랫폼, Google Cloud, Agent Development Kit(ADK), Vertex AI Memory Bank가 명시되어 있다.
 
-### 3. GoogleChrome/modern-web-guidance-src
+### Google for Developers
 
-https://github.com/GoogleChrome/modern-web-guidance-src
+#### Google Antigravity 활용 사례: 오프라인 야생동물 도감 만들기
+https://www.youtube.com/watch?v=fpQcDQJQLhg
 
-- 언어: TypeScript
-- 이번 주 증가: 3,575 stars this week
-- 코딩 에이전트가 레거시 패턴 대신 최신 웹 플랫폼 기능을 활용하도록 웹 플랫폼 전문 지식, 모범 사례, 브라우저 호환성 데이터를 제공하는 Modern Web Guidance의 소스 저장소입니다.
-- Google Chrome, Microsoft Edge, Mozilla Firefox, MDN 팀이 공동 관리하며 Node.js 22 이상 환경에서 CLI를 통해 가이드 검색·조회 및 코드베이스 레거시 패턴 스캔(`legacy-scan`)을 실행할 수 있습니다.
+- Google for Developers 채널의 영상으로, 크리에이티브 테크놀로지스트 겸 하드웨어 빌더 Arden Schager(xWF)가 GemmaDex 제작 과정을 시연한다.
+- GemmaDex는 포켓 크기의 100% 오프라인 야생동물 및 식물 도감으로, Raspberry Pi 5에서 실행된다.
+- 이 프로젝트는 Antigravity와 Gemma 4를 활용해 구현되었다.
+- 영상 메타데이터에는 언급된 제품으로 Antigravity와 Gemma가 명시되어 있다.
+- 설명란에서는 Antigravity 개발 리소스 링크와 Gemini 4 Neon 안내 링크를 함께 제공한다.
 
-### 4. alibaba/open-code-review
+### OpenAI
 
-https://github.com/alibaba/open-code-review
+#### GPT-6 Cyber로 리눅스 취약점 조사하기
+https://www.youtube.com/watch?v=w-ltt0Np2cY
 
-- 언어: Go
-- 이번 주 증가: 3,700 stars this week
-- 결정론적 파이프라인과 LLM 에이전트를 결합한 하이브리드 아키텍처 기반의 Go 코드 리뷰 CLI 도구로, NPE·스레드 안전성·XSS·SQL 인젝션 등 다국어 내장 규칙 세트와 OpenAI·Anthropic 호환 모델을 지원합니다.
-- Git diff 분석 시 에이전트가 전체 파일 내용 조회, 코드베이스 검색, 연관 변경 파일 확인을 수행해 줄 단위 코멘트를 생성하며 `ocr scan` 명령으로 diff가 없는 전체 파일이나 디렉터리도 점검합니다.
+- OpenAI 채널의 영상으로, GPT-6 Cyber를 활용해 리눅스 취약점을 조사하는 내용을 다룬다.
+- 한 차례의 실행에서 GPT-6 Cyber는 948개의 리눅스 커널 취약점을 검증하고 사람이 검토할 수 있는 후보 패치를 생성하는 데 활용되었다.
+- 사이버 연구원 Kyle Zeng과 응용 사이버 연구 리드 Clint Gibler가 대담에 참여한다.
+- 두 사람은 취약점 연구 파이프라인을 구축한 방법과 리눅스 메인테이너들과 협력해 수정 사항을 업스트림에 반영한 과정을 논의한다.
+- 설명란에는 전체 연구 내용을 확인할 수 있는 OpenAI 링크가 첨부되어 있다.
 
-### 5. mvanhorn/last30days-skill
+### Claude
 
-https://github.com/mvanhorn/last30days-skill
+#### Claude의 CRISPR 유사 패턴 발견 설명
+https://www.youtube.com/watch?v=ANcPabMDH14
 
-- 언어: Python
-- 이번 주 증가: 4,731 stars this week
-- Reddit, X, YouTube, HN, Polymarket, GitHub 및 웹 등에서 주제를 병렬 검색해 추천 수·좋아요·베팅 배당률 등 참여 지표로 점수를 산정한 뒤 근거 기반 요약을 생성하는 AI 에이전트 스킬입니다.
-- Claude Code, Codex, Cursor, Copilot, Gemini CLI 등 Agent Skills 호환 도구에 설치할 수 있으며 기본 상태에서 Reddit·HN·Polymarket·GitHub 검색을 지원하고 설정 마법사로 X·YouTube·TikTok·arXiv 등을 추가할 수 있습니다.
+- Claude 채널에서 공개한 영상으로, Claude의 CRISPR 유사 발견을 설명한다.
+- 본문은 CRISPR가 세균 DNA의 특이한 반복 패턴에서 시작되어 이를 설명하는 데 수년이 걸렸다고 언급한다.
+- Claude는 최근 바이러스 DNA에서 이와 유사해 보이는 패턴을 포착했다.
+- 현재 Anthropic 과학자들이 이 패턴에 대한 실험을 진행하고 있다.
+- 진행 중인 실험은 바이러스 DNA의 해당 패턴이 CRISPR와 비슷하게 작동하는지 알아보기 위한 것이다.
 
-### 6. ChromeDevTools/chrome-devtools-mcp
+### NVIDIA Developer
 
-https://github.com/ChromeDevTools/chrome-devtools-mcp
+#### NVIDIA와 Together AI: 모든 워크로드를 위한 더 빠르고 비용 효율적인 AI 추론
+https://www.youtube.com/watch?v=ClfOWvsj164
 
-- 언어: TypeScript
-- 이번 주 증가: 2,268 stars this week
-- 코딩 에이전트가 MCP 서버나 CLI를 통해 실행 중인 Chrome 브라우저를 제어하고 검사할 수 있게 해주는 도구입니다.
-- Chrome DevTools로 성능 트레이스를 기록해 인사이트를 추출하고, 네트워크 요청·스크린샷·콘솔 메시지 디버깅과 Puppeteer 기반 자동화를 지원합니다.
+- NVIDIA Developer 채널의 영상으로, Together AI 엔지니어링 팀이 AI 추론 워크로드 배치 방식을 설명한다.
+- 새로운 GPU 세대가 나오더라도 모든 워크로드를 이전할 필요는 없다는 점을 다룬다.
+- Together AI 엔지니어들은 메모리 요구량, 지연 시간 목표, 서빙 비용을 기준으로 워크로드를 NVIDIA Hopper와 Blackwell에 매칭한다.
+- CUDA를 활용해 Hopper와 Blackwell 두 환경 모두에서 최적화를 수행한다.
+- 영상은 모든 워크로드에 대해 더 빠르고 비용 효율적인 AI 추론을 구현하는 방안을 주제로 한다.
 
-### 7. tradermonty/claude-trading-skills
+### kakao tech
 
-https://github.com/tradermonty/claude-trading-skills
+#### 남산타워까지 알아본 비전 인코더의 학습법 | Kanana Vision Encoder: 글로벌 최고 수준에 도전하는 자체 비전 인코더 개발기 | Model & Agent
+https://www.youtube.com/watch?v=X7nW9HABy8M
 
-- 언어: Python
-- 이번 주 증가: 2,616 stars this week
-- 개인 투자자를 위해 시장 분석, 기술적 차트, 경제 캘린더, 스크리너 및 트레이딩 전략 개발 워크플로우를 제공하는 Claude Skills 기반 툴킷입니다.
-- 매매 결정을 AI에 위임하지 않고 시장 검토, 리스크 관리, 매매 계획, 저널링 과정을 구조화하기 위한 연구 및 프로세스 개선용 오픈소스입니다.
-
-### 8. ag-ui-protocol/ag-ui
-
-https://github.com/ag-ui-protocol/ag-ui
-
-- 언어: TypeScript
-- 이번 주 증가: 3,620 stars this week
-- AI 에이전트와 사용자 애플리케이션을 양방향 이벤트 스트림으로 연결해 토큰 스트리밍, 도구 호출, 상태 공유 등을 표준화하는 오픈 프로토콜입니다.
-- JSON Schema 기반의 AG-UI 1.0 사양에서 생성된 TypeScript, Python, .NET SDK를 제공하며 프론트엔드 앱을 생성하는 CLI를 포함합니다.
-
-### 9. meta/astryx
-
-https://github.com/meta/astryx
-
-- 언어: TypeScript
-- 이번 주 증가: 3,626 stars this week
-- React 19+와 StyleX로 구축된 Meta의 오픈소스 디자인 시스템으로, 150개 이상의 접근성 지원 컴포넌트와 테마, 다크 모드, 템플릿, CLI를 제공합니다.
-- 별도 빌드 플러그인 없이 사전 빌드된 CSS와 타입이 적용된 React 컴포넌트를 사용할 수 있으며, swizzle로 컴포넌트 소스를 프로젝트로 내보내거나 className으로 스타일을 재정의할 수 있습니다.
-
-### 10. pookjw/HermesEnabler
-
-https://github.com/pookjw/HermesEnabler
-
-- 언어: Objective-C
-- 이번 주 증가: 461 stars this week
-- watchOS 27.0부터 27.3 beta 1까지를 실행하는 Apple Watch에서 에르메스 워치 페이스를 활성화할 수 있도록 지원하는 앱입니다.
-- macOS에서 Sideloadly로 사전 빌드된 IPA를 설치하거나 Xcode로 직접 빌드한 뒤 iPhone과 Apple Watch의 개발자 모드를 켜고 실행해 적용합니다.
+- 카카오가 자체 기술력으로 밑바닥부터(From scratch) 학습한 카나나 비전 인코더의 개발 과정을 다루는 if kakao 26 발표 영상이다.
+- 카나나 조직에서 멀티모달 언어모델을 연구·개발하는 카카오 엄지환(Polar)이 발표자로 참여했다.
+- 다음 토큰 예측을 기반으로 카나나 언어모델을 활용해 학습과 추론 모두에서 효율을 높인 설계를 소개한다.
+- 온디바이스 환경 적용을 위한 비전 인코더의 경량화 과정을 공유한다.
+- 언어모델이 발전할수록 비전 인코더도 함께 발전하는 선순환 구조를 다루며 세션 발표 자료 링크를 함께 제공한다.
