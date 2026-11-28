@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-27T12:00:22+09:00",
+  "checked_at": "2026-11-28T12:00:26+09:00",
   "backend": "agy",
   "list_error": null,
   "opencode_free": [],
@@ -9,14 +9,14 @@
       "model": "agy/gemini-4-hydrogen-high",
       "ok": true,
       "score": 95,
-      "seconds": 17.1,
+      "seconds": 22.5,
       "error": null
     }
   ],
   "order": [
     "agy/gemini-4-hydrogen-high"
   ],
-  "seconds": 17.2,
+  "seconds": 22.5,
   "appeared": [],
   "disappeared": []
 }
